@@ -249,7 +249,14 @@ export default function AssessmentPage() {
 					</button>
 					<button
 						disabled={currentIdx === shuffledData.length - 1}
-						onClick={() => setCurrentIdx((prev) => prev + 1)}
+						onClick={() => {
+							if (!userAnswers[currentIdx] && status == "active") {
+								//
+								setModalType("noAnswer");
+							} else {
+								setCurrentIdx((prev) => prev + 1);
+							}
+						}}
 						className="flex items-center gap-1 px-3 py-2 bg-white dark:bg-zinc-800 sm:px-6 sm:py-3 text-sm sm:text-base border border-zinc-300 dark:border-zinc-700 rounded-xl font-bold disabled:opacity-40"
 					>
 						Next

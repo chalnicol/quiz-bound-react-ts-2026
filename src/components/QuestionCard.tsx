@@ -63,7 +63,7 @@ export default function QuestionCard({
 				<div className="grid gap-3">
 					{question.shuffledOptions.map((opt, idx) => (
 						<OptionBox
-							key={opt}
+							key={`${opt}_${idx}`}
 							// text={`${String.fromCharCode(65 + idx)}. ${opt}`}
 							text={opt}
 							isCorrect={opt === question.answer}

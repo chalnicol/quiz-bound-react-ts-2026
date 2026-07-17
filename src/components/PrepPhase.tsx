@@ -27,7 +27,7 @@ export default function PrepPhase({
 				Dashboard
 			</Link>
 
-			<div className="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12 mt-4 lg:mt-2">
+			<div className="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12 mt-4">
 				{/* Left: Placeholder Image */}
 				<div className="w-full md:w-1/3 max-w-sm aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center border-4 border-zinc-300 dark:border-zinc-400 transition-colors relative">
 					<span className="material-icons !text-6xl text-zinc-300 dark:text-zinc-600">
