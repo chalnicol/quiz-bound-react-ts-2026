@@ -17,7 +17,7 @@ export default function PrepPhase({
 	const [isTimed, setIsTimed] = useState(true);
 
 	return (
-		<div className="max-w-5xl mx-auto p-6 transition-colors">
+		<div className="max-w-7xl mx-auto transition-colors px-4 py-8">
 			{/* Prominent Back Navigation */}
 			<Link
 				to="/"
@@ -27,28 +27,30 @@ export default function PrepPhase({
 				Dashboard
 			</Link>
 
-			<div className="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12 mt-4">
+			<div className="flex flex-col md:flex-row gap-6 lg:gap-8 mt-4">
 				{/* Left: Placeholder Image */}
-				<div className="w-full md:w-1/3 max-w-sm aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center border-4 border-zinc-300 dark:border-zinc-400 transition-colors relative">
+				<div className="w-full md:w-1/3 lg:w-1/2 bg-zinc-200 h-44 md:h-auto dark:bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center border-4 border-zinc-700 dark:border-zinc-600 transition-colors relative">
 					<span className="material-icons !text-6xl text-zinc-300 dark:text-zinc-600">
 						image
 					</span>
 
-					{/* <img
+					<img
 						src="/generic_photo.jpg"
-						className="w-full h-full absolute z-10"
-					/> */}
+						className="md:w-2/3 md:h-auto h-2/3 w-auto aspect-square rounded-full absolute z-10 object-contain shadow-2xl border-2 border-zinc-400 dark:border-zinc-500"
+					/>
 				</div>
 
 				{/* Right: Details */}
-				<div className="w-full md:w-2/3 space-y-8">
+				<div className="w-full md:w-2/3 lg:w-1/2 space-y-8">
 					<div>
 						<h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 mb-2">
 							{topicName}
 						</h1>
-						<p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-							{topicBrief}
-						</p>
+						{topicBrief && (
+							<p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+								{topicBrief}
+							</p>
+						)}
 					</div>
 
 					{/* Theme-Adaptive Directions with matching muted colors */}

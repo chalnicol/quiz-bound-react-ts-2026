@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
+
 type ModalType = "none" | "exit" | "forceFinish" | "noAnswer" | "timeExpired";
 
 interface AssessmentModalProps {
@@ -11,11 +14,38 @@ export default function AssessmentModal({
 	onClose,
 	onConfirm,
 }: AssessmentModalProps) {
+	const contRef = useRef<HTMLDivElement>(null);
+
 	if (modalType === "none") return null;
+
+	useEffect(() => {
+		if (contRef.current) {
+			gsap.fromTo(
+				contRef.current,
+				{
+					scale: 0,
+				},
+				{
+					scale: 1,
+					delay: 0.2,
+					ease: "elastic.out(1, 0.4)",
+					duration: 0.8,
+				},
+			);
+		}
+		return () => {
+			if (contRef.current) {
+				gsap.killTweensOf(contRef.current);
+			}
+		};
+	}, []);
 
 	return (
 		<div className="fixed inset-0 bg-zinc-950/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-			<div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 p-8 rounded-2xl shadow-2xl max-w-sm w-full">
+			<div
+				ref={contRef}
+				className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 p-6 rounded-2xl shadow-2xl max-w-sm w-full"
+			>
 				<h3 className="text-lg font-bold mb-2 text-zinc-900 dark:text-zinc-50">
 					{modalType === "exit"
 						? "Exit Assessment?"
@@ -38,7 +68,7 @@ export default function AssessmentModal({
 					{modalType !== "noAnswer" && modalType !== "timeExpired" && (
 						<button
 							onClick={onClose}
-							className="flex-1 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-600 font-semibold text-zinc-700 dark:text-zinc-300 text-sm"
+							className="flex-1 py-2.5 rounded-xl border border-zinc-400 dark:border-zinc-600 font-semibold text-zinc-700 dark:text-zinc-300 text-sm"
 						>
 							Cancel
 						</button>

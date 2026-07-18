@@ -157,9 +157,532 @@ export const topics: Topic[] = [
 	// 	],
 	// },
 	{
-		id: "t5",
+		id: "t1",
+		name: "Mathematics",
+		brief: "",
+		direction:
+			"This is a test of your ability to think out solutions to quantitative problems in mathematics. Analyze and solve each problem carefully. Determine the four choices a, b, c, d.",
+		timeLimit: "01:00:00",
+		questions: [
+			{
+				text: "Find the sum: 299 + 943 + 398 + 101.",
+				options: ["1,531", "1,641", "1,741", "122,222"],
+				answer: "1,741",
+			},
+			{
+				text: "If 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55, then 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 = ?",
+				options: ["65", "155", "125", "550"],
+				answer: "155",
+			},
+			{
+				text: "If 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55, then 101 + 102 + 103 + 104 + 105 + 106 + 107 + 108 + 109 + 110 = ?",
+				options: ["1,055", "1,065", "1,075", "5,550"],
+				answer: "1,055",
+			},
+			{
+				text: "Evaluate { 16 - (24 - 8) + 22 &#215 8 - 8 }.",
+				options: ["40", "48", "64", "168"],
+				answer: "168",
+			},
+			{
+				text: "If 23 + 28 + 37 + <span class='custom-italic'>x</span> + 53 = 168 and 23 + 28 + 40 + <span class='custom-italic'>y</span> + 50 = 120. Find the value of <span class='custom-italic'>x</span> - <span class='custom-italic'>y</span>",
+				options: ["36", "48", "56", "64"],
+				answer: "48",
+			},
+			{
+				text: "Find the product: 800 &#215 125.",
+				options: ["925", "1,000", "10,000", "100,000"],
+				answer: "100,000",
+			},
+			{
+				text: "Find the quotient: 8000 &#247 125.",
+				options: ["48", "64", "80", "88"],
+				answer: "64",
+			},
+			{
+				text: "What is the remainder when 192,888 is divided by 8?",
+				options: ["0", "4", "8", "24,111"],
+				answer: "0",
+			},
+			{
+				text: "Rounding 299,943 to the nearest thousands the result is",
+				options: ["299,940", "299,000", "299,900", "300,000"],
+				answer: "300,000",
+			},
+			{
+				text: "398.101 is read as",
+				options: [
+					"three hundred ninety eight, one hundred one",
+					"three hundred ninety eight and one hundred on",
+					"three hundred ninety eight and one hundred one hundredths",
+					"three hundred ninety eight and one hundred one thousandths",
+				],
+				answer:
+					"three hundred ninety eight and one hundred one thousandths",
+			},
+			{
+				text: "A number is divisible by 8 if its last three digits is divisible by 8. Which of the following numbers is divisible by 8?",
+				options: ["9,208", "6,236", "88,254", "8,886"],
+				answer: "9,208",
+			},
+			{
+				text: "Which of the following statements is <strong><span class='custom-italic'>true</span></strong>?",
+				options: [
+					"If a number is divisible by 5, then it is divisible by 10",
+					"If a number is divisible by 10, then it is divisible by 5",
+					"If a number is divisible by 3, then it is divisible by 6",
+					"If a number is divisible by 4, then it is divisible by 8",
+				],
+				answer: "If a number is divisible by 10, then it is divisible by 5",
+			},
+			{
+				text: "Simplify : <span class='fraction'><span>1</span><span>2</span></span> (128 - 84)  &nbsp;+&nbsp; (128 - 84)  &nbsp;-&nbsp; <span class='fraction'><span>1</span><span>2</span></span> (128 - 24)",
+				options: ["0", "20", "44", "64"],
+				answer: "44",
+			},
+			{
+				text: "Simplify : 33<span class='fraction'><span>1</span><span>3</span></span>% of 48 &nbsp; + &nbsp; 12<span class='fraction'><span>1</span><span>2</span></span>% of 96 &nbsp; - &nbsp; 44<span class='fraction'><span>4</span><span>9</span></span>% of 27",
+				options: ["12", "16", "24", "48"],
+				answer: "16",
+			},
+			{
+				text: "Reduce <span class='fraction'><span>231</span><span>1000</span></span> to its lowest terms.",
+				options: [
+					"<span class='fraction'><span>7</span><span>11</span></span>",
+					"<span class='fraction'><span>3</span><span>31</span></span>",
+					"<span class='fraction'><span>3</span><span>13</span></span>",
+					"<span class='fraction'><span>7</span><span>13</span></span>",
+				],
+				answer:
+					"<span class='fraction'><span>3</span><span>13</span></span>",
+			},
+			{
+				text: "Which of the following is <strong><span class='custom-italic'>true</span></strong>?",
+				options: [
+					"- 16 > 8",
+					"<span class='fraction'><span>8</span><span>64</span></span> = <span class='fraction'><span>1</span><span>4</span></span>",
+					"54 - 8 &nbsp;<u>></u>&nbsp; 8 - 54",
+					"<span class='fraction'><span>9</span><span>117</span></span> = <span class='fraction'><span>1</span><span>17</span></span>",
+				],
+				answer: "54 - 8 &nbsp;<u>></u>&nbsp; 8 - 54",
+			},
+			{
+				text: "Find the value of <strong><span class='custom-italic'>x&nbsp;&nbsp;:</span></strong>  &nbsp;&nbsp;<strong><span class='custom-italic'>x</span></strong> = <bk>[</bk> <span class='fraction'><span>3</span><span>8</span></span> (72) + <span class='fraction'><span>5</span><span>7</span></span> (35) <bk>]</bk>",
+				options: ["27", "36", "45", "52"],
+				answer: "52",
+			},
+			{
+				text: "What is 25% of 228?",
+				options: ["52", "57", "54", "912"],
+				answer: "57",
+			},
+			{
+				text: "228 is 25% of what number?",
+				options: ["52", "57", "54", "912"],
+				answer: "912",
+			},
+			{
+				text: "168 is what percent of 672?",
+				options: ["25%", "50%", "400%", "80%"],
+				answer: "25%",
+			},
+			{
+				text: "Evaluate: 123 &times 0.1 + 123 &times; 0.01 + 123 &times; 0.0001.",
+				options: ["13.653", "135.53", "1,356.3", "13,563"],
+				answer: "13.653",
+			},
+			{
+				text: "Find 3<span class='fraction'><span>1</span><span>4</span></span> of 16.",
+				options: ["7", "16", "39", "52"],
+				answer: "52",
+			},
+			{
+				text: "Evaluate: 1 + <span class='fraction'><span>1</span><span>2</span></span> + <span class='fraction'><span>1</span><span>4</span></span> + <span class='fraction'><span>1</span><span>8</span></span>",
+				options: [
+					"1<span class='fraction'><span>3</span><span>16</span></span>",
+					"1<span class='fraction'><span>3</span><span>8</span></span>",
+					"1<span class='fraction'><span>5</span><span>8</span></span>",
+					"1<span class='fraction'><span>7</span><span>8</span></span>",
+				],
+				answer:
+					"1<span class='fraction'><span>7</span><span>8</span></span>",
+			},
+			{
+				text: "Find the value of <strong><span class='custom-italic'>x&nbsp;</span></strong> in the equation 3x + 7 = 28.",
+				options: ["{ 7 }", "{ -7 }", "{ &#177 7 }", "{ 4 }"],
+				answer: "{ 7 }",
+			},
+			{
+				text: "Which of the following has the greatest value?",
+				options: [
+					"<span class='fraction'><span>8</span><span> (6<sup>2</sup>)(8<sup>2</sup>)</span></span>",
+					"<span class='fraction'><span>16</span><span> (6<sup>2</sup>)(8<sup>3</sup>)</span></span>",
+					"<span class='fraction'><span>1</span><span> (6<sup>3</sup>)(8<sup>2</sup>)</span></span>",
+					"<span class='fraction'><span>168</span><span> (6<sup>4</sup>)(8<sup>3</sup>)</span></span>",
+				],
+				answer:
+					"<span class='fraction'><span>8</span><span> (6<sup>2</sup>)(8<sup>2</sup>)</span></span>",
+			},
+			{
+				text: "Which of the following <strong><span class='custom-italic'>cannot</span></strong>&nbsp; yield an odd integer when divided by 10?",
+				options: [
+					"The sum of two odd integers.",
+					"The product of a prime number and an <br/><so/>odd integer.",
+					"The product of two odd integers",
+					"The sum of three consecutive integers",
+				],
+				answer: "The product of two odd integers",
+			},
+			{
+				text: "If 8x + 12 = 24, what is the value of 24x + 36?",
+				options: ["4", "6", "8", "72"],
+				answer: "72",
+			},
+			{
+				text: "If a positive integer <span class='custom-italic'>m</span> is divisible by both 3 and 8, then <span class='custom-italic'>m</span> must also be divisible by",
+				options: ["10", "18", "24", "60"],
+				answer: "24",
+			},
+			{
+				text: "If positive integers <span class='custom-italic'>m</span> and <span class='custom-italic'>n</span> are not both odd, which of the following is always true?",
+				options: [
+					"m + n is even",
+					"mn is even",
+					"m - n cannot be odd",
+					"m + n - 1 is odd",
+				],
+				answer: "mn is even",
+			},
+			{
+				text: "Find the average temperature change for the 12-day perioD.  Temperature change in degree celsius : 2.6, 3.8, 7.0, 4.5, 4.6, 7.9, 5.0, 8.1, 4.4, 5.3, 6.4, 5.2",
+				options: ["4.8", "4.9", "5.2", "5.4"],
+				answer: "5.4",
+			},
+			{
+				text: "Find the set of all odd numbers <span class='custom-italic'>x</span> satisfying the conditions 5x - 4 &#8804 0 and 3x - 7 &#8805 0.",
+				options: [
+					"{ <span class='custom-italic'>x</span> | <span class='custom-italic'>x</span> &#8800 1}",
+					"{ 1 }",
+					"{ <span class='custom-italic'>x</span> | <span class='custom-italic'>x</span> &#8712; &#8476; }",
+					"{ &nbsp; }",
+				],
+				answer: "{ &nbsp; }",
+			},
+			{
+				text: "State the property illustrated.  If 8(6) + 4 = 48 + 4 and 48 + 4 = 52 then 8(6) + 4 = 52",
+				options: [
+					"distributive property of multiplication <br/><so/>over addition",
+					"commutative property of addition",
+					"associative property",
+					"transitive property of equality",
+				],
+				answer: "transitive property of equality",
+			},
+			{
+				text: "If 8 less than the product of a number and -3 is greater than 7, which of the following could be that number?",
+				options: ["-6", "-5", "5", "6"],
+				answer: "-6",
+			},
+			{
+				text: "The difference between 8 times a number and 17 is 231. Find the number.",
+				options: ["31", "37", "48", "1,984"],
+				answer: "31",
+			},
+			{
+				text: "Four times the perimeter of a parking lot is 16 less than 2,000 meters. What is the perimeter of the lot?",
+				options: ["496m", "504m", "992m", "1,008m"],
+				answer: "496m",
+			},
+			{
+				text: "The amount of last month's telephone bill, decreased by the product of 3 and &#8369;30.00 equals &#8369;1,319.50.",
+				options: [
+					"&#8369; 1,229.50",
+					"&#8369; 1,289.50",
+					"&#8369; 1,310.50",
+					"&#8369; 1,409.50",
+				],
+				answer: "&#8369; 1,409.50",
+			},
+			{
+				text: "Eighteen less than seven times the number of sandwiches is 269. How many sandwiches are there?",
+				options: ["32", "41", "44", "45"],
+				answer: "41",
+			},
+			{
+				text: "A house and lot are sold for &#8369; 14M. The house costs 1.5 times as much as the lot. How much does the lot cost?",
+				options: [
+					"&#8369;5.6M",
+					"&#8369;8.4M",
+					"&#8369;10.5M",
+					"&#8369;21M",
+				],
+				answer: "&#8369;5.6M",
+			},
+			{
+				text: "The sale price of a television set is &#8369; 7,200. The discount rate is 40%. Find its regular price.",
+				options: [
+					"&#8369;4,320",
+					"&#8369;12,000",
+					"&#8369;6,800",
+					"&#8369;10,000",
+				],
+				answer: "&#8369;12,000",
+			},
+			{
+				text: "The lengths of the sides of a triangle can be represented by three consecutive integers. The perimeter of the triangle is 96 cm. Find the length of the longest side of the triangle.",
+				options: ["28", "32", "33", "36"],
+				answer: "33",
+			},
+			{
+				text: "The lengths of the rectangle is 8 meters more than twice its width. The perimeter is 112 meters. Find its areA. ",
+				options: ["16m", "24m", "28 m<sup>2</sup>", "640 m<sup>2</sup>"],
+				answer: "640 m<sup>2</sup>",
+			},
+			{
+				text: "Paula is twice as old as Queenie. Seven years ago the sum of their ages was 16. How old is Queenie now?",
+				options: ["8", "10", "16", "20"],
+				answer: "10",
+			},
+			{
+				text: "For what value of <span class='custom-italic'>x</span> will <span class='custom-italic'>x</span> be the average of 2, 4x, 6, 8, 10 ?",
+				options: ["4", "12", "26", "39"],
+				answer: "26",
+			},
+			{
+				text: "How many integers between 197 and 303 are divisible by 4 or 10 ?",
+				options: ["25", "26", "31", "37"],
+				answer: "26",
+			},
+			{
+				text: "A patient must take his medication every 7 hours starting at 7:00 AM Sunday. On what day will the patient first receive his medication at 8 AM ?",
+				options: ["Sunday", "Wednesday", "Thursday", "Tuesday"],
+				answer: "Tuesday",
+			},
+			{
+				text: "Of the 300 grocery surveyed, 96 did not have a regular day of the week which they shop. What percentage of the shoppers did not have a regular day of shopping?",
+				options: ["32%", "48%", "64%", "96%"],
+				answer: "32%",
+			},
+			{
+				text: "A water container has 100ml of water in it and is 20% full. How many ml of water can this container hold if it is full?",
+				options: ["200ml", "400ml", "500ml", "800ml"],
+				answer: "500ml",
+			},
+			{
+				text: "How many containers each occupies an area of 2<span class='fraction'><span>1</span><span>8</span></span> square meters can be stored in a 952-square meter warehouse?",
+				options: ["358", "448", "530", "630"],
+				answer: "448",
+			},
+			{
+				text: "A starting salary of a secretary at ABC computer Specialists is &#8369;15,000 a month. Next year the starting salary will be raised to &#8369;18,000 a month. What will is the rate of increase in the starting salary?",
+				options: ["3%", "20%", "25%", "30%"],
+				answer: "20%",
+			},
+			{
+				text: "The cost of a square meter commercial lot in a certain municipality five years ago was &#8369;12,500. There was a 420% increase in the price in the last five years. What is the price per square meter of that lot today?",
+				options: [
+					"&#8369;17,500",
+					"&#8369;52,500",
+					"&#8369;19,000",
+					"&#8369;65,500",
+				],
+				answer: "&#8369;65,500",
+			},
+			{
+				text: "Last month a store manager decided to decrease the prices of all items by 10%. This month he increased the prices by 10%. What would be the price for a pair of pants that had cost &#8369;750 before prices were decreased last month?",
+				options: [
+					"&#8369;742.50",
+					"&#8369;750.00",
+					"&#8369;675.00",
+					"&#8369;825.00",
+				],
+				answer: "&#8369;742.50",
+			},
+			{
+				text: "When the original price of an item is increased by a certain rate, the increased price is &#8369;3,100. When the original price is decreased by the same rate, the decreased price is &#8369;1,900. What is the original price of this item?",
+				options: [
+					"&#8369;1,200",
+					"&#8369;200",
+					"&#8369;2,500",
+					"&#8369;2,800",
+				],
+				answer: "&#8369;2,500",
+			},
+			{
+				text: "How much must one has to invest in corporate bonds paying 9.6% in order to earn an income of &#8369;12,000 per annum?",
+				options: [
+					"&#8369;11,520",
+					"&#8369;23,040",
+					"&#8369;125,000",
+					"&#8369;250,000",
+				],
+				answer: "&#8369;125,000",
+			},
+			{
+				text: "How much must be cut from the edge of a piece of glass 16<span class='fraction'><span>1</span><span>8</span></span>cm wide, in order for it to fit into an  opening 14<span class='fraction'><span>3</span><span>4</span></span>cm wide?",
+				options: [
+					"2<span class='fraction'><span>3</span><span>8</span></span>cm",
+					"1<span class='fraction'><span>7</span><span>8</span></span>cm",
+					"1<span class='fraction'><span>3</span><span>8</span></span>cm",
+					"2<span class='fraction'><span>5</span><span>8</span></span>cm",
+				],
+				answer:
+					"1<span class='fraction'><span>3</span><span>8</span></span>cm",
+			},
+			{
+				text: "A race car traveled for 2<span class='fraction'><span>1</span><span>2</span></span> hours with an average speed of 132<span class='fraction'><span>5</span><span>8</span></span> km per hour. Find the total distance covereD. ",
+				options: [
+					"264<span class='fraction'><span>5</span><span>16</span></span>km",
+					"331<span class='fraction'><span>9</span><span>16</span></span>km",
+					"330<span class='fraction'><span>5</span><span>16</span></span>km",
+					"135<span class='fraction'><span>1</span><span>8</span></span>km",
+				],
+				answer:
+					"331<span class='fraction'><span>9</span><span>16</span></span>km",
+			},
+			{
+				text: "If the weight of a 241-kg freight car increases 3<span class='fraction'><span>1</span><span>8</span></span> times when fully loaded.  What will be its weight with a full load?",
+				options: [
+					"730<span class='fraction'><span>3</span><span>8</span></span>kg",
+					"824<span class='fraction'><span>3</span><span>8</span></span>kg",
+					"720<span class='fraction'><span>5</span><span>8</span></span>kg",
+					"753<span class='fraction'><span>1</span><span>8</span></span>kg",
+				],
+				answer:
+					"753<span class='fraction'><span>1</span><span>8</span></span>kg",
+			},
+			{
+				text: "How many liters will remain in a 1000-liter storage tank if 8.2% of the liquid has evaporated due to excessive heat?",
+				options: ["918", "991.8", "999.18", "998"],
+				answer: "918",
+			},
+			{
+				text: "Dante recently sold some stocks for which he originally bought for &#8369;358. If it has increased in value by 116%, how much did he receive for the stock?",
+				options: [
+					"&#8369;678.28",
+					"&#8369;772",
+					"&#8369;773.28",
+					"&#8369;778",
+				],
+				answer: "&#8369;773.28",
+			},
+			{
+				text: "Mr. Manny Vargas, a real state broker sold a building for &#8369;175M. How much did he receive if his commission is 5.5% of the sale price of the property?",
+				options: [
+					"&#8369;9.5M",
+					"&#8369;9.7M",
+					"&#8369;9.625M",
+					"&#8369;180.5M",
+				],
+				answer: "&#8369;9.625M",
+			},
+			{
+				text: "If 560 out of 700 examinees passed in the recent Career Service Exam for Sub-Professional level, what percent of the examinees passed?",
+				options: ["65%", "72%", "80%", "140%"],
+				answer: "80%",
+			},
+			{
+				text: "Mr.Cruz borrows &#8369;750,000 from Asian Bank and is charged &#8369;90,000 interest. What rate of interest of the examinees passed?",
+				options: ["8%", "9%", "10%", "12%"],
+				answer: "12%",
+			},
+			{
+				text: "A store sells shirts for  &#8369; 1,078 each or 3 for &#8369;2,997. How much would one save by buying 3 shirts at a time instead of 3 shirts, one at a time? ",
+				options: [
+					"&#8369;237",
+					"&#8369;921",
+					"&#8369;1,237",
+					"&#8369;1,921",
+				],
+				answer: "&#8369;237",
+			},
+			{
+				text: "A computer can be rented for &#8369;1,745 a week or &#8369;347.50 a day. You need the computer only for 6 days. At which rate ( daily or weekly ), would it be cheaper to rent and by how much cheaper?",
+				options: [
+					"weekly: &#8369;340",
+					"daily: &#8369;240",
+					"daily: &#8369;340",
+					"weekly: &#8369;240",
+				],
+				answer: "weekly: &#8369;340",
+			},
+			{
+				text: "A 1.25 -kg box of Brand A detergent sells for &#8369;87.50. &nbsp;A 1.5 - kg box of Brand B detergent sells for &#8369;103.20. <br/> What is the difference in the price per kg?",
+				options: [
+					"&#8369;1.20",
+					"&#8369;1.50",
+					"&#8369;1.80",
+					"&#8369;2.00",
+				],
+				answer: "&#8369;1.20",
+			},
+			{
+				text: "A 30-cm long plastic pipe costs &#8369;249. At this rate, what is the price of the pipe per meter?",
+				options: ["&#8369;830", "&#8369;840", "&#8369;747", "&#8369;749"],
+				answer: "&#8369;830",
+			},
+			{
+				text: "A homeowner can rent a chain saw for a rental agency at &#8369;2,700 a day. The brand new of the same saw can be bought for &#8369;18,900. For how many days could the homeowner rent the saw before renting would cost more than buying?",
+				options: ["5", "6", "7", "8"],
+				answer: "7",
+			},
+			{
+				text: "Paula uses ten 100-watt bulbs in her house. She uses these bulbs at an average of 5 hours each day. How many KWH do these bulbs use each day?",
+				options: ["5", "10", "50", "5,000"],
+				answer: "5",
+			},
+			{
+				text: "An electric range uses 12,200 watts per hour and is run an average of 60 hours a year. How many kilowatt-hour is this?",
+				options: ["73.2", "732", "7,320", "7.32"],
+				answer: "732",
+			},
+			{
+				text: "A video casette movie, purchased for &#8369;440 was marked up 25% on the selling price. Later as the retail prices fell, this movie was marked down 20% on the current sale price. Find its new sale price.",
+				options: ["&#8369;352", "&#8369;440", "&#8369;500", "&#8369;550"],
+				answer: "&#8369;440",
+			},
+			{
+				text: "MSA Products InC. , bought these office supplies last week: 1,320 pens @ &#8369;0.125; 1,480 packs paper clips @ &#8369;0.625; 1,240 boxes of tape @ &#8369;0.875; 1,720 boxes of cards @ &#8369;0.80. A 5% sales tax is addeD.  What was the company's total bill?",
+				options: [
+					"&#8369;173.25",
+					"&#8369;3,551",
+					"&#8369;971.25",
+					"&#8369;3,728.55",
+				],
+				answer: "&#8369;3,728.55",
+			},
+			{
+				text: 'The question - "How many flowers are needed to border a rectangular garden?", involves ',
+				options: ["weight", "perimeter", "volume", "area"],
+				answer: "perimeter",
+			},
+			{
+				text: "How many meters of fencing are needed to enclose an 84-meter by 48-meter rectangular garden?",
+				options: ["132 m", "244 m", "264 m", "4,032 m"],
+				answer: "264 m",
+			},
+			{
+				text: "How many 1-cm square stickers are needed to cover a photo box 4 cm long, 3 cm wide and 5 cm high?",
+				options: ["47", "60", "88", "94"],
+				answer: "94",
+			},
+			{
+				text: "One side of a triangle is 3 cm longer than the shortest side, and the other side is 4cm longer than the shortest side. How long is the shortest side if the perimeter is 67 cm?",
+				options: ["20 cm", "23 cm", "24 cm", "27 cm"],
+				answer: "20 cm",
+			},
+			{
+				text: "The length of the rectangle is 2 cm less than twice its width. What is its width in cm, if its perimeter is 50 cm?",
+				options: ["8", "9", "16", "25"],
+				answer: "9",
+			},
+		],
+	},
+	{
+		id: "t2",
 		name: "Clerical Operations - Alphabetizing",
-		brief: "Arrange each group of items in alphabetical order.",
+		brief: "",
+		direction: "Arrange each group of items in alphabetical order.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
@@ -265,128 +788,130 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t6",
+		id: "t3",
 		name: "English - Synonyms",
-		brief: "Choose the letter that corresponds to the word closest in meaning to the bold and italicized word in the sentence.",
+		brief: "",
+		direction:
+			"Choose the letter that corresponds to the word closest in meaning to the bold and italicized word in the sentence.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
-				text: "We should never be <b class='font-bold italic text-slate-500 dark:text-slate-400'>apathetic</b> towards other people for we have a social responsibility to fulfill.",
+				text: "We should never be <span class='custom-italic'>apathetic</span> towards other people for we have a social responsibility to fulfill.",
 				options: ["indifferent", "concerned", "generous", "worried"],
 				answer: "indifferent",
 			},
 			{
-				text: "A good leader should be <b class='font-bold italic text-slate-500 dark:text-slate-400'>cognizant</b> of the numerous issues that affect his constituents.",
+				text: "A good leader should be <span class='custom-italic'>cognizant</span> of the numerous issues that affect his constituents.",
 				options: ["aware", "uninformed", "confused", "idealistic"],
 				answer: "aware",
 			},
 			{
-				text: "Always be careful not to issue any <b class='font-bold italic text-slate-500 dark:text-slate-400'>disparaging</b> remarks against other people.",
+				text: "Always be careful not to issue any <span class='custom-italic'>disparaging</span> remarks against other people.",
 				options: ["praising", "confusing", "damaging", "discouraging"],
 				answer: "damaging",
 			},
 			{
-				text: "Flowers are <b class='font-bold italic text-slate-500 dark:text-slate-400'>ephermal</b> ; they bloom yet whiter in a week or so later.",
+				text: "Flowers are <span class='custom-italic'>ephermal</span> ; they bloom yet whiter in a week or so later.",
 				options: ["shrivel", "long lasting", "beautiful", "short lived"],
 				answer: "short lived",
 			},
 			{
-				text: "A <b class='font-bold italic text-slate-500 dark:text-slate-400'>fastidious</b> person will never find true happiness.",
+				text: "A <span class='custom-italic'>fastidious</span> person will never find true happiness.",
 				options: ["simple", "choosy", "greedy", "contented"],
 				answer: "choosy",
 			},
 			{
-				text: "The Ortigas Center is filled with <b class='font-bold italic text-slate-500 dark:text-slate-400'>gargantuan</b> buildings, some having up to 50 floors.",
+				text: "The Ortigas Center is filled with <span class='custom-italic'>gargantuan</span> buildings, some having up to 50 floors.",
 				options: ["crowded", "old and weak", "first class", "gigantic"],
 				answer: "gigantic",
 			},
 			{
-				text: "Nobody liked <b class='font-bold italic text-slate-500 dark:text-slate-400'>haughty</b> Monty who kept bragging about his riches.",
+				text: "Nobody liked <span class='custom-italic'>haughty</span> Monty who kept bragging about his riches.",
 				options: ["arrogant", "foolish", "respectable", "dependable"],
 				answer: "arrogant",
 			},
 			{
-				text: "The corrupt policeman was discharged from service due to his <b class='font-bold italic text-slate-500 dark:text-slate-400'>ignominous</b> act of accepting bribes.",
+				text: "The corrupt policeman was discharged from service due to his <span class='custom-italic'>ignominous</span> act of accepting bribes.",
 				options: ["honorable", "disrespectable", "unwanted", "remarkable"],
 				answer: "disrespectable",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>impudent</b> child was scolded for answering back to older people.",
+				text: "The <span class='custom-italic'>impudent</span> child was scolded for answering back to older people.",
 				options: ["respectful", "honorable", "clever", "rude"],
 				answer: "rude",
 			},
 			{
-				text: "Spores are <b class='font-bold italic text-slate-500 dark:text-slate-400'>infinitesimal</b> reproductive units of fungi and lower plants.",
+				text: "Spores are <span class='custom-italic'>infinitesimal</span> reproductive units of fungi and lower plants.",
 				options: ["invisible", "interesting", "microscopic", "large"],
 				answer: "microscopic",
 			},
 			{
-				text: "Never trust an <b class='font-bold italic text-slate-500 dark:text-slate-400'>insidious</b> person because you'll never know what goes on in his mind. ",
+				text: "Never trust an <span class='custom-italic'>insidious</span> person because you'll never know what goes on in his mind. ",
 				options: ["honest", "treacherous", "loyal", "trustworthy"],
 				answer: "treacherous",
 			},
 			{
-				text: "Jessica is an <b class='font-bold italic text-slate-500 dark:text-slate-400'>irascible</b> girl who frequently has tantrums.",
+				text: "Jessica is an <span class='custom-italic'>irascible</span> girl who frequently has tantrums.",
 				options: ["impatient", "cheerful", "hot-tempered", "jolly"],
 				answer: "hot-tempered",
 			},
 			{
-				text: "Surgeons should be <b class='font-bold italic text-slate-500 dark:text-slate-400'>meticulous</b> especially when performing operations",
+				text: "Surgeons should be <span class='custom-italic'>meticulous</span> especially when performing operations",
 				options: ["careful", "careless", "strict", "lenient"],
 				answer: "careful",
 			},
 			{
-				text: "Christ teaches us to be concerned about putting up riches in heaven and not to be obsessed with <b class='font-bold italic text-slate-500 dark:text-slate-400'>mundane</b> things.",
+				text: "Christ teaches us to be concerned about putting up riches in heaven and not to be obsessed with <span class='custom-italic'>mundane</span> things.",
 				options: ["temporary", "worldly", "insignificant", "important"],
 				answer: "worldly",
 			},
 			{
-				text: "Rochelle has difficulty seeing things from afar because she is <b class='font-bold italic text-slate-500 dark:text-slate-400'>myopic</b>",
+				text: "Rochelle has difficulty seeing things from afar because she is <span class='custom-italic'>myopic</span>",
 				options: ["cross-eyed", "eagle-eyed", "farsighted", "nearsighted"],
 				answer: "nearsighted",
 			},
 			{
-				text: "Regina, being a child of three, is <b class='font-bold italic text-slate-500 dark:text-slate-400'>oblivious</b> to the world around her.",
+				text: "Regina, being a child of three, is <span class='custom-italic'>oblivious</span> to the world around her.",
 				options: ["careful", "carefree", "aware", "unmindful"],
 				answer: "unmindful",
 			},
 			{
-				text: "Man can never be <b class='font-bold italic text-slate-500 dark:text-slate-400'>omniscient</b> like God. ",
+				text: "Man can never be <span class='custom-italic'>omniscient</span> like God. ",
 				options: ["all-knowing", "logical", "immortal", "miraculous"],
 				answer: "all-knowing",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>piquant</b> mouse was able to find its way out of the maze in a short while.",
+				text: "The <span class='custom-italic'>piquant</span> mouse was able to find its way out of the maze in a short while.",
 				options: ["dumb", "clever", "small", "unusual"],
 				answer: "clever",
 			},
 			{
-				text: "It is now <b class='font-bold italic text-slate-500 dark:text-slate-400'>plausible</b> to say that someday, interplanetary travel will no longer be impossible.",
+				text: "It is now <span class='custom-italic'>plausible</span> to say that someday, interplanetary travel will no longer be impossible.",
 				options: ["reasonable", "unusual", "illogical", "extraordinary"],
 				answer: "reasonable",
 			},
 			{
-				text: "A <b class='font-bold italic text-slate-500 dark:text-slate-400'>prudent</b> person is not easily deceived. ",
+				text: "A <span class='custom-italic'>prudent</span> person is not easily deceived. ",
 				options: ["loyal", "careless", "wise", "foolish"],
 				answer: "wise",
 			},
 			{
-				text: "\"Spare the rod and spoil the child\" is a common <b class='font-bold italic text-slate-500 dark:text-slate-400'>aphorism</b>.",
+				text: "\"Spare the rod and spoil the child\" is a common <span class='custom-italic'>aphorism</span>.",
 				options: ["slogan", "battle cry", "proverb", "motto"],
 				answer: "proverb",
 			},
 			{
-				text: "Charmaine's <b class='font-bold italic text-slate-500 dark:text-slate-400'>deportment</b> is highly commendable.",
+				text: "Charmaine's <span class='custom-italic'>deportment</span> is highly commendable.",
 				options: ["belief", "behavior", "intelligence", "competence"],
 				answer: "behavior",
 			},
 			{
-				text: "For <b class='font-bold italic text-slate-500 dark:text-slate-400'>enmity</b> and hate are contrary to friendship and concord. ",
+				text: "For <span class='custom-italic'>enmity</span> and hate are contrary to friendship and concord. ",
 				options: ["agreement", "mutual hatred", "confusion", "division"],
 				answer: "mutual hatred",
 			},
 			{
-				text: "The Filipino's <b class='font-bold italic text-slate-500 dark:text-slate-400'>fortitude</b> is the reason why he seldom complains.",
+				text: "The Filipino's <span class='custom-italic'>fortitude</span> is the reason why he seldom complains.",
 				options: [
 					"endurance",
 					"peace-loving",
@@ -396,22 +921,22 @@ export const topics: Topic[] = [
 				answer: "endurance",
 			},
 			{
-				text: "Poverty should never viewed as an <b class='font-bold italic text-slate-500 dark:text-slate-400'>impedement</b> towards attaining good education.",
+				text: "Poverty should never viewed as an <span class='custom-italic'>impedement</span> towards attaining good education.",
 				options: ["reason", "way", "link", "obstruction"],
 				answer: "obstruction",
 			},
 			{
-				text: "The students were <b class='font-bold italic text-slate-500 dark:text-slate-400'>upbraided</b> for misbehaving during the assembly.",
+				text: "The students were <span class='custom-italic'>upbraided</span> for misbehaving during the assembly.",
 				options: ["praised", "honored", "scolded", "stopped"],
 				answer: "scolded",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Urbane</b> people are appalled by rude behavior.",
+				text: "<span class='custom-italic'>Urbane</span> people are appalled by rude behavior.",
 				options: ["well-mannered", "ill-mannered", "modern", "rich"],
 				answer: "well-mannered",
 			},
 			{
-				text: "Clowns are never <b class='font-bold italic text-slate-500 dark:text-slate-400'>vapid</b> but the sick usually are.",
+				text: "Clowns are never <span class='custom-italic'>vapid</span> but the sick usually are.",
 				options: [
 					"lively and energetic",
 					"lacking spirits and liveliness",
@@ -421,12 +946,12 @@ export const topics: Topic[] = [
 				answer: "lacking spirits and liveliness",
 			},
 			{
-				text: "The client was asked to verify the <b class='font-bold italic text-slate-500 dark:text-slate-400'>veracity</b> of the statement of accounts issued. ",
+				text: "The client was asked to verify the <span class='custom-italic'>veracity</span> of the statement of accounts issued. ",
 				options: ["accuracy", "discrepancy", "redundancy", "mistake"],
 				answer: "accuracy",
 			},
 			{
-				text: "Dentists believe that babies should be <b class='font-bold italic text-slate-500 dark:text-slate-400'>weaned</b> from freeding bottles as soon as possible to prevent <br/> malformation of the infant's erupting teeth.",
+				text: "Dentists believe that babies should be <span class='custom-italic'>weaned</span> from freeding bottles as soon as possible to prevent <br/> malformation of the infant's erupting teeth.",
 				options: [
 					"get used to",
 					"develop hatred for",
@@ -436,27 +961,27 @@ export const topics: Topic[] = [
 				answer: "free from dependence",
 			},
 			{
-				text: "Some people believe that Balete Drive is haunted because a <b class='font-bold italic text-slate-500 dark:text-slate-400'>wraith</b> of a woman appears here.",
+				text: "Some people believe that Balete Drive is haunted because a <span class='custom-italic'>wraith</span> of a woman appears here.",
 				options: ["shadow", "statue", "reflection", "ghost"],
 				answer: "ghost",
 			},
 			{
-				text: "She looks <b class='font-bold italic text-slate-500 dark:text-slate-400'>unkempt</b> with her wavy coarse hair falling freely behind her back.",
+				text: "She looks <span class='custom-italic'>unkempt</span> with her wavy coarse hair falling freely behind her back.",
 				options: ["pretty", "neat", "prim and proper", "untidy"],
 				answer: "untidy",
 			},
 			{
-				text: "The room is <b class='font-bold italic text-slate-500 dark:text-slate-400'>topsy-turvy</b> , as if a hurricane just passed through.",
+				text: "The room is <span class='custom-italic'>topsy-turvy</span> , as if a hurricane just passed through.",
 				options: ["disorderly", "destroyed", "orderly", "clean"],
 				answer: "disorderly",
 			},
 			{
-				text: "Sherloch Holmes is a famous <b class='font-bold italic text-slate-500 dark:text-slate-400'>sleuth</b>.",
+				text: "Sherloch Holmes is a famous <span class='custom-italic'>sleuth</span>.",
 				options: ["adventurer", "scientist", "detective", "criminal"],
 				answer: "detective",
 			},
 			{
-				text: "Mindy <b class='font-bold italic text-slate-500 dark:text-slate-400'>rummaged</b> through the chest of old clothes for something usable to donate.",
+				text: "Mindy <span class='custom-italic'>rummaged</span> through the chest of old clothes for something usable to donate.",
 				options: [
 					"searched through",
 					"wandered through",
@@ -466,7 +991,7 @@ export const topics: Topic[] = [
 				answer: "searched through",
 			},
 			{
-				text: "Only a <b class='font-bold italic text-slate-500 dark:text-slate-400'>ruffian</b> could do such a heinous act of killing a helpless child. ",
+				text: "Only a <span class='custom-italic'>ruffian</span> could do such a heinous act of killing a helpless child. ",
 				options: [
 					"an insane person",
 					"a brutal person",
@@ -476,22 +1001,22 @@ export const topics: Topic[] = [
 				answer: "a brutal person",
 			},
 			{
-				text: "To <b class='font-bold italic text-slate-500 dark:text-slate-400'>augment</b> the policemen's income, the goverment allowed them to take part-time jobs.",
+				text: "To <span class='custom-italic'>augment</span> the policemen's income, the goverment allowed them to take part-time jobs.",
 				options: ["increase", "contribute", "limit", "remove"],
 				answer: "increase",
 			},
 			{
-				text: "A person's reputation is very important so be very careful not to <b class='font-bold italic text-slate-500 dark:text-slate-400'>caluminate</b> anybody.",
+				text: "A person's reputation is very important so be very careful not to <span class='custom-italic'>caluminate</span> anybody.",
 				options: ["embarass", "abuse", "tease", "slander"],
 				answer: "slander",
 			},
 			{
-				text: "The footprints were <b class='font-bold italic text-slate-500 dark:text-slate-400'>effaced</b> when the floor was mopped. ",
+				text: "The footprints were <span class='custom-italic'>effaced</span> when the floor was mopped. ",
 				options: ["printed", "erased", "deformed", "developed"],
 				answer: "erased",
 			},
 			{
-				text: "The plane <b class='font-bold italic text-slate-500 dark:text-slate-400'>overshot</b> the runway and landed on a ditch.",
+				text: "The plane <span class='custom-italic'>overshot</span> the runway and landed on a ditch.",
 				options: [
 					"passed through",
 					"passed by",
@@ -503,13 +1028,15 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t7",
+		id: "t4",
 		name: "English - Antonym",
-		brief: "Choose the letter that corresponds to the word opposite in meaning to the italicized word or phrase in the sentence.",
+		brief: "",
+		direction:
+			"Choose the letter that corresponds to the word opposite in meaning to the italicized word or phrase in the sentence.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
-				text: "Czarmaine <b class='font-bold italic text-slate-500 dark:text-slate-400'>accompanied</b> her sister to the drugstore.",
+				text: "Czarmaine <span class='custom-italic'>accompanied</span> her sister to the drugstore.",
 				options: [
 					"followed",
 					"let go on one's own",
@@ -519,47 +1046,47 @@ export const topics: Topic[] = [
 				answer: "let go on one's own",
 			},
 			{
-				text: "Beside the <b class='font-bold italic text-slate-500 dark:text-slate-400'>boulevard</b> are gigantic buildings.",
+				text: "Beside the <span class='custom-italic'>boulevard</span> are gigantic buildings.",
 				options: ["alley", "street", "avenue", "road"],
 				answer: "alley",
 			},
 			{
-				text: "He often got into trouble because he was <b class='font-bold italic text-slate-500 dark:text-slate-400'>brusque</b>.",
+				text: "He often got into trouble because he was <span class='custom-italic'>brusque</span>.",
 				options: ["blunt", "rude", "refined", "curt"],
 				answer: "refined",
 			},
 			{
-				text: "The reporter's <b class='font-bold italic text-slate-500 dark:text-slate-400'>candid</b> remarks caught the mayoralty candidate off-guarD. ",
+				text: "The reporter's <span class='custom-italic'>candid</span> remarks caught the mayoralty candidate off-guarD. ",
 				options: ["secret", "frank", "well-thought", "reserved"],
 				answer: "well-thought",
 			},
 			{
-				text: "The mean boys <b class='font-bold italic text-slate-500 dark:text-slate-400'>derided</b> the sickly boy.",
+				text: "The mean boys <span class='custom-italic'>derided</span> the sickly boy.",
 				options: ["made fun of", "ridiculed", "praised", "abandoned"],
 				answer: "praised",
 			},
 			{
-				text: "Charm was <b class='font-bold italic text-slate-500 dark:text-slate-400'>ecstatic</b> when she won the first prixe in the short story writing contest.",
+				text: "Charm was <span class='custom-italic'>ecstatic</span> when she won the first prixe in the short story writing contest.",
 				options: ["melancholic", "overjoyed", "worried", "energetic"],
 				answer: "melancholic",
 			},
 			{
-				text: "Migraine headaches are <b class='font-bold italic text-slate-500 dark:text-slate-400'>excruciating</b>.",
+				text: "Migraine headaches are <span class='custom-italic'>excruciating</span>.",
 				options: ["extremely painful", "mild pain", "painless", "healing"],
 				answer: "painless",
 			},
 			{
-				text: "The quiz proved to be <b class='font-bold italic text-slate-500 dark:text-slate-400'>facile</b> so the students got high scores.",
+				text: "The quiz proved to be <span class='custom-italic'>facile</span> so the students got high scores.",
 				options: ["difficult", "easy", "average", "answerable"],
 				answer: "difficult",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>garrulous</b> girls were distanced from each other.",
+				text: "The <span class='custom-italic'>garrulous</span> girls were distanced from each other.",
 				options: ["mute", "talkative", "behaved", "quiet"],
 				answer: "quiet",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>heathens</b> used to practice cannibalism.",
+				text: "The <span class='custom-italic'>heathens</span> used to practice cannibalism.",
 				options: [
 					"uncivilized people",
 					"barbaric people",
@@ -569,32 +1096,32 @@ export const topics: Topic[] = [
 				answer: "cultured people",
 			},
 			{
-				text: "Keep on believing that physical disability is not a <b class='font-bold italic text-slate-500 dark:text-slate-400'>hindrance</b> to success.",
+				text: "Keep on believing that physical disability is not a <span class='custom-italic'>hindrance</span> to success.",
 				options: ["block", "stepping stone", "opportunity", "difficulty"],
 				answer: "stepping stone",
 			},
 			{
-				text: "Never operate a machine once you are <b class='font-bold italic text-slate-500 dark:text-slate-400'>inebriated</b>.",
+				text: "Never operate a machine once you are <span class='custom-italic'>inebriated</span>.",
 				options: ["sober", "drunk", "sleepy", "active"],
 				answer: "sober",
 			},
 			{
-				text: "The people <b class='font-bold italic text-slate-500 dark:text-slate-400'>inveighed</b> against the sharp increase in oil prices.",
+				text: "The people <span class='custom-italic'>inveighed</span> against the sharp increase in oil prices.",
 				options: ["admitted", "amended", "accepted", "deliberated"],
 				answer: "accepted",
 			},
 			{
-				text: "Some people believe that breaking mirror is a <b class='font-bold italic text-slate-500 dark:text-slate-400'>jinx</b>.",
+				text: "Some people believe that breaking mirror is a <span class='custom-italic'>jinx</span>.",
 				options: ["bad luck", "evil", "expensive", "good luck"],
 				answer: "good luck",
 			},
 			{
-				text: "The players were confused when the <b class='font-bold italic text-slate-500 dark:text-slate-400'>kibitzers</b> suddenly buttered-in during the team's huddle.",
+				text: "The players were confused when the <span class='custom-italic'>kibitzers</span> suddenly buttered-in during the team's huddle.",
 				options: ["advisers", "spectators", "onlookers", "crowd"],
 				answer: "advisers",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>lanky</b> lad stood out among the average-sized students.",
+				text: "The <span class='custom-italic'>lanky</span> lad stood out among the average-sized students.",
 				options: [
 					"fierce-looking",
 					"gigantic",
@@ -604,22 +1131,22 @@ export const topics: Topic[] = [
 				answer: "short and stout",
 			},
 			{
-				text: "The sickly dog was given <b class='font-bold italic text-slate-500 dark:text-slate-400'>lethal</b> dose of morphine tablets.",
+				text: "The sickly dog was given <span class='custom-italic'>lethal</span> dose of morphine tablets.",
 				options: ["fatal", "safe", "deadly", "nasty"],
 				answer: "safe",
 			},
 			{
-				text: "Heinous criminals are truly <b class='font-bold italic text-slate-500 dark:text-slate-400'>loathsome</b>.",
+				text: "Heinous criminals are truly <span class='custom-italic'>loathsome</span>.",
 				options: ["repugnant", "foul", "adorable", "nasty"],
 				answer: "adorable",
 			},
 			{
-				text: "We listened attentively to the <b class='font-bold italic text-slate-500 dark:text-slate-400'>mellifluous</b> sound produced by the Philippine Philharmonic OrchestrA. ",
+				text: "We listened attentively to the <span class='custom-italic'>mellifluous</span> sound produced by the Philippine Philharmonic OrchestrA. ",
 				options: ["harsh", "resonant", "melodious", "mellow"],
 				answer: "harsh",
 			},
 			{
-				text: "The free medical and dental checkup conducted by the AFP Group is just a proof of their <b class='font-bold italic text-slate-500 dark:text-slate-400'>munifecence</b>.",
+				text: "The free medical and dental checkup conducted by the AFP Group is just a proof of their <span class='custom-italic'>munifecence</span>.",
 				options: [
 					"committment",
 					"generosity",
@@ -629,111 +1156,113 @@ export const topics: Topic[] = [
 				answer: "stinginess",
 			},
 			{
-				text: "Justice calls for penalizing <b class='font-bold italic text-slate-500 dark:text-slate-400'>nefarious</b> acts.",
+				text: "Justice calls for penalizing <span class='custom-italic'>nefarious</span> acts.",
 				options: ["honorable", "detestable", "infamous", "vile"],
 				answer: "honorable",
 			},
 			{
-				text: "The MSA Reviewer Books are <b class='font-bold italic text-slate-500 dark:text-slate-400'>noteworthy</b> materials.",
+				text: "The MSA Reviewer Books are <span class='custom-italic'>noteworthy</span> materials.",
 				options: ["remarkable", "substantial", "trivial", "significant"],
 				answer: "trivial",
 			},
 			{
-				text: "You will never get sufficient nourishment if you are <b class='font-bold italic text-slate-500 dark:text-slate-400'>obdurate</b> in refusing to eat vegetables.",
+				text: "You will never get sufficient nourishment if you are <span class='custom-italic'>obdurate</span> in refusing to eat vegetables.",
 				options: ["stubborn", "obedient", "firm", "willful"],
 				answer: "obedient",
 			},
 			{
-				text: "Don't be so <b class='font-bold italic text-slate-500 dark:text-slate-400'>obtrusive</b> but instead, mind your own business.",
+				text: "Don't be so <span class='custom-italic'>obtrusive</span> but instead, mind your own business.",
 				options: ["reserved", "snoopy", "nosey", "interfering"],
 				answer: "reserved",
 			},
 			{
-				text: "I admire people who are modest their <b class='font-bold italic text-slate-500 dark:text-slate-400'>opulence</b>.",
+				text: "I admire people who are modest their <span class='custom-italic'>opulence</span>.",
 				options: ["great wealth", "poverty", "affluence", "lavishness"],
 				answer: "poverty",
 			},
 			{
-				text: "Do you always try to be a <b class='font-bold italic text-slate-500 dark:text-slate-400'>paragon</b> of virtue.",
+				text: "Do you always try to be a <span class='custom-italic'>paragon</span> of virtue.",
 				options: ["model", "example", "yardstick", "anomaly"],
 				answer: "anomaly",
 			},
 			{
-				text: "Tragic stories had so much <b class='font-bold italic text-slate-500 dark:text-slate-400'>pathos</b> that it left me feeling down.",
+				text: "Tragic stories had so much <span class='custom-italic'>pathos</span> that it left me feeling down.",
 				options: ["anguish", "woe", "intrigue", "humor"],
 				answer: "humor",
 			},
 			{
-				text: "Chin is such <b class='font-bold italic text-slate-500 dark:text-slate-400'>precocious</b> girl who can already read at age three.",
+				text: "Chin is such <span class='custom-italic'>precocious</span> girl who can already read at age three.",
 				options: ["slow learner", "bright", "inquisitive", "advanced"],
 				answer: "slow learner",
 			},
 			{
-				text: "She had the <b class='font-bold italic text-slate-500 dark:text-slate-400'>quixotic</b> idea that she was a reincarnation of a British princess.",
+				text: "She had the <span class='custom-italic'>quixotic</span> idea that she was a reincarnation of a British princess.",
 				options: ["wild", "fantastic", "realistic", "dreamy"],
 				answer: "realistic",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>ramshackle</b> building collapsed easily.",
+				text: "The <span class='custom-italic'>ramshackle</span> building collapsed easily.",
 				options: ["new", "old", "outdated", "shabby"],
 				answer: "new",
 			},
 			{
-				text: "An A-rating represents the <b class='font-bold italic text-slate-500 dark:text-slate-400'>ultimate</b> honor a film will ever have.",
+				text: "An A-rating represents the <span class='custom-italic'>ultimate</span> honor a film will ever have.",
 				options: ["greatest", "pinnacle", "least", "supreme"],
 				answer: "least",
 			},
 			{
-				text: "CJ de Silva's painting abilities are <b class='font-bold italic text-slate-500 dark:text-slate-400'>uncanny</b>.",
+				text: "CJ de Silva's painting abilities are <span class='custom-italic'>uncanny</span>.",
 				options: ["remarkable", "ordinary", "astonishing", "unbelievable"],
 				answer: "ordinary",
 			},
 			{
-				text: "Lea Salonga's performance was <b class='font-bold italic text-slate-500 dark:text-slate-400'>utterly</b> delightful.",
+				text: "Lea Salonga's performance was <span class='custom-italic'>utterly</span> delightful.",
 				options: ["somewhat", "entirely", "thoroughly", "absolutely"],
 				answer: "somewhat",
 			},
 			{
-				text: "The strong current of the floodwaters caused the wooden bridge to <b class='font-bold italic text-slate-500 dark:text-slate-400'>vacillate</b>.",
+				text: "The strong current of the floodwaters caused the wooden bridge to <span class='custom-italic'>vacillate</span>.",
 				options: ["collapse", "sway", "vibrate", "be firm"],
 				answer: "be firm",
 			},
 			{
-				text: "The <b class='font-bold italic text-slate-500 dark:text-slate-400'>vindictive</b> politician spread rumors about his opponent.",
+				text: "The <span class='custom-italic'>vindictive</span> politician spread rumors about his opponent.",
 				options: ["revengeful", "forgiving", "spiteful", "malicious"],
 				answer: "forgiving",
 			},
 			{
-				text: "If words were swords, then her <b class='font-bold italic text-slate-500 dark:text-slate-400'>vitriolic</b> remarks could really kill.",
+				text: "If words were swords, then her <span class='custom-italic'>vitriolic</span> remarks could really kill.",
 				options: ["scathing", "sarcastic", "satirical", "kind"],
 				answer: "kind",
 			},
 			{
-				text: "Many students <b class='font-bold italic text-slate-500 dark:text-slate-400'>vouch</b> for the effectiveness of the MSA review classes.",
+				text: "Many students <span class='custom-italic'>vouch</span> for the effectiveness of the MSA review classes.",
 				options: ["guarantee", "endorse", "affirm", "refute"],
 				answer: "refute",
 			},
 			{
-				text: "That <b class='font-bold italic text-slate-500 dark:text-slate-400'>yonder</b> youths is more studious than the nearer one.",
+				text: "That <span class='custom-italic'>yonder</span> youths is more studious than the nearer one.",
 				options: ["lonesome", "farther", "closer", "thither"],
 				answer: "closer",
 			},
 			{
-				text: "MSA tutors are all <b class='font-bold italic text-slate-500 dark:text-slate-400'>zealous</b> tutors who nourish eager minds.",
+				text: "MSA tutors are all <span class='custom-italic'>zealous</span> tutors who nourish eager minds.",
 				options: ["vigorous", "earnest", "indifference", "enthusiastic"],
 				answer: "indifference",
 			},
 			{
-				text: "Don't let <b class='font-bold italic text-slate-500 dark:text-slate-400'>trivial</b> things upset you.",
+				text: "Don't let <span class='custom-italic'>trivial</span> things upset you.",
 				options: ["important", "trifling", "ordinary", "inconsequential"],
 				answer: "important",
 			},
 		],
 	},
 	{
-		id: "t8",
+		id: "t5",
 		name: "English - Double-Word Analogy",
-		brief: "Choose the letter that corresponds to the pair of words that is related in the same way as the given pair of words.",
+		brief: "",
+		direction:
+			"Choose the letter that corresponds to the pair of words that is related in the same way as the given pair of words.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
@@ -1129,9 +1658,11 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t9",
+		id: "t6",
 		name: "English - Correct Usage",
-		brief: "Choose the letter that corresponds to the word or phrase that will correctly complete each sentence.",
+		brief: "",
+		direction:
+			"Choose the letter that corresponds to the word or phrase that will correctly complete each sentence.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
@@ -1367,13 +1898,325 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t10",
+		id: "t7",
+		name: "English - Identifying Errors",
+		brief: "",
+		direction:
+			"Choose the underlined word or phrases laveled <span class='font-bold'>a, b, c</span> or <strong>d</strong> which are NOT acceptable in format written English. Choose e if there is no error. Choose the letter that corresponds to your answer on the item number in your answer sheet.",
+		timeLimit: "00:25:00",
+		questions: [
+			{
+				text: "<span class='division'><span>No one</span><span>a</span></span><span class='division'><span>were happy</span><span>b</span></span><span class='division'><span>about</span><span>c</span></span> the Mindanao<span class='division'><span>crisis.</span><span>d</span></span><span class='division'><span>No error</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "The<span class='division'><span>House of Representatives</span><span>a</span></span> decision<span class='division'><span>to decrease</span><span>b</span></span> the budget <span class='division'><span>for</span><span>c</span></span> the Department of Education was <span class='division'><span>met</span><span>d</span></span>with protest. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "The<span class='division'><span>Cabinet</span><span>a</span></span> <span class='division'><span>regularly</span><span>b</span></span> <span class='division'><span>meet</span><span>c</span></span> <span class='division'><span>once a week.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Both</span><span>a</span></span> the <span class='division'><span>Senators</span><span>b</span></span> and the<span class='division'><span>Congressmen</span><span>c</span></span> <span class='division'><span>legislates</span><span>d</span></span> laws.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "The Philippine<span class='division'><span>government</span><span>a</span></span><span class='division'><span>have</span><span>b</span></span>three<span class='division'><span>branches</span><span>c</span></span>of<span class='division'><span>powers</span><span>d</span></span>: the executive, the legislative and the judicial.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "The Supreme Court<span class='division'><span>upholds</span><span>a</span></span>the highest<span class='division'><span>principles</span><span>b</span></span>and<span class='division'><span>standards</span><span>c</span></span> of morality as<span class='division'><span>embodied</span><span>d</span></span>in the  Constitution.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Some</span><span>a</span></span><span class='division'><span>historians</span><span>b</span></span><span class='division'><span>contests</span><span>c</span></span>the<span class='division'><span>origin</span><span>d</span></span>of the Filipino flag.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Some<span class='division'><span>believe</span><span>a</span></span>that the flag we<span class='division'><span>use</span><span>b</span></span>now <span class='division'><span>is</span><span>c</span></span>not the same as the one<span class='division'><span>made</span><span>d</span></span> by Marcella Agoncillo. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Either</span><span>a</span></span>Prof. Teodoro Agoncillo or Dr. Gregorio F. Zalde<span class='division'><span>affirm</span><span>b</span></span>the<span class='division'><span>history</span><span>c</span></span><span class='division'><span>of</span><span>d</span></span>our flag<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "The<span class='division'><span>news</span><span>a</span></span><span class='division'><span>are</span><span>b</span></span><span class='division'><span>written</span><span>c</span></span>immediately to<span class='division'><span>meet</span><span>d</span></span>the previous deadline<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Attempts</span><span>a</span></span><span class='division'><span>is</span><span>b</span></span><span class='division'><span>made</span><span>c</span></span>to locate and<span class='division'><span>restore</span><span>d</span></span>the last original Filipino Flag.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Both</span><span>a</span></span>Chelle<span class='division'><span>and</span><span>b</span></span>Charm<span class='division'><span>enjoys</span><span>c</span></span><span class='division'><span>reading.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Reading</span><span>a</span></span><span class='division'><span>books</span><span>b</span></span><span class='division'><span>widens</span><span>c</span></span><span class='division'><span>one's</span><span>d</span></span>horizons<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "If<span class='division'><span>everybody</span><span>a</span></span><span class='division'><span>know</span><span>b</span></span>how to read,<span class='division'><span>then</span><span>c</span></span>books will never<span class='division'><span>cease</span><span>d</span></span>to be useful<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>No one</span><span>a</span></span><span class='division'><span>dares</span><span>b</span></span>to<span class='division'><span>question</span><span>c</span></span>how invaluable books<span class='division'><span>are.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Great</span><span>a</span></span>literary <span class='division'><span>works</span><span>b</span></span><span class='division'><span>enriches</span><span>c</span></span>the vocabulary of<span class='division'><span>their</span><span>d</span></span>readers.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Have</span><span>a</span></span>either of the<span class='division'><span>books</span><span>b</span></span><span class='division'><span>been</span><span>c</span></span><span class='division'><span>returned?</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>One hundred fifty pesos</span><span>a</span></span><span class='division'><span>are</span><span>b</span></span>the average selling<span class='division'><span>price</span><span>c</span></span>of one<span class='division'><span>textbook.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "One of the<span class='division'><span>machines</span><span>a</span></span>in the printing<span class='division'><span>press</span><span>b</span></span><span class='division'><span>weren't</span><span>c</span></span><span class='division'><span>functioning</span><span>d</span></span>properly.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Either</span><span>a</span></span>the<span class='division'><span>teachers</span><span>b</span></span>or the <span class='division'><span>librarian</span><span>c</span></span><span class='division'><span>take care</span><span>d</span></span>of the books.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "A<span class='division'><span>number</span><span>a</span></span>of<span class='division'><span>books</span><span>b</span></span><span class='division'><span>is</span><span>c</span></span>regulary<span class='division'><span>donated</span><span>d</span></span>to public schools.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "The<span class='division'><span>number</span><span>a</span></span>of<span class='division'><span>readers</span><span>b</span></span><span class='division'><span>continually</span><span>c</span></span><span class='division'><span>rise</span><span>d</span></span>each year.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "For<span class='division'><span>I,</span><span>a</span></span><i>Reader's Digest</i><span class='division'><span>is</span><span>b</span></span><span class='division'><span>informative</span><span>c</span></span>as well as <span class='division'><span>entertaining.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "The <i>Manila Bullettin</i><span class='division'><span>has</span><span>a</span></span>been<span class='division'><span>published</span><span>b</span></span>the Panorama magazine<span class='division'><span>for</span><span>c</span></span>over a hundred<span class='division'><span>years.</span><span>d</span></span> <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>All</span><span>a</span></span>children<span class='division'><span>has</span><span>b</span></span>inherent rights that<span class='division'><span>must</span><span>c</span></span>be<span class='division'><span>protecteD. </span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "The<span class='division'><span>editor-in-chief,</span><span>a</span></span>together with the<span class='division'><span>writers,</span><span>b</span></span><span class='division'><span>confers</span><span>c</span></span>about the content of their<span class='division'><span>newspaper.</span><span>d</span></span> <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<i>Gorion and Tekla,</i><span class='division'><span>in addition to</span><span>a</span></span><i>Captain Barbel,</i><span class='division'><span>was a</span><span>b</span></span>popular<span class='division'><span>comic books</span><span>c</span></span><span class='division'><span>during</span><span>d</span></span>the 70's. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Pol Medina</span><span>a</span></span>has<span class='division'><span>drew</span><span>b</span></span>the<span class='division'><span>very   famous</span><span>c</span></span><i>Pugad Baboy</i><span class='division'><span>characters.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span><i>Pugad Baboy</i></span><span>a</span></span><span class='division'><span>first appear</span><span>b</span></span><span class='division'><span>in</span><span>c</span></span>the Philippine Daily Inquirer<span class='division'><span>during</span><span>d</span></span>the late 80's<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "Neither Pol Medina<span class='division'><span>nor</span><span>a</span></span>his<span class='division'><span>friends</span><span>b</span></span><span class='division'><span>thinks</span><span>c</span></span>he will become<span class='division'><span>successful.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Some<span class='division'><span>believes</span><span>a</span></span>that Mr. Medina's<span class='division'><span>works</span><span>b</span></span><span class='division'><span>satirize</span><span>c</span></span>the socio-economic condition of the people<span class='division'><span>in</span><span>d</span></span>our  country.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "The youth<span class='division'><span>delegates</span><span>a</span></span><span class='division'><span>have been</span><span>b</span></span><span class='division'><span>sang</span><span>c</span></span>the<span class='division'><span><i>National Anthem.</i></span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>That</span><span>a</span></span>house and lot<span class='division'><span>in</span><span>b</span></span>the corner<span class='division'><span>are</span><span>c</span></span><span class='division'><span>goverment-owneD. </span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "The<span class='division'><span>number</span><span>a</span></span>of<span class='division'><span>socialized</span><span>b</span></span>housing units<span class='division'><span>sponsored</span><span>c</span></span>by the goverment<span class='division'><span>increases</span><span>d</span></span>each year.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>A</span><span>a</span></span><span class='division'><span>quarter</span><span>b</span></span>of the goverment tax<span class='division'><span>collection</span><span>c</span></span><span class='division'><span>goes</span><span>d</span></span>to infrastructure projects.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "The<span class='division'><span>beneficiaries</span><span>a</span></span>of the study grant<span class='division'><span>given</span><span>b</span></span>by the government<span class='division'><span>will be</span><span>c</span></span><span class='division'><span>them.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "Studies<span class='division'><span>suggests</span><span>a</span></span>that<span class='division'><span>exposure</span><span>b</span></span>to too much violence on television<span class='division'><span>makes</span><span>c</span></span>one equally<span class='division'><span>violent.</span><span>d</span></span> <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "The possible<span class='division'><span>effects</span><span>a</span></span>of television<span class='division'><span>viewing</span><span>b</span></span><span class='division'><span>needs</span><span>c</span></span>to be<span class='division'><span>explored</span><span>d</span></span>further.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Every</span><span>a</span></span><span class='division'><span>weekdays,</span><span>b</span></span>Chel and Charm<span class='division'><span>goes</span><span>c</span></span>to school<span class='division'><span>together.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<i>The Scent of Apples,</i> a story<span class='division'><span>about</span><span>a</span></span>a Filipino who<span class='division'><span>immigrated</span><span>b</span></span>to the United States,<span class='division'><span>are</span><span>c</span></span><span class='division'><span>written</span><span>d</span></span>by  Bienvenido Santos.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Nick Joaquin, one of the exceptional Filipino<span class='division'><span>writers,</span><span>a</span></span><span class='division'><span>is</span><span>b</span></span>also<span class='division'><span>known</span><span>c</span></span><span class='division'><span>for</span><span>d</span></span>Quijano de Manila. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "<span class='division'><span>Some people</span><span>a</span></span><span class='division'><span>believes</span><span>b</span></span>that one could<span class='division'><span>see</span><span>c</span></span>his future mate by<span class='division'><span>looking into</span><span>d</span></span>a mirror on May day eve. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "Jose Garcia Villa<span class='division'><span>was</span><span>a</span></span>a<span class='division'><span>recipient</span><span>b</span></span>of numerous <span class='division'><span>awards,</span><span>c</span></span> <span class='division'><span>between</span><span>d</span></span>them, the \"National Artist Award  Literature\".<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "The Far Eastern University (FEU) also<span class='division'><span>gave</span><span>a</span></span><span class='division'><span>he</span><span>b</span></span> a Doctor of Literature <i>honoris causa</i><span class='division'><span>in</span><span>c</span></span>1959, aside from</sp><span class='division'><span>asking</span><span>d</span></span>him to be a visiting professor.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Between</span><span>a</span></span>the numerous prose<span class='division'><span>writers,</span><span>b</span></span> I<span class='division'><span>think</span><span>c</span></span>Nick Joaquin is the<span class='division'><span>best.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>Those</span><span>a</span></span> <span class='division'><span>are</span><span>b</span></span> <span class='division'><span>work</span><span>c</span></span> of <span class='division'><span>famous</span><span>d</span></span>authors.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "The<span class='division'><span>professor</span><span>a</span></span> <span class='division'><span>asked</span><span>b</span></span> <span class='division'><span>her</span><span>c</span></span> a question about<span class='division'><span>they.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "Literature<span class='division'><span>seem</span><span>a</span></span>elusive<span class='division'><span>to</span><span>b</span></span> people<span class='division'><span>who</span><span>c</span></span>profess indifference to<span class='division'><span>it.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>It</span><span>a</span></span> <span class='division'><span>appeals</span><span>b</span></span>both to the<span class='division'><span>readers</span><span>c</span></span>intellect<span class='division'><span>and</span><span>d</span></span>passion<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Robert Frost, an<span class='division'><span>American</span><span>a</span></span>poet,<span class='division'><span>defines</span><span>b</span></span> literature<span class='division'><span>as</span><span>c</span></span>\"performance<span class='division'><span>in</span><span>d</span></span>words\".<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Either</span><span>a</span></span>of the<span class='division'><span>authors</span><span>b</span></span> <span class='division'><span>have received</span><span>c</span></span>citations<span class='division'><span>for</span><span>d</span></span>their remarkable works.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Just like Edgar Allan Poe,<span class='division'><span>it</span><span>a</span></span> <span class='division'><span>is believed</span><span>b</span></span> that Nick Joaquin<span class='division'><span>starts</span><span>c</span></span>getting ideas after he has<span class='division'><span>drank</span><span>d</span></span> alcoholic beverages.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "<span class='division'><span>Computers</span><span>a</span></span> <span class='division'><span>are</span><span>b</span></span>widely<span class='division'><span>use</span><span>c</span></span> nowadays even in<span class='division'><span>preschools.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "The<span class='division'><span>number</span><span>a</span></span>of Computer Science<span class='division'><span>students</span><span>b</span></span> <span class='division'><span>steadily</span><span>c</span></span> <span class='division'><span>increases.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "AMA, in addition to STI,<span class='division'><span>train</span><span>a</span></span> <span class='division'><span>students</span><span>b</span></span> to be<span class='division'><span>proficient</span><span>c</span></span>in computer<span class='division'><span>use.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>Knowledge</span><span>a</span></span> <span class='division'><span>should</span><span>b</span></span>always<span class='division'><span>be put</span><span>c</span></span>to good<span class='division'><span>use.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "One of the<span class='division'><span>viruses</span><span>a</span></span> <span class='division'><span>has infect</span><span>b</span></span> my<span class='division'><span>brother's</span><span>c</span></span>brand new<span class='division'><span>laptop</span><span>d</span></span>computer.<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "Internet<span class='division'><span>access</span><span>a</span></span> <span class='division'><span>allow</span><span>b</span></span> us<span class='division'><span>to communicate</span><span>c</span></span>with other people<span class='division'><span>anywhere</span><span>d</span></span>in the world. <span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>All</span><span>a</span></span>of the<span class='division'><span>pens</span><span>b</span></span> <span class='division'><span>are</span><span>c</span></span> <span class='division'><span>spent</span><span>d</span></span>yesterday<span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Each</span><span>a</span></span>computer<span class='division'><span>come</span><span>b</span></span>with<span class='division'><span>either</span><span>c</span></span> a compact disk player or a DVD<span class='division'><span>player.</span><span>d</span></span><span class='division'><span>No error.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+		],
+	},
+	{
+		id: "t8",
 		name: "Filipino - Kasing-Kahulugan",
-		brief: "Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
+		brief: "",
+		direction:
+			"Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Nauulinigan</b> ang pag-uusap ng grupo dahil sa lakas ng tinig nila. ",
+				text: "<span class='custom-italic'>Nauulinigan</span> ang pag-uusap ng grupo dahil sa lakas ng tinig nila. ",
 				options: [
 					"nahihimigan",
 					"napapakinggan",
@@ -1383,17 +2226,17 @@ export const topics: Topic[] = [
 				answer: "napapakinggan",
 			},
 			{
-				text: "Karapatan ng bawat batang Pilipino ang magkaroon ng pamilyang <b class='font-bold italic text-slate-500 dark:text-slate-400'>mag-aaruga</b> sa kanya. ",
+				text: "Karapatan ng bawat batang Pilipino ang magkaroon ng pamilyang <span class='custom-italic'>mag-aaruga</span> sa kanya. ",
 				options: ["mag-aalaga", "magsasaway", "gagabay", "tutulong"],
 				answer: "mag-aalaga",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Nagugulumihan</b> si Rochelle kung anong kurso ang kanyang kukuning sa kolehiyo.",
+				text: "<span class='custom-italic'>Nagugulumihan</span> si Rochelle kung anong kurso ang kanyang kukuning sa kolehiyo.",
 				options: ["nagtataka", "natutuwa", "nagpapasalamat", "nalilito"],
 				answer: "nalilito",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Tigib</b> na ng pasahero ang dyip nang ito ay umalis.",
+				text: "<span class='custom-italic'>Tigib</span> na ng pasahero ang dyip nang ito ay umalis.",
 				options: [
 					"punong-puno",
 					"kulang-kulang",
@@ -1403,17 +2246,17 @@ export const topics: Topic[] = [
 				answer: "punong-puno",
 			},
 			{
-				text: "Hindi na nakapagpigil ang kaawa-awang katulong kaya <b class='font-bold italic text-slate-500 dark:text-slate-400'>ibinulalas</b> ang sama ng loob sa mapag-aping amo.",
+				text: "Hindi na nakapagpigil ang kaawa-awang katulong kaya <span class='custom-italic'>ibinulalas</span> ang sama ng loob sa mapag-aping amo.",
 				options: ["isinabi", "inilahad", "isinigaw", "ibinulgar"],
 				answer: "ibinulgar",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Iminungkahi</b> ang pagbabawal magtapon ng basura sa di-wastong lugar.",
+				text: "<span class='custom-italic'>Iminungkahi</span> ang pagbabawal magtapon ng basura sa di-wastong lugar.",
 				options: ["ipinatupad", "inilahad", "siniwalat", "kinalat"],
 				answer: "ipinatupad",
 			},
 			{
-				text: "Madalas silang mapaaway dahil sa kanilang <b class='font-bold italic text-slate-500 dark:text-slate-400'>kapalaluan</b>.",
+				text: "Madalas silang mapaaway dahil sa kanilang <span class='custom-italic'>kapalaluan</span>.",
 				options: [
 					"kalabisan",
 					"kayabangan",
@@ -1423,7 +2266,7 @@ export const topics: Topic[] = [
 				answer: "kayabangan",
 			},
 			{
-				text: "Pakiramdam niya ay labis-labis ang kanyang suliranin kung kaya siya ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>maligalig</b>.",
+				text: "Pakiramdam niya ay labis-labis ang kanyang suliranin kung kaya siya ay <span class='custom-italic'>maligalig</span>.",
 				options: [
 					"matalino",
 					"masaya",
@@ -1433,37 +2276,37 @@ export const topics: Topic[] = [
 				answer: "magulo ang isip",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Maalwan</b> lang ang nararapat na dalahin ng isang bata. ",
+				text: "<span class='custom-italic'>Maalwan</span> lang ang nararapat na dalahin ng isang bata. ",
 				options: ["magaan", "maganda", "malaki", "maliit"],
 				answer: "magaan",
 			},
 			{
-				text: "Sa <b class='font-bold italic text-slate-500 dark:text-slate-400'>palihan</b> nagagawa ang mga itak, espada at iba pang yari sa bakal.",
+				text: "Sa <span class='custom-italic'>palihan</span> nagagawa ang mga itak, espada at iba pang yari sa bakal.",
 				options: ["palikuran", "pamilihang-bayan", "palengke", "pandayan"],
 				answer: "pandayan",
 			},
 			{
-				text: "Hindi mo dapat gawing katuwaan ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>pagkutya</b> sa kapwa. ",
+				text: "Hindi mo dapat gawing katuwaan ang <span class='custom-italic'>pagkutya</span> sa kapwa. ",
 				options: ["pagsumbong", "panunukso", "pagtampo", "pagkurot"],
 				answer: "panunukso",
 			},
 			{
-				text: "Ang pag-eensayo ng banda ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>nakabubulahaw</b>.",
+				text: "Ang pag-eensayo ng banda ay <span class='custom-italic'>nakabubulahaw</span>.",
 				options: ["nakaiinis", "nakakagulo", "nakatutuwa", "nakababahala"],
 				answer: "nakakagulo",
 			},
 			{
-				text: "Dapat kang <b class='font-bold italic text-slate-500 dark:text-slate-400'>magkamal</b> ng salapi sa mabuting paraan.",
+				text: "Dapat kang <span class='custom-italic'>magkamal</span> ng salapi sa mabuting paraan.",
 				options: ["magmana", "magnakaw", "mag-ipon", "maghanda"],
 				answer: "mag-ipon",
 			},
 			{
-				text: "Ilang taon ding <b class='font-bold italic text-slate-500 dark:text-slate-400'>siniil</b> ng mga dayuhan ang mga Pilipino.",
+				text: "Ilang taon ding <span class='custom-italic'>siniil</span> ng mga dayuhan ang mga Pilipino.",
 				options: ["tinago", "inapi", "tinimpi", "pinalaya"],
 				answer: "inapi",
 			},
 			{
-				text: "Ang anumang <b class='font-bold italic text-slate-500 dark:text-slate-400'>alitan</b> ay di dapat hayaang magtagal.",
+				text: "Ang anumang <span class='custom-italic'>alitan</span> ay di dapat hayaang magtagal.",
 				options: [
 					"proyekto",
 					"pagkakaibigan",
@@ -1473,42 +2316,42 @@ export const topics: Topic[] = [
 				answer: "di-pagkakasunduan",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Laganap</b> ang krisis kaya tayo ay dapat magtipid. ",
+				text: "<span class='custom-italic'>Laganap</span> ang krisis kaya tayo ay dapat magtipid. ",
 				options: ["kalat", "kapos", "limitado", "pantay"],
 				answer: "kalat",
 			},
 			{
-				text: "Madaling <b class='font-bold italic text-slate-500 dark:text-slate-400'>nababalino</b> sa lihis na gawain ang mga kabataang laki sa langsangan.",
+				text: "Madaling <span class='custom-italic'>nababalino</span> sa lihis na gawain ang mga kabataang laki sa langsangan.",
 				options: ["natutuwa", "namamalik-mata", "nagaganyak", "nakakaiwas"],
 				answer: "nagaganyak",
 			},
 			{
-				text: "Maraming <b class='font-bold italic text-slate-500 dark:text-slate-400'>himutok</b> ang mga manggagawa laban sa kanilang kumpanya gaya ng di pagtaas ng kanilang sahod. ",
+				text: "Maraming <span class='custom-italic'>himutok</span> ang mga manggagawa laban sa kanilang kumpanya gaya ng di pagtaas ng kanilang sahod. ",
 				options: ["nais", "balakid", "kilos", "reklamo"],
 				answer: "reklamo",
 			},
 			{
-				text: "Walang <b class='font-bold italic text-slate-500 dark:text-slate-400'>minimithi</b> ang iyong magulang kungdi ang mabigyan ka ng magandang kinabukasan.",
+				text: "Walang <span class='custom-italic'>minimithi</span> ang iyong magulang kungdi ang mabigyan ka ng magandang kinabukasan.",
 				options: ["dinadalangin", "ninanais", "ikinatutuwa", "tinitiis"],
 				answer: "ninanais",
 			},
 			{
-				text: "Iwasang <b class='font-bold italic text-slate-500 dark:text-slate-400'>sumugba</b> sa alanganin.",
+				text: "Iwasang <span class='custom-italic'>sumugba</span> sa alanganin.",
 				options: ["lumusong", "tumigil", "lumayo", "lumapit"],
 				answer: "lumusong",
 			},
 			{
-				text: "Huwag mong <b class='font-bold italic text-slate-500 dark:text-slate-400'>pukawin</b> ang batang nahihimlay.",
+				text: "Huwag mong <span class='custom-italic'>pukawin</span> ang batang nahihimlay.",
 				options: ["libangin", "palayain", "pigilin", "gisingin"],
 				answer: "gisingin",
 			},
 			{
-				text: "Hindi ka dapat <b class='font-bold italic text-slate-500 dark:text-slate-400'>magmaktol</b> kung ika'y napagsasabihan.",
+				text: "Hindi ka dapat <span class='custom-italic'>magmaktol</span> kung ika'y napagsasabihan.",
 				options: ["umiyak", "magtampo", "magdabog", "lumayas"],
 				answer: "magtampo",
 			},
 			{
-				text: "Tuwing Marso, ang puno ng mangga ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>namumutiktik</b> sa bunga. ",
+				text: "Tuwing Marso, ang puno ng mangga ay <span class='custom-italic'>namumutiktik</span> sa bunga. ",
 				options: [
 					"maraming-marami",
 					"bilang na bilang",
@@ -1518,12 +2361,12 @@ export const topics: Topic[] = [
 				answer: "maraming-marami",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Kumipot</b> ang Maynila sa dami ng taong naninirahan dito..",
+				text: "<span class='custom-italic'>Kumipot</span> ang Maynila sa dami ng taong naninirahan dito..",
 				options: ["lumuwag", "lumaki", "sumikip", "lumiit"],
 				answer: "sumikip",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Patang-pata</b> siya nang marating ang tuktok ng bundok Apo.",
+				text: "<span class='custom-italic'>Patang-pata</span> siya nang marating ang tuktok ng bundok Apo.",
 				options: [
 					"pagod na pagod",
 					"masiglang-masigla",
@@ -1535,78 +2378,79 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t11",
+		id: "t9",
 		name: "Filipino - Kasalungat",
-		brief: "Piliin ang salitang kasalungat ng salitang nakapahilig.",
+		brief: "",
+		direction: "Piliin ang salitang kasalungat ng salitang nakapahilig.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
-				text: "Ang pag-iibigan nina Florante at Laura ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>matimyas</b>.",
+				text: "Ang pag-iibigan nina Florante at Laura ay <span class='custom-italic'>matimyas</span>.",
 				options: ["di-magmamaliw", "di-totoo", "dalisay", "wagas"],
 				answer: "di-totoo",
 			},
 			{
-				text: "Dinidiligan ng pataba ang halaman upang ito'y <b class='font-bold italic text-slate-500 dark:text-slate-400'>yumabong</b>.",
+				text: "Dinidiligan ng pataba ang halaman upang ito'y <span class='custom-italic'>yumabong</span>.",
 				options: ["lumago", "dumami", "malanta", "lumiit"],
 				answer: "malanta",
 			},
 			{
-				text: "Namamasyal siya sa parke upang mapawi ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>lumbay</b>.",
+				text: "Namamasyal siya sa parke upang mapawi ang <span class='custom-italic'>lumbay</span>.",
 				options: ["galak", "lungkot", "sama ng loob", "gulat"],
 				answer: "galak",
 			},
 			{
-				text: "Hinintay namin ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>pagdaong</b> ng Superferry upang salubungin si Ate.",
+				text: "Hinintay namin ang <span class='custom-italic'>pagdaong</span> ng Superferry upang salubungin si Ate.",
 				options: ["pag-alis", "paglapag", "paghimpil", "pagtigil"],
 				answer: "pag-alis",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Palasak</b> na ang paggamit ng kompyuter.",
+				text: "<span class='custom-italic'>Palasak</span> na ang paggamit ng kompyuter.",
 				options: ["pambihira", "pangkaraniwan", "laganap", "matipid"],
 				answer: "pambihira",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Nabaghan</b> siya nang dumating ang kanyang amang dalawang taong naghanap-buhay sa ibang bansa. ",
+				text: "<span class='custom-italic'>Nabaghan</span> siya nang dumating ang kanyang amang dalawang taong naghanap-buhay sa ibang bansa. ",
 				options: ["nagulat", "nagtaka", "nainis", "nahimatay"],
 				answer: "nainis",
 			},
 			{
-				text: "Huwag mong ugaliin ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>umalipusta</b> ng iyong kapwa. ",
+				text: "Huwag mong ugaliin ang <span class='custom-italic'>umalipusta</span> ng iyong kapwa. ",
 				options: ["laitin", "purihin", "kagalitan", "bastusin"],
 				answer: "purihin",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Pahapay</b> na ang mga maliliit na kumpanya dahil sa pagbagsak ng ekonomiya. ",
+				text: "<span class='custom-italic'>Pahapay</span> na ang mga maliliit na kumpanya dahil sa pagbagsak ng ekonomiya. ",
 				options: ["paunlad", "tagilid", "pabagsak", "pasara"],
 				answer: "paunlad",
 			},
 			{
-				text: "Makapal at <b class='font-bold italic text-slate-500 dark:text-slate-400'>magalas</b> ang palad ng mga mason at karpintero.",
+				text: "Makapal at <span class='custom-italic'>magalas</span> ang palad ng mga mason at karpintero.",
 				options: ["mabuto", "magaspang", "maliksi", "makinis"],
 				answer: "makinis",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Masalimuot</b> man ang buhay natin, di tayo dapat mawalan ng pag-asa. ",
+				text: "<span class='custom-italic'>Masalimuot</span> man ang buhay natin, di tayo dapat mawalan ng pag-asa. ",
 				options: ["mahirap", "magulo", "maayos", "malungkot"],
 				answer: "maayos",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Sinaplutan</b> man lamang sana nila ang sanggol bago ito ginamit sa paglilimos.",
+				text: "<span class='custom-italic'>Sinaplutan</span> man lamang sana nila ang sanggol bago ito ginamit sa paglilimos.",
 				options: ["binalutan", "tinakpan", "dinamitan", "hinubaran"],
 				answer: "hinubaran",
 			},
 			{
-				text: "Hindi dapat pagkatiwalaan ang mga taong <b class='font-bold italic text-slate-500 dark:text-slate-400'>taksil</b> na mabait lamang kung kaharap mo.",
+				text: "Hindi dapat pagkatiwalaan ang mga taong <span class='custom-italic'>taksil</span> na mabait lamang kung kaharap mo.",
 				options: ["suwail", "matapat", "hunghang", "matalino"],
 				answer: "matapat",
 			},
 			{
-				text: "Tila walang kapaguran ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>mabungalngal</b> na bibig ni Lina. ",
+				text: "Tila walang kapaguran ang <span class='custom-italic'>mabungalngal</span> na bibig ni Lina. ",
 				options: ["tahimik", "masalita", "madaldal", "matalino"],
 				answer: "tahimik",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Napakakupad</b> ng takbo ng karitela kung ikukumpara sa traysikel at dyip.",
+				text: "<span class='custom-italic'>Napakakupad</span> ng takbo ng karitela kung ikukumpara sa traysikel at dyip.",
 				options: [
 					"napakabilis",
 					"napakabagal",
@@ -1616,80 +2460,82 @@ export const topics: Topic[] = [
 				answer: "napakabilis",
 			},
 			{
-				text: "Patuloy na <b class='font-bold italic text-slate-500 dark:text-slate-400'>magdarahop</b> ang taong tamad. ",
+				text: "Patuloy na <span class='custom-italic'>magdarahop</span> ang taong tamad. ",
 				options: ["asenso", "maghihikahos", "magiging salat", "maghihirap"],
 				answer: "asenso",
 			},
 			{
-				text: "Mahirap pakinggan ang sinasabi ng taong <b class='font-bold italic text-slate-500 dark:text-slate-400'>garil</b>.",
+				text: "Mahirap pakinggan ang sinasabi ng taong <span class='custom-italic'>garil</span>.",
 				options: ["utal", "bulol", "matalino", "matatas"],
 				answer: "matatas",
 			},
 			{
-				text: "Kumain ka ng masustansiyang pagkain nang hindi maging <b class='font-bold italic text-slate-500 dark:text-slate-400'>hawas</b>.",
+				text: "Kumain ka ng masustansiyang pagkain nang hindi maging <span class='custom-italic'>hawas</span>.",
 				options: ["payat", "matipuno", "manipis", "sakitin"],
 				answer: "sakitin",
 			},
 			{
-				text: "Ang labis na pagiging <b class='font-bold italic text-slate-500 dark:text-slate-400'>hidhid</b> ay nakasasama rin lalo pa't hindi ka marunong magbigay sa nangangailangan.",
+				text: "Ang labis na pagiging <span class='custom-italic'>hidhid</span> ay nakasasama rin lalo pa't hindi ka marunong magbigay sa nangangailangan.",
 				options: ["waldas", "kuripot", "matipid", "mapera"],
 				answer: "waldas",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Hungkag</b> ang bigasan dahil nasira ng bagyo ang mga palay.",
+				text: "<span class='custom-italic'>Hungkag</span> ang bigasan dahil nasira ng bagyo ang mga palay.",
 				options: ["salat", "puno", "matipid", "mapera"],
 				answer: "puno",
 			},
 			{
-				text: "Ang mga bulaklak ng orkidya ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>naluoy</b> sa tindi ng init.",
+				text: "Ang mga bulaklak ng orkidya ay <span class='custom-italic'>naluoy</span> sa tindi ng init.",
 				options: ["nabulok", "natuyo", "namumukadkad", "nalaglag"],
 				answer: "namumukadkad",
 			},
 			{
-				text: "Totoo bang <b class='font-bold italic text-slate-500 dark:text-slate-400'>walang latoy</b> ang pagkain sa ospital.",
+				text: "Totoo bang <span class='custom-italic'>walang latoy</span> ang pagkain sa ospital.",
 				options: ["walang lasa", "walang sangkap", "malasa", "kakaunti"],
 				answer: "malasa",
 			},
 			{
-				text: "Hindi <b class='font-bold italic text-slate-500 dark:text-slate-400'>linubayan</b> ng mga manunulat ang pagtatanong sa panauhing pandangal.",
+				text: "Hindi <span class='custom-italic'>linubayan</span> ng mga manunulat ang pagtatanong sa panauhing pandangal.",
 				options: ["tinigilan", "iniwasan", "dinikitan", "pinagpatuloy"],
 				answer: "pinagpatuloy",
 			},
 			{
-				text: "Ang mga tirahan ng mayayaman ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>maagwat</b> sa isa't isa. ",
+				text: "Ang mga tirahan ng mayayaman ay <span class='custom-italic'>maagwat</span> sa isa't isa. ",
 				options: ["hiwa-hiwalay", "magkakadikit", "manhid", "mahapdi"],
 				answer: "magkakadikit",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Maantak</b> ang sugat kapag napatakan ng kalamansi.",
+				text: "<span class='custom-italic'>Maantak</span> ang sugat kapag napatakan ng kalamansi.",
 				options: ["malaki", "maliit", "manhid", "mahapdi"],
 				answer: "manhid",
 			},
 			{
-				text: "Tunay na <b class='font-bold italic text-slate-500 dark:text-slate-400'>mabalasik</b> ang leon at ang tigre.",
+				text: "Tunay na <span class='custom-italic'>mabalasik</span> ang leon at ang tigre.",
 				options: ["maamo", "matapang", "masungit", "maliit"],
 				answer: "maamo",
 			},
 		],
 	},
 	{
-		id: "t12",
+		id: "t10",
 		name: "Filipino - Mga Kawikaan",
-		brief: "Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
+		brief: "",
+		direction:
+			"Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Nag-alsa balutan</b> ang katulong sa bahay dahil sa kalupitan ng kanyang amo.",
+				text: "<span class='custom-italic'>Nag-alsa balutan</span> ang katulong sa bahay dahil sa kalupitan ng kanyang amo.",
 				options: ["nagtampo", "lumayas", "nagtago", "nagmaktol"],
 				answer: "lumayas",
 			},
 			{
-				text: "Hindi totoo ang kanyang katapangan sapagkat <b class='font-bold italic text-slate-500 dark:text-slate-400'>bahag ang buntot</b> niya sa harap ng paghihirap.",
+				text: "Hindi totoo ang kanyang katapangan sapagkat <span class='custom-italic'>bahag ang buntot</span> niya sa harap ng paghihirap.",
 				options: ["malakas ang loob", "matapang", "duwag", "matiyaga"],
 				answer: "duwag",
 			},
 			{
-				text: "Dahil sa paulit-ulit na pagsisinungaling, <b class='font-bold italic text-slate-500 dark:text-slate-400'>basa ang papel</b> niya sa karamihan.",
+				text: "Dahil sa paulit-ulit na pagsisinungaling, <span class='custom-italic'>basa ang papel</span> niya sa karamihan.",
 				options: [
 					"ayaw nang paniwalaan",
 					"ayaw nang pagbigyan",
@@ -1699,7 +2545,7 @@ export const topics: Topic[] = [
 				answer: "ayaw nang paniwalaan",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Kumukulo ang dugo</b> ng ina ni Robin sa kanya sapagkat hindi siya nag-aral.",
+				text: "<span class='custom-italic'>Kumukulo ang dugo</span> ng ina ni Robin sa kanya sapagkat hindi siya nag-aral.",
 				options: [
 					"tuwang-tuwang",
 					"galit na galit",
@@ -1709,7 +2555,7 @@ export const topics: Topic[] = [
 				answer: "galit na galit",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Di-mahapayang gatang</b> ang pagpapalitan ng kuro-kuro ng mga mambabatas.",
+				text: "<span class='custom-italic'>Di-mahapayang gatang</span> ang pagpapalitan ng kuro-kuro ng mga mambabatas.",
 				options: [
 					"hindi maumpisahan",
 					"hindi magulo",
@@ -1719,12 +2565,12 @@ export const topics: Topic[] = [
 				answer: "hindi maawat",
 			},
 			{
-				text: "Noong panahon ng pananakop ng Kastila, ang mga Pilipino ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>hawak sa tainga</b> ng mga ito.",
+				text: "Noong panahon ng pananakop ng Kastila, ang mga Pilipino ay <span class='custom-italic'>hawak sa tainga</span> ng mga ito.",
 				options: ["sunud-sunuran", "katuwang", "kakampi", "alipin"],
 				answer: "sunud-sunuran",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Mabulaklak ang landas</b> ng taong masikap.",
+				text: "<span class='custom-italic'>Mabulaklak ang landas</span> ng taong masikap.",
 				options: [
 					"malabo ang kinabukasan",
 					"makulay ang kinabukasan",
@@ -1734,7 +2580,7 @@ export const topics: Topic[] = [
 				answer: "maganda ang kinabukasan",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Maliit ang sisidlan</b> ni Mhon kaya iniiwasan siyang biruin.",
+				text: "<span class='custom-italic'>Maliit ang sisidlan</span> ni Mhon kaya iniiwasan siyang biruin.",
 				options: [
 					"walang lakas-loob",
 					"walang galang",
@@ -1744,7 +2590,7 @@ export const topics: Topic[] = [
 				answer: "walang pasensiya",
 			},
 			{
-				text: "Mahilig kasing magbasa kahit sa madilim si Tina kaya siya ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>nagmamatang-manok</b>.",
+				text: "Mahilig kasing magbasa kahit sa madilim si Tina kaya siya ay <span class='custom-italic'>nagmamatang-manok</span>.",
 				options: [
 					"lumiliit ang mata",
 					"malabo ang mata",
@@ -1754,7 +2600,7 @@ export const topics: Topic[] = [
 				answer: "malabo ang mata",
 			},
 			{
-				text: "Kung minsan, inggit ang nagiging dahilan sa <b class='font-bold italic text-slate-500 dark:text-slate-400'>pagsasaulian ng kandila</b>.",
+				text: "Kung minsan, inggit ang nagiging dahilan sa <span class='custom-italic'>pagsasaulian ng kandila</span>.",
 				options: [
 					"pagkasira ng tiwala",
 					"pagkasira ng pamilya",
@@ -1764,22 +2610,22 @@ export const topics: Topic[] = [
 				answer: "pagkasira ng pagkakaibigan",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Pabalat-bunga</b> lang pala ang pagiging bukas-palad niya; may pulitikal pala itong kadahilanan kaya siya mapagbigay.",
+				text: "<span class='custom-italic'>Pabalat-bunga</span> lang pala ang pagiging bukas-palad niya; may pulitikal pala itong kadahilanan kaya siya mapagbigay.",
 				options: ["taos-puso", "pakunwari", "pasikreto", "sapilitan"],
 				answer: "pakunwari",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Tiklop-tuhod</b> ang akusado na siya ay patawarin ng biktima. ",
+				text: "<span class='custom-italic'>Tiklop-tuhod</span> ang akusado na siya ay patawarin ng biktima. ",
 				options: ["nagkukunwari", "nananakot", "pasikreto", "sapilitan"],
 				answer: "pasikreto",
 			},
 			{
-				text: "Ni ayaw man lamang humarap sa tao ang <b class='font-bold italic text-slate-500 dark:text-slate-400'>talo-saling</b> na si Eula. ",
+				text: "Ni ayaw man lamang humarap sa tao ang <span class='custom-italic'>talo-saling</span> na si Eula. ",
 				options: ["masungit", "isnabera", "mahiyain", "pangit"],
 				answer: "mahiyain",
 			},
 			{
-				text: "Di dapat tularan ang mga taong <b class='font-bold italic text-slate-500 dark:text-slate-400'>walang kusang-palo</b>.",
+				text: "Di dapat tularan ang mga taong <span class='custom-italic'>walang kusang-palo</span>.",
 				options: [
 					"walang kusang-loob",
 					"walang bait sa sarili",
@@ -1789,7 +2635,7 @@ export const topics: Topic[] = [
 				answer: "walang kusang-loob",
 			},
 			{
-				text: "Hindi tama ang ika'y <b class='font-bold italic text-slate-500 dark:text-slate-400'>walang lingon-likod</b>. Dapat ay suklian ang kabutihan ng iba sa iyo.",
+				text: "Hindi tama ang ika'y <span class='custom-italic'>walang lingon-likod</span>. Dapat ay suklian ang kabutihan ng iba sa iyo.",
 				options: [
 					"mayabang",
 					"mapagmataas",
@@ -1799,22 +2645,22 @@ export const topics: Topic[] = [
 				answer: "walang utang na loob",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Makapigil-hininga</b> ang pelikulang Muro Ami.",
+				text: "<span class='custom-italic'>Makapigil-hininga</span> ang pelikulang Muro Ami.",
 				options: ["nakakasabik", "nakaaantok", "nakaiinis", "nakasusuya"],
 				answer: "nakakasabik",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Halang ang kaluluwa</b> ng taong gumagawa ng karumal-dumal na krimen.",
+				text: "<span class='custom-italic'>Halang ang kaluluwa</span> ng taong gumagawa ng karumal-dumal na krimen.",
 				options: ["mabait", "bastos", "maitim ang budhi", "matapang"],
 				answer: "maitim ang budhi",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Di-maliparan ng uwak</b> ang lupain ng mga Aquino sa Tarlac. ",
+				text: "<span class='custom-italic'>Di-maliparan ng uwak</span> ang lupain ng mga Aquino sa Tarlac. ",
 				options: ["napakaliit", "napakalawak", "napakadami", "napakasikip"],
 				answer: "napakalawak",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Makunat pa sa patola</b> si Lola Rosa kaya uugud-ugod na. ",
+				text: "<span class='custom-italic'>Makunat pa sa patola</span> si Lola Rosa kaya uugud-ugod na. ",
 				options: [
 					"masayahin pa",
 					"masigla pa",
@@ -1824,7 +2670,7 @@ export const topics: Topic[] = [
 				answer: "napakatanda na",
 			},
 			{
-				text: "<b class='font-bold italic text-slate-500 dark:text-slate-400'>Nilubugan ng araw</b> ang mga taong nasalanta ng bagyo ang mga tirahan.",
+				text: "<span class='custom-italic'>Nilubugan ng araw</span> ang mga taong nasalanta ng bagyo ang mga tirahan.",
 				options: [
 					"nawalan ng pag-asa",
 					"dumilim ang paligid",
@@ -1834,7 +2680,7 @@ export const topics: Topic[] = [
 				answer: "nawalan ng pag-asa",
 			},
 			{
-				text: "Hindi mo matatagpuan sa kanilang bahay si Cecile palibhasa ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>may puyo sa talampakan</b>.",
+				text: "Hindi mo matatagpuan sa kanilang bahay si Cecile palibhasa ay <span class='custom-italic'>may puyo sa talampakan</span>.",
 				options: [
 					"mahilig matulog",
 					"mahilig mamasyal",
@@ -1844,7 +2690,7 @@ export const topics: Topic[] = [
 				answer: "mahilig mamasyal",
 			},
 			{
-				text: "Binata na si JB kaya siya ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>naniningalang-pugad</b> na. ",
+				text: "Binata na si JB kaya siya ay <span class='custom-italic'>naniningalang-pugad</span> na. ",
 				options: [
 					"naninigarilyo",
 					"nagbabarkada",
@@ -1854,7 +2700,7 @@ export const topics: Topic[] = [
 				answer: "nanliligaw",
 			},
 			{
-				text: "Malimit na may kabanggaan si Malou sa opisina dahil <b class='font-bold italic text-slate-500 dark:text-slate-400'>maanghang ang kanyang dila</b>.",
+				text: "Malimit na may kabanggaan si Malou sa opisina dahil <span class='custom-italic'>maanghang ang kanyang dila</span>.",
 				options: [
 					"pikon",
 					"walang pakialam",
@@ -1864,7 +2710,7 @@ export const topics: Topic[] = [
 				answer: "masakit magsalita",
 			},
 			{
-				text: "Di napaunlakan ni Ana ang imbitasyong manood sila ng sine sapagkat <b class='font-bold italic text-slate-500 dark:text-slate-400'>butas ang kanyang bulsa</b>.",
+				text: "Di napaunlakan ni Ana ang imbitasyong manood sila ng sine sapagkat <span class='custom-italic'>butas ang kanyang bulsa</span>.",
 				options: [
 					"sira ang pantalon",
 					"walang pera",
@@ -1874,7 +2720,7 @@ export const topics: Topic[] = [
 				answer: "walang pera",
 			},
 			{
-				text: "Si Karl ay <b class='font-bold italic text-slate-500 dark:text-slate-400'>nagtataingang-kawali</b>. Animo'y wala siyang naririnig kahit tinatawag na. ",
+				text: "Si Karl ay <span class='custom-italic'>nagtataingang-kawali</span>. Animo'y wala siyang naririnig kahit tinatawag na. ",
 				options: [
 					"matigas ang tainga",
 					"mahina ang pandinig",
@@ -1886,226 +2732,521 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t13",
-		name: "Filipino - Pagkilala sa Mali",
-		brief: "Basahing mabuti ang bawat pangungusap. Hanapin ang salita o grupo ng mga salitang may salangguhit na di wasto ang gamit. Kung walang mali, piliin ang titik e.",
-		timeLimit: "00:15:00",
+		id: "t10",
+		name: "Filipino - Wastong Gamit",
+		brief: "Piliin ang titik ng salitang angkop sa patlang.",
+		timeLimit: "15",
 		questions: [
 			{
-				text: "Ang walang kamatayang Mi Ultimo Adios ay sinulat ng Rizal sa Fort Santiago.",
-				options: [
-					"Ang",
-					"kamatayang",
-					"ay sinulat",
-					"ng Rizal",
-					"Walang Mali.",
-				],
-				answer: "ng Rizal",
-			},
-			{
-				text: "Si Teodora Alonzo at Francisco Mercado ang mga magulang ni Jose Rizal.",
-				options: ["Si", "at", "ang mga", "ni", "Walang Mali."],
-				answer: "Si",
-			},
-			{
-				text: "Hindi dapat lumikha nang buwis na hindi makakayang bayaran ng kahit sino.",
-				options: ["lumikha", "nang", "makakayang", "ng", "Walang Mali."],
+				text: "Katungkulan _______ sinuman ang tumulong sa kanyang kapwA. ",
+				options: ["nang", "ng", "namin", "natin"],
 				answer: "nang",
 			},
 			{
-				text: "Iniisip rin ng ating pamahalaan ang kapakanan ng mga maralita.",
-				options: ["rin", "ng ating", "ang", "ng mga", "Walang Mali."],
-				answer: "Walang Mali.",
+				text: "____________ ko kay Inay ang mga kaganapan sa aming paaralan sa isang buong papel.",
+				options: ["Isinulat", "Isinabi", "Sinulat", "Sinabi"],
+				answer: "Isinulat",
 			},
 			{
-				text: "Mainam sa lahat ng paraan ng pag-aaral ang magbalik-aral ng mga aralin bago pa man dumating ang mga pagsusulit sa paaralan.",
-				options: [
-					"Mainam",
-					"magbalik-aral",
-					"dumating",
-					"pagsusulit",
-					"Walang Mali.",
-				],
-				answer: "Mainam",
+				text: "Ang ____________ ng mga manlalaro ay dininig ng komite kahapon.",
+				options: ["pakiusapan", "pakikipag-usap", "ipakiusap", "pakiusap"],
+				answer: "pakiusap",
 			},
 			{
-				text: "Ang mga payo kung binitawan ay dapat mong pakinggan.",
-				options: [
-					"payo",
-					"kung",
-					"binitawan",
-					"pakinggan.",
-					"Walang Mali.",
-				],
+				text: "Nagulat ang mga tao _________ mabalitaan ang kaguluhan nagaganap sa Mindanao.",
+				options: ["nang", "ng", "noon", "datapwat"],
+				answer: "nang",
+			},
+			{
+				text: "___________ mo si Chin ng damit sa kabinet.",
+				options: ["Kunin", "Utusan", "Hanapan", "Hanapin"],
+				answer: "Hanapan",
+			},
+			{
+				text: "____________ suliranin ng pagtataas ng presyo ng gasolina ang pinapaksa ng pulong sa kasalukuyan.",
+				options: ["Hinggil kay", "Ayon kay", "Hinggil sa", "Ayon sa"],
+				answer: "Hinggil sa",
+			},
+			{
+				text: "Ang paglalakbay ___________ Magellan noong 1521 ang naging dahilan kung bakit nakilala ang Pilipinas sa ibang bansa. ",
+				options: ["ni", "daw", "sa", "para kay"],
+				answer: "ni",
+			},
+			{
+				text: "Ang pagkakalat o pagtatapon sa kung saan-saan ay ___________ batas.",
+				options: ["sang-ayon", "hinggil sa", "laban sa", "labag sa"],
+				answer: "labag sa",
+			},
+			{
+				text: "Pinatay _________ mga Hapones si Jose Abad Santos nang tinanggihan niyang ibunyag ang lihim ng mga kilusang Pilipino laban sa kanila. ",
+				options: ["namin", "ng", "nang", "nong"],
+				answer: "ng",
+			},
+			{
+				text: "____________ mo naman sa kanila na magdala ng mapagsaluhan.",
+				options: ["Usapin", "Usap-Usapan", "Ipakiusap", "Pakiusap"],
+				answer: "Ipakiusap",
+			},
+			{
+				text: "____________ G. at Gng. Reyes, matagal na nilang pinag-iipunan ang pangtustos sa pag-aaral mo sa kolehiyo.",
+				options: ["Ayon sa", "Ayon kay", "Ayon kina", "Sang-ayon kina"],
+				answer: "Ayon kina",
+			},
+			{
+				text: "____________ ni Emilio Jacinto ang <i>Kartilya</i> na naglalaman ng adhikain ng Katipunan.",
+				options: ["Winika", "Sinulatan", "Isinabi", "Nalaman"],
+				answer: "Winika",
+			},
+			{
+				text: "Dumating ang Lola _________ kami'y nagdiwang.",
+				options: ["kaya", "kung", "marahil", "siguro"],
+				answer: "kaya",
+			},
+			{
+				text: "Ang pagbabara ng mga estero ay dulot ________ walang pakundangang pagtatapon ng basura. ",
+				options: ["rin", "ng", "natin", "nila"],
+				answer: "ng",
+			},
+			{
+				text: "____________ maari ay magtipid tayo nang husto.",
+				options: ["Kung", "Dahil", "Bagamat", "Mandin"],
+				answer: "Kung",
+			},
+			{
+				text: "Mapadadali ang ating gawain _________ tayo ay magtutulung-tulungan.",
+				options: ["upang", "kung", "kahit", "ngunit"],
 				answer: "kung",
 			},
 			{
-				text: "Mag-aral ng mabuti upang hindi masayang ang iyong pera at panahon.",
-				options: ["Mag-aral", "ng", "upang", "masayang", "Walang Mali."],
-				answer: "ng",
+				text: "Masaya sila ____________ napakaraming pagsubok ang dumarating sa kanilang pamilya. ",
+				options: ["sapagkat", "marahil", "kahit", "ngunit"],
+				answer: "kahit",
 			},
 			{
-				text: "Tunay nga na masipag at maalahanin ang panganay na si Rochell.",
-				options: [
-					"Tunay nga",
-					"masipag",
-					"maalahanin",
-					"ang panganay",
-					"Walang Mali.",
-				],
-				answer: "maalahanin",
+				text: "____________ pagod na pagod na sa biyahe ni Rey ay nagawa pa rin niya ang mag-aral.",
+				options: ["Bagaman", "Maliban", "Samakatwid", "Maging"],
+				answer: "Bagaman",
 			},
 			{
-				text: "Hindi lamang sipag kundi tiyaga din ang kinakailangan upang magtagumpay sa isang negosyo.",
-				options: [
-					"kundi",
-					"din",
-					"kinakailangan",
-					"magtagumpay",
-					"Walang Mali.",
-				],
-				answer: "din",
+				text: "Patuloy tayong maghahalinhinan sa pagroronda ____________ di pa nahuhuli ang magnanakaw.",
+				options: ["samantala", "hanggang", "palibhasa", "bagaman"],
+				answer: "hanggang",
 			},
 			{
-				text: "Upang maiwasan ang pagkasira ng ngipin, ipinapayo ng mga dentista na nagsisipilyo matapos kumain.",
-				options: [
-					"Upang",
-					"ipinapayo",
-					"nagsisipilyo",
-					"kumain.",
-					"Walang Mali.",
-				],
-				answer: "nagsisipilyo",
-			},
-			{
-				text: "Haluin mo ang sopas ng iba't ibang gulay.",
-				options: ["Haluin", "ang", "ng", "iba't ibang", "Walang Mali."],
-				answer: "Haluin",
-			},
-			{
-				text: "Kundi ka kikilos at di gagawin ang iyong proyekto ay wala kang mapapala.",
-				options: [
-					"Kundi",
-					"kikilos",
-					"gagawin",
-					"mapapala.",
-					"Walang Mali.",
-				],
-				answer: "Kundi",
-			},
-			{
-				text: 'Alam mo ba na mayroon proyekto ang DECS na tinaguriang "Study Now, Pay Later"?',
-				options: ["Alam", "mayroon", "ang", "tinaguriang", "Walang Mali."],
-				answer: "mayroon",
-			},
-			{
-				text: "Nagtutulungan ang mga ninuno nating Ipugaw kaya nayari ang hagdan-hagdang taniman ng palay.",
-				options: [
-					"Nagtutulungan",
-					"nating",
-					"nayari",
-					"palay.",
-					"Walang Mali.",
-				],
-				answer: "Nagtutulungan",
-			},
-			{
-				text: "Ginigising lamang daw ng Maykapal ang mga taong nakakalimot sa Kanya sapagkat nagkakaroon ng kalamidad.",
-				options: [
-					"Ginigising",
-					"ng Maykapal",
-					"nakakalimot",
-					"sapagkat",
-					"Walang Mali.",
-				],
-				answer: "sapagkat",
-			},
-			{
-				text: "Maganda siya ngunit masungit kaya hindi siya popular sa mga kamag-aral.",
-				options: [
-					"ngunit",
-					"kaya",
-					"popular",
-					"kamag-aral.",
-					"Walang Mali.",
-				],
-				answer: "Walang Mali.",
-			},
-			{
-				text: "Upang umunlad ang bayan kailangan ang pagtutulungan nang lahat.",
-				options: [
-					"Upang",
-					"umunlad",
-					"pagtutulungan",
-					"nang",
-					"Walang Mali.",
-				],
+				text: "Nagtatalon sa tuwa si Regina ____________ mapanalunan ang patimpalak sa pagsusulat ng maikling kuwento.",
+				options: ["subalit", "disin sana'y", "nang", "ng"],
 				answer: "nang",
 			},
 			{
-				text: "Hindi nawawalan ng pag-asa ang mga mayron matibay na paniniwala.",
-				options: [
-					"nawawalan",
-					"mayron",
-					"matibay",
-					"paniniwala.",
-					"Walang Mali.",
-				],
-				answer: "mayron",
+				text: "Hindi maaring ibilanggo ang sino man dahil ________ kanyang pagkakautang.",
+				options: ["subalit", "disin sana'y", "nang", "sa"],
+				answer: "sa",
 			},
 			{
-				text: "Ipinakiusap mo ba na pinayagan kang gamitin ang kompyuter?",
-				options: [
-					"Ipinakiusap",
-					"pinayagan",
-					"gamitin",
-					"kompyuter?",
-					"Walang Mali.",
-				],
-				answer: "pinayagan",
-			},
-			{
-				text: "Hanapan mo ng sagot sa iyong katanungan ang iyong guro.",
-				options: ["Hanapan", "ng", "sa", "katanungan", "Walang Mali."],
-				answer: "Walang Mali.",
-			},
-			{
-				text: "Ayon sa mga dalubhasa, malaki raw ang naitutulong ng pag-eehersisiyo ng pag-iwas sa pagkakaroon ng sakit sa puso.",
-				options: ["raw", "naitutulong", "ng", "sa", "Walang Mali."],
+				text: "Nagpapatugtog sila _________ awiting Pilipino.",
+				options: ["sa", "nang", "ng", "na"],
 				answer: "ng",
 			},
 			{
-				text: "Dapat natin iiwasan ang labis na pagkain ng mga maalat na pagkain.",
-				options: ["Dapat", "iiwasan", "pagkain", "maalat", "Walang Mali."],
-				answer: "iiwasan",
+				text: "Ang ____________ ng mga mamamayan ng huwag munang magtaas ng presyo ng langis ay pinag-aralan ng kinauukulan.",
+				options: ["usapin", "pakiusapan", "ipakiusap", "pakiusap"],
+				answer: "pakiusap",
 			},
 			{
-				text: "Panatilihin natin laging malinis at malayo sa polusyon ang ating kapaligiran para na rin sa ating kalusugan.",
-				options: ["Panatilihin", "sa", "ang", "para", "Walang Mali."],
-				answer: "Walang Mali.",
+				text: "Hindi _______ nabibigyang lunas ang sakit na AIDS sa ngayon.",
+				options: ["pa", "na", "sa", "ka"],
+				answer: "pa",
 			},
 			{
-				text: "Laban sa batas ang smuggling dahil ito ay isang paraan ng pagsabotahe sa ekonomiya.",
-				options: ["Laban", "dahil", "ng", "sa", "Walang Mali."],
-				answer: "Laban",
+				text: "____________ bang suliranin na hindi kayang lutasin.",
+				options: ["May", "Mayroon", "Sino", "Anong"],
+				answer: "Mayroon",
 			},
 			{
-				text: "Walang kabutihang naidudulot ang droga, bagkus ito pa nga ang nakasisira nang tahanan at lipunan.",
-				options: [
-					"naidudulot",
-					"bagkus",
-					"nakasisira",
-					"nang",
-					"Walang Mali.",
-				],
-				answer: "nang",
+				text: "____________ patimpalak sa Balagtasan na gaganapin sa plasa. ",
+				options: ["May", "Mayroon", "Anong", "Bakit"],
+				answer: "May",
+			},
+			{
+				text: "____________ ba nagkaroon ng isang bulkan.",
+				options: ["Sino", "Alin", "Ano", "Paano"],
+				answer: "Paano",
+			},
+			{
+				text: "____________ natin ang ating kapwang nangangailan ng tulong.",
+				options: ["Abutan", "Kunin", "Abutin", "Kunan"],
+				answer: "Abutan",
+			},
+			{
+				text: "Huwag mong ____________ ang sino man nasa kapangyarihan kung nais mo laman makakuha ng pabor.",
+				options: ["abutin", "abutan", "kunin", "kunan"],
+				answer: "abutan",
+			},
+			{
+				text: "____________ mo ang mabibigat na dalahin ng Inay.",
+				options: ["Abutan", "Tanawin", "Kunin", "Kunan"],
+				answer: "Kunin",
+			},
+		],
+	},
+	// {
+	// 	id: "t11",
+	// 	name: "Filipino - Pagkilala sa Mali",
+	// 	brief: "",
+	// 	direction:
+	// 		"Basahing mabuti ang bawat pangungusap. Hanapin ang salita o grupo ng mga salitang may salangguhit na di wasto ang gamit. Kung walang mali, piliin ang titik e.",
+	// 	timeLimit: "00:15:00",
+	// 	questions: [
+	// 		{
+	// 			text: "Ang walang kamatayang Mi Ultimo Adios ay sinulat ng Rizal sa Fort Santiago.",
+	// 			options: [
+	// 				"Ang",
+	// 				"kamatayang",
+	// 				"ay sinulat",
+	// 				"ng Rizal",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "ng Rizal",
+	// 		},
+	// 		{
+	// 			text: "Si Teodora Alonzo at Francisco Mercado ang mga magulang ni Jose Rizal.",
+	// 			options: ["Si", "at", "ang mga", "ni", "Walang Mali."],
+	// 			answer: "Si",
+	// 		},
+	// 		{
+	// 			text: "Hindi dapat lumikha nang buwis na hindi makakayang bayaran ng kahit sino.",
+	// 			options: ["lumikha", "nang", "makakayang", "ng", "Walang Mali."],
+	// 			answer: "nang",
+	// 		},
+	// 		{
+	// 			text: "Iniisip rin ng ating pamahalaan ang kapakanan ng mga maralita.",
+	// 			options: ["rin", "ng ating", "ang", "ng mga", "Walang Mali."],
+	// 			answer: "Walang Mali.",
+	// 		},
+	// 		{
+	// 			text: "Mainam sa lahat ng paraan ng pag-aaral ang magbalik-aral ng mga aralin bago pa man dumating ang mga pagsusulit sa paaralan.",
+	// 			options: [
+	// 				"Mainam",
+	// 				"magbalik-aral",
+	// 				"dumating",
+	// 				"pagsusulit",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "Mainam",
+	// 		},
+	// 		{
+	// 			text: "Ang mga payo kung binitawan ay dapat mong pakinggan.",
+	// 			options: [
+	// 				"payo",
+	// 				"kung",
+	// 				"binitawan",
+	// 				"pakinggan.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "kung",
+	// 		},
+	// 		{
+	// 			text: "Mag-aral ng mabuti upang hindi masayang ang iyong pera at panahon.",
+	// 			options: ["Mag-aral", "ng", "upang", "masayang", "Walang Mali."],
+	// 			answer: "ng",
+	// 		},
+	// 		{
+	// 			text: "Tunay nga na masipag at maalahanin ang panganay na si Rochell.",
+	// 			options: [
+	// 				"Tunay nga",
+	// 				"masipag",
+	// 				"maalahanin",
+	// 				"ang panganay",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "maalahanin",
+	// 		},
+	// 		{
+	// 			text: "Hindi lamang sipag kundi tiyaga din ang kinakailangan upang magtagumpay sa isang negosyo.",
+	// 			options: [
+	// 				"kundi",
+	// 				"din",
+	// 				"kinakailangan",
+	// 				"magtagumpay",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "din",
+	// 		},
+	// 		{
+	// 			text: "Upang maiwasan ang pagkasira ng ngipin, ipinapayo ng mga dentista na nagsisipilyo matapos kumain.",
+	// 			options: [
+	// 				"Upang",
+	// 				"ipinapayo",
+	// 				"nagsisipilyo",
+	// 				"kumain.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "nagsisipilyo",
+	// 		},
+	// 		{
+	// 			text: "Haluin mo ang sopas ng iba't ibang gulay.",
+	// 			options: ["Haluin", "ang", "ng", "iba't ibang", "Walang Mali."],
+	// 			answer: "Haluin",
+	// 		},
+	// 		{
+	// 			text: "Kundi ka kikilos at di gagawin ang iyong proyekto ay wala kang mapapala.",
+	// 			options: [
+	// 				"Kundi",
+	// 				"kikilos",
+	// 				"gagawin",
+	// 				"mapapala.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "Kundi",
+	// 		},
+	// 		{
+	// 			text: 'Alam mo ba na mayroon proyekto ang DECS na tinaguriang "Study Now, Pay Later"?',
+	// 			options: ["Alam", "mayroon", "ang", "tinaguriang", "Walang Mali."],
+	// 			answer: "mayroon",
+	// 		},
+	// 		{
+	// 			text: "Nagtutulungan ang mga ninuno nating Ipugaw kaya nayari ang hagdan-hagdang taniman ng palay.",
+	// 			options: [
+	// 				"Nagtutulungan",
+	// 				"nating",
+	// 				"nayari",
+	// 				"palay.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "Nagtutulungan",
+	// 		},
+	// 		{
+	// 			text: "Ginigising lamang daw ng Maykapal ang mga taong nakakalimot sa Kanya sapagkat nagkakaroon ng kalamidad.",
+	// 			options: [
+	// 				"Ginigising",
+	// 				"ng Maykapal",
+	// 				"nakakalimot",
+	// 				"sapagkat",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "sapagkat",
+	// 		},
+	// 		{
+	// 			text: "Maganda siya ngunit masungit kaya hindi siya popular sa mga kamag-aral.",
+	// 			options: [
+	// 				"ngunit",
+	// 				"kaya",
+	// 				"popular",
+	// 				"kamag-aral.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "Walang Mali.",
+	// 		},
+	// 		{
+	// 			text: "Upang umunlad ang bayan kailangan ang pagtutulungan nang lahat.",
+	// 			options: [
+	// 				"Upang",
+	// 				"umunlad",
+	// 				"pagtutulungan",
+	// 				"nang",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "nang",
+	// 		},
+	// 		{
+	// 			text: "Hindi nawawalan ng pag-asa ang mga mayron matibay na paniniwala.",
+	// 			options: [
+	// 				"nawawalan",
+	// 				"mayron",
+	// 				"matibay",
+	// 				"paniniwala.",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "mayron",
+	// 		},
+	// 		{
+	// 			text: "Ipinakiusap mo ba na pinayagan kang gamitin ang kompyuter?",
+	// 			options: [
+	// 				"Ipinakiusap",
+	// 				"pinayagan",
+	// 				"gamitin",
+	// 				"kompyuter?",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "pinayagan",
+	// 		},
+	// 		{
+	// 			text: "Hanapan mo ng sagot sa iyong katanungan ang iyong guro.",
+	// 			options: ["Hanapan", "ng", "sa", "katanungan", "Walang Mali."],
+	// 			answer: "Walang Mali.",
+	// 		},
+	// 		{
+	// 			text: "Ayon sa mga dalubhasa, malaki raw ang naitutulong ng pag-eehersisiyo ng pag-iwas sa pagkakaroon ng sakit sa puso.",
+	// 			options: ["raw", "naitutulong", "ng", "sa", "Walang Mali."],
+	// 			answer: "ng",
+	// 		},
+	// 		{
+	// 			text: "Dapat natin iiwasan ang labis na pagkain ng mga maalat na pagkain.",
+	// 			options: ["Dapat", "iiwasan", "pagkain", "maalat", "Walang Mali."],
+	// 			answer: "iiwasan",
+	// 		},
+	// 		{
+	// 			text: "Panatilihin natin laging malinis at malayo sa polusyon ang ating kapaligiran para na rin sa ating kalusugan.",
+	// 			options: ["Panatilihin", "sa", "ang", "para", "Walang Mali."],
+	// 			answer: "Walang Mali.",
+	// 		},
+	// 		{
+	// 			text: "Laban sa batas ang smuggling dahil ito ay isang paraan ng pagsabotahe sa ekonomiya.",
+	// 			options: ["Laban", "dahil", "ng", "sa", "Walang Mali."],
+	// 			answer: "Laban",
+	// 		},
+	// 		{
+	// 			text: "Walang kabutihang naidudulot ang droga, bagkus ito pa nga ang nakasisira nang tahanan at lipunan.",
+	// 			options: [
+	// 				"naidudulot",
+	// 				"bagkus",
+	// 				"nakasisira",
+	// 				"nang",
+	// 				"Walang Mali.",
+	// 			],
+	// 			answer: "nang",
+	// 		},
+	// 	],
+	// },
+	{
+		id: "t11",
+		name: "Filipino - Pagkilala sa Mali",
+		brief: "Basahing mabuti ang bawat pangungusap. Hanapin ang salita o grupo ng mga salitang may salangguhit na di wasto ang gamit. Kung walang mali, piliin ang titik <strong>e</strong>.",
+		timeLimit: "00:15:00",
+		questions: [
+			{
+				text: "<span class='division'><span>Ang</span><span>a</span></span>walang <span class='division'><span>kamatayang</span><span>b</span></span><i>Mi Ultimo Adios</i><span class='division'><span>ay sinulat</span><span>c</span></span><span class='division'><span>ng Rizal</span><span>d</span></span>sa Fort Santiago<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "<span class='division'><span>Si</span><span>a</span></span>Teodora Alonzo<span class='division'><span>at</span><span>b</span></span>Francisco Mercado<span class='division'><span>ang mga</span><span>c</span></span>magulang<span class='division'><span>ni</span><span>d</span></span>Jose Rizal.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "Hindi dapat<span class='division'><span>lumikha</span><span>a</span></span><span class='division'><span>nang</span><span>b</span></span>buwis na hindi <span class='division'><span>makakayang</span><span>c</span></span>bayaran<span class='division'><span>ng</span><span>d</span></span>kahit sino.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "Iniisip <span class='division'><span>rin</span><span>a</span></span><span class='division'><span>ng ating</span><span>b</span></span>pamahalaan<span class='division'><span>ang</span><span>c</span></span>kapakanan<span class='division'><span>ng mga</span><span>d</span></span>maralita. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Mainam</span><span>a</span></span>sa lahat ng paraan ng pag-aaral ang<span class='division'><span>magbalik-aral</span><span>b</span></span>ng mga aralin bago pa man<span class='division'><span>dumating</span><span>c</span></span>ang mga <span class='division'><span>pagsusulit</span><span>d</span></span>sa paaralan.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "Ang mga<span class='division'><span>payo</span><span>a</span></span><span class='division'><span>kung</span><span>b</span></span><span class='division'><span>binitawan</span><span>c</span></span>ay dapat mong<span class='division'><span>pakinggan.</span><span>d</span></span><span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Mag-aral</span><span>a</span></span><span class='division'><span>ng</span><span>b</span></span>mabuti<span class='division'><span>upang</span><span>c</span></span>hindi<span class='division'><span>masayang</span><span>d</span></span>ang iyong pera at panahon.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Tunay nga</span><span>a</span></span>na<span class='division'><span>masipag</span><span>b</span></span>at<span class='division'><span>maalahanin</span><span>c</span></span><span class='division'><span>ang panganay</span><span>d</span></span>na si Rochell.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Hindi lamang sipag<span class='division'><span>kundi</span><span>a</span></span>tiyaga<span class='division'><span>din</span><span>b</span></span>ang<span class='division'><span>kinakailangan</span><span>c</span></span>upang<span class='division'><span>magtagumpay</span><span>d</span></span>sa isang negosyo. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Upang</span><span>a</span></span>maiwasan ang pagkasira ng ngipin,<span class='division'><span>ipinapayo</span><span>b</span></span>ng mga dentista na<span class='division'><span>nagsisipilyo</span><span>c</span></span>matapos<span class='division'><span>kumain.</span><span>d</span></span> <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Haluin</span><span>a</span></span>mo<span class='division'><span>ang</span><span>b</span></span>sopas<span class='division'><span>ng</span><span>c</span></span><span class='division'><span>iba't ibang</span><span>d</span></span>gulay.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>Kundi</span><span>a</span></span>ka<span class='division'><span>kikilos</span><span>b</span></span>at di<span class='division'><span>gagawin</span><span>c</span></span>ang iyong proyekto ay wala kang<span class='division'><span>mapapala. </span><span>d</span></span><span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>Alam</span><span>a</span></span>mo ba na<span class='division'><span>mayroon</span><span>b</span></span>proyekto<span class='division'><span>ang</span><span>c</span></span>DECS na<span class='division'><span>tinaguriang</span><span>d</span></span>\"Study Now, Pay Later\"?<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Nagtutulungan</span><span>a</span></span>ang mga ninuno<span class='division'><span>nating</span><span>b</span></span>Ipugaw kaya<span class='division'><span>nayari</span><span>c</span></span>ang hagdan-hagdang taniman ng<span class='division'><span>palay.</span><span>d</span></span> <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "<span class='division'><span>Ginigising</span><span>a</span></span>lamang daw<span class='division'><span>ng Maykapal</span><span>b</span></span>ang mga taong<span class='division'><span>nakakalimot</span><span>c</span></span>sa Kanya<span class='division'><span>sapagkat</span><span>d</span></span>nagkakaroon ng  kalamidad. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "Maganda siya<span class='division'><span>ngunit</span><span>a</span></span>masungit<span class='division'><span>kaya</span><span>b</span></span>hindi siya<span class='division'><span>popular</span><span>c</span></span>sa mga<span class='division'><span>kamag-aral.</span><span>d</span></span><span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Upang</span><span>a</span></span><span class='division'><span>umunlad</span><span>b</span></span>ang bayan kailangan ang<span class='division'><span>pagtutulungan</span><span>c</span></span><span class='division'><span>nang</span><span>d</span></span>lahat.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "Hindi<span class='division'><span>nawawalan</span><span>a</span></span>ng pag-asa ang mga<span class='division'><span>mayron</span><span>b</span></span><span class='division'><span>matibay</span><span>c</span></span>na<span class='division'><span>paniniwala. </span><span>d</span></span><span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Ipinakiusap</span><span>a</span></span>mo ba na<span class='division'><span>pinayagan</span><span>b</span></span>kang<span class='division'><span>gamitin</span><span>c</span></span>ang<span class='division'><span>kompyuter?</span><span>d</span></span><span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Hanapan</span><span>a</span></span>mo<span class='division'><span>ng</span><span>b</span></span>sagot<span class='division'><span>sa</span><span>c</span></span>iyong<span class='division'><span>katanungan</span><span>d</span></span>ang iyong guro.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "Ayon sa mga dalubhasa, malaki<span class='division'><span>raw</span><span>a</span></span>ang<span class='division'><span>naitutulong</span><span>b</span></span>ng pag-eehersisiyo<span class='division'><span>ng</span><span>c</span></span>pag-iwas<span class='division'><span>sa</span><span>d</span></span>pagkakaroon ng  sakit sa puso.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "<span class='division'><span>Dapat</span><span>a</span></span>natin<span class='division'><span>iiwasan</span><span>b</span></span>ang labis na<span class='division'><span>pagkain</span><span>c</span></span>ng mga<span class='division'><span>maalat</span><span>d</span></span>na pagkain.<span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "<span class='division'><span>Panatilihin</span><span>a</span></span>natin laging malinis at malayo<span class='division'><span>sa</span><span>b</span></span>polusyon<span class='division'><span>ang</span><span>c</span></span>ating kapaligiran<span class='division'><span>para</span><span>d</span></span>na rin sa ating kalusugan. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "e",
+			},
+			{
+				text: "<span class='division'><span>Laban</span><span>a</span></span>sa batas ang <i>smuggling</i><span class='division'><span>dahil</span><span>b</span></span>ito ay isang paraan<span class='division'><span>ng</span><span>c</span></span>pagsabotahe<span class='division'><span>sa</span><span>d</span></span>ekonomiya. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "Walang kabutihang<span class='division'><span>naidudulot</span><span>a</span></span>ang droga,<span class='division'><span>bagkus</span><span>b</span></span>ito pa nga ang<span class='division'><span>nakasisira</span><span>c</span></span><span class='division'><span>nang</span><span>d</span></span>tahanan at lipunan. <span class='division'><span>Walang Mali.</span><span>e</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
 			},
 		],
 	},
 	{
-		id: "t14",
+		id: "t12",
 		name: "Constitution",
-		brief: "Choose letter that corresponds to the answer that will make each statement correct.",
+		brief: "",
+		direction:
+			"Choose letter that corresponds to the answer that will make each statement correct.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
@@ -2373,9 +3514,11 @@ export const topics: Topic[] = [
 		],
 	},
 	{
-		id: "t15",
+		id: "t13",
 		name: "Inductive Reasoning",
-		brief: "Discover the principle involved in each of the following series. Choose the letter that corresponds to the best answer.",
+		brief: "",
+		direction:
+			"Discover the principle involved in each of the following series. Choose the letter that corresponds to the best answer.",
 		timeLimit: "00:15:00",
 		questions: [
 			{
@@ -2627,6 +3770,116 @@ export const topics: Topic[] = [
 				text: '<div class="space-x-3"><span>b9b9</span><span>c7c7</span><span>d5d5</span></div>',
 				options: ["e3e2", "e4e4", "e2e2", "e3e3"],
 				answer: "e3e3",
+			},
+		],
+	},
+	{
+		id: "t14",
+		name: "Data Sufficiency",
+		brief: "",
+		direction:
+			"Each of this data sufficiency problem consists of a question and two statements, labeled (1) and (2), in which certain data are given. You have to decide whether the data given in the statements are sufficient for the answering the questions. <div class='mt-1'>Choose the letter <br>a. if statement (1) ALONE is sufficient, but statement (2) alone is not sufficent. <br>b. if statement (2) ALONE is sufficient, but statement (1) alone is not sufficent. <br>c. if BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficent. <br>d. if each statement ALONE is sufficent. <br>e. if statements (1) and (2) TOGETHER are not sufficent.</div>",
+		timeLimit: "00:10:00",
+		questions: [
+			{
+				text: "By what percent was the price per kilo of chicken increased? <br>(1) The price per kilo of chicken was increased by ₱20.<br>(2) The price per kilo of chicken after the increase was ₱120.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "A real estate broker received a commission of 8% of the selling price of a certain property, what was the selling price of the property?<br>(1) The selling price minus the real estate agent's commission was ₱9,200,000.<br>(2) The selling price was 250% of the original purchase price of ₱4,000,000.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "Chin-Chin and Quennie May were among those who sold raffle tickets to raise money for the cluB. If Chin-Chin and Queenie May sold a total of 168 tickets, how many tickets did Chin-Chin sell?<br>(1) Queenie May sold 60% as many raffle tickets as Chin-Chin.<br>(2) Queenie May sold 8% of all the raffle tickets sold.",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "What is the ratio of m : s : a ?<br>(1) a = 2, and ms = 64 <br>(2) <span class='fraction'><span>m</span><span>s</span></span> = 2 and  <span class='fraction'><span>a</span><span>s</span></span> = <span class='fraction'><span>1</span><span>4</span></span>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "If <span class='custom-italic'>x</span> and <span class='custom-italic'>y</span> are integers, is x divisible by 17?<br>(1) The product <span class='custom-italic'>xy</span> is divisible by 17.<br>(2) <span class='custom-italic'>y</span> is not divisible by 17.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "On Saturday morning the printing machine of Gerpress Printing ran continously at uniform rate to fill a production order. At what time did it completely fill the order that morning?<br>(1) The supervisor began the plan for production 8:08 a. m.<br>(2) The machine had filled 50% of the order at 9:48 a. m. and <span class='fraction'><span>5</span><span>6</span></span> of the order by 10:18 a. m.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "How many books does Gerard have?<br>(1) If Gerard had 18 fewer books, he would have only half as many as he actually has.<br>(2) Gerard has three times as many fiction as non-fiction books.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "What number is 24% of <span class='custom-italic'>x</span> ? <br>(1) 16 is 8% of <span class='custom-italic'>x</span><br> (2) <span class='fraction'><span>1</span><span>8</span></span> of <span class='custom-italic'>x</span> is 1600.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "What was the total amount raised for the Payatas Tragedy from private corporations and personal donations?<br>(1) Of the amount donated, 48% came from the private corporations<br> (2) Of the amount donated, ₱15M came from personal donations.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Miriam's total score in the three bowling games was 530. What were her scores?<br>(1) Miriam's highes score was 198.<br> (2) The sum of Miriam's two highest score was 368.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "Is the value of <span class='custom-italic'>n</span> closer to 48 than to 78?<br>(1) 78 - <span class='custom-italic'>n</span> > <span class='custom-italic'>n</span> - 48<br>(2) <span class='custom-italic'>n</span> > 60<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "In last Saturday's Midnight Sale at StA. Lucia Mall a certain shop sold 75% of the shirts in its inventory. Each shirt was sold for ₱358. What was the total revenue from the sale of these shirts on that day?<br>(1) When the shop opened last Saturday, there were 448 shirts in its inventory.<br> (2) All but 112 of the shop's inventory were sold last Saturday.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
+			},
+			{
+				text: "How many more boys than girls are there in the room?<br>(1) There is a total of 56 girls and boys in the room.<br> (2) The number of boys in the room equals the square of the number of girls in the room. <br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "In what year was Gerard born?<br>(1) Gerards's friend Mary Angela, who is <span class='fraction'><span>1</span><span>2</span></span> years younger than him, was born in 1979.<br> (2) In 1998 Gerard turned 20 years olD. <br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "A box contains 48 balls, of which 30 are red and 18 are blue. If 16 of the balls are removed, how many of the balls left in the box are blue?<br>(1) Of the balls removed, the ratio of the number of red ones to the number of blue one is 5:3.<br> (2) Of the first 8 marbles removed, 5 are reD. <br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "How long did it take Mrs, Alferez to drive non-stop on a trip from her home to Ayala Alabang?<br>(1) If Mrs. Alferez's average speed for the trip had been 1.5 times as fast, the trip would have taken 2 hours.<br> (2) Mrs. Alferez's average speed for the trip was 80 km per hour.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "a",
+			},
+			{
+				text: "If Myrna had a dentist's appointment on a certain day, was the appointment on a Friday?<br>(1) Exactly 64 hours before the appointment, it was Wednesday<br> (2) The appointment is between 2:00 p.m. to 7:00 p.m.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "What was the average number of kilometers per liter of gasoline a car can consume during a certain trip?<br>(1) The total cost of the gasoline used by the car or the 640-km trip was ₱1,152<br> (2) The cost for the gasoline used by the car for the trip was ₱18.00 per liter<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "c",
+			},
+			{
+				text: "What is the ratio of <span class='custom-italic'>a</span> to <span class='custom-italic'>b</span>?<br>(1) <span class='custom-italic'>a</span> is 8 more than twice <span class='custom-italic'>b</span>.<br>(2) The ratio of <span class='custom-italic'>a</span> to 4<span class='custom-italic'>b</span> is 3:7.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "b",
+			},
+			{
+				text: "At MSA Tutorial and Review Center, 400 students are enrolled for the Review Program or Academic Advancement Program or both. If 100 of these students are not enrolled in the Review Program, how many of them are enrolled in both MSA Review Program and MSA Academic Advancement Program?<br>(1) Of the 400 students, 160 are not enrolled in the Academic Advancement Program.<br> (2) A total of 240 of the students are enrolled in the Academic Advancement Program.<br>",
+				options: ["a", "b", "c", "d", "e"],
+				answer: "d",
 			},
 		],
 	},

@@ -40,7 +40,7 @@ export default function QuestionCarousel({
 	}, [currentIdx, stepPercent]);
 
 	return (
-		<div className="relative overflow-hidden">
+		<div className="relative overflow-hidden bg-white dark:bg-zinc-900 rounded-lg border border-zinc-300 dark:border-zinc-700 shadow-sm transition-colors">
 			<div
 				ref={trackRef}
 				className="flex"

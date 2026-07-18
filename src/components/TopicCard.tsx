@@ -8,19 +8,24 @@ export default function TopicCard({ topic }: { topic: any }) {
 	// const durationInSeconds = (topic.timeLimit || 0) * 60;
 
 	return (
-		<div className="bg-white flex flex-col dark:bg-zinc-800 p-6 rounded-xl border border-zinc-200 dark:border-zinc-700 shadow-md transition-all hover:shadow-lg">
+		<div className="bg-white flex flex-col dark:bg-zinc-800 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 shadow-md transition-all hover:shadow-lg">
 			<h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
 				{topic.name}
 			</h2>
-			<p className="text-zinc-500 dark:text-zinc-400 text-sm mb-4">
-				{topic.brief}
-			</p>
+			{/* <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-4">
+				{topic.brief.length > 100 ? (
+					<span>{topic.brief.substring(0, 100)}...</span>
+				) : (
+					<span>{topic.brief}</span>
+				)}
+			</p> */}
 
-			<div className="space-y-2 mb-6 mt-auto">
+			<div className="space-y-2 mb-4 mt-auto border dark:border-zinc-600 border-zinc-300 rounded-lg px-3 py-2">
 				{/* Duration */}
 				<div className="flex justify-between text-sm">
 					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons text-sm">timer</span> Duration
+						<span className="material-icons !text-lg">timer</span>{" "}
+						Duration
 					</span>
 					<span className="font-medium text-zinc-900 dark:text-zinc-200">
 						{/* {formatTime(timeLimit * 60)} */}
@@ -34,7 +39,7 @@ export default function TopicCard({ topic }: { topic: any }) {
 				{/* Questions */}
 				<div className="flex justify-between text-sm">
 					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons text-sm">list_alt</span>{" "}
+						<span className="material-icons !text-lg">list_alt</span>{" "}
 						Questions
 					</span>
 					<span className="font-medium text-zinc-900 dark:text-zinc-200">
@@ -45,10 +50,10 @@ export default function TopicCard({ topic }: { topic: any }) {
 				{/* Mastery */}
 				<div className="flex justify-between text-sm">
 					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons text-sm">emoji_events</span>{" "}
-						Mastery
+						<span className="material-icons !text-lg">emoji_events</span>{" "}
+						<span>Mastery</span>
 					</span>
-					<span className="font-bold text-zinc-900 dark:text-zinc-200">
+					<span className="font-bold text-zinc-900 dark:text-zinc-200 text-sm">
 						0%
 					</span>
 				</div>
@@ -56,9 +61,9 @@ export default function TopicCard({ topic }: { topic: any }) {
 
 			<button
 				onClick={() => navigate(`/assessment/${topic.id}`)}
-				className="w-full cursor-pointer py-2.5 bg-zinc-900 dark:bg-zinc-50 hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-medium rounded-lg transition-colors"
+				className="w-full cursor-pointer py-2.5 bg-zinc-700 dark:bg-zinc-100 hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-medium rounded-lg transition-colors"
 			>
-				Enter Assessment
+				View Assessment
 			</button>
 		</div>
 	);

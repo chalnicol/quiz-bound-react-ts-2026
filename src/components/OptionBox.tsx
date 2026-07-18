@@ -1,4 +1,5 @@
 import { cn } from "../lib/utils";
+import DOMPurify from "dompurify";
 
 interface OptionProps {
 	text: string;
@@ -35,7 +36,11 @@ export default function OptionBox({
 							: "border-zinc-200 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-500 text-zinc-700 dark:text-zinc-300",
 				)}
 			>
-				{text}
+				<p
+					dangerouslySetInnerHTML={{
+						__html: DOMPurify.sanitize(text),
+					}}
+				/>
 			</button>
 
 			{isResult && isCorrect && (

@@ -5,6 +5,9 @@ import AssessmentModal from "../components/AssesmentModal";
 import PrepPhase from "../components/PrepPhase";
 import { formatTime, timeToSeconds } from "../lib/utils";
 import QuestionCarousel from "../components/QuestionCarousel";
+import DOMPurify from "dompurify";
+import SelectDropdown from "../components/SelectDropdown";
+import CustomButton from "../components/CustomButton";
 
 // const DEFAULT_TIME_LIMIT = 600; // 10:00, swap for topic?.timeLimit if you add that field
 
@@ -109,23 +112,28 @@ export default function AssessmentPage() {
 			)}
 
 			{/* Header */}
-			{/* Header */}
-			<div className="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center gap-4 mb-8">
+			<div className="mb-8 space-y-4">
 				<button
 					onClick={handleBack}
 					className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full font-semibold hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all shadow-sm justify-self-start"
 				>
 					<span className="material-icons !text-sm">arrow_back</span> Back
+					to Dashboard
 				</button>
 
-				<div className="text-left sm:text-center">
+				<div className="space-y-1">
 					<h1 className="font-bold text-lg text-zinc-900 dark:text-zinc-50">
 						{topic.name}
 					</h1>
-					{topic.brief && (
-						<p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-							{topic.brief}
-						</p>
+					{topic.direction && (
+						<div className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 leading-normal">
+							{/* {topic.brief} */}
+							<p
+								dangerouslySetInnerHTML={{
+									__html: DOMPurify.sanitize(topic.direction),
+								}}
+							/>
+						</div>
 					)}
 				</div>
 
@@ -134,7 +142,7 @@ export default function AssessmentPage() {
 			</div>
 
 			{/* Progress, Timer, and Score */}
-			<div className="mb-8">
+			<div>
 				{/* Calculate progress once to use everywhere */}
 				{(() => {
 					const answeredCount = userAnswers.filter(
@@ -148,33 +156,39 @@ export default function AssessmentPage() {
 					return (
 						<>
 							{status !== "result" && (
-								<div className="mb-8">
+								<div className="mb-6">
 									<div className="flex justify-between text-sm font-bold text-zinc-500 mb-2">
 										<span>Assessment Progress</span>
 										<span>
 											{answeredCount} / {total}
 										</span>
 									</div>
-									<div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800/50 rounded-full mb-3">
+									<div className="h-2 w-full bg-zinc-200 dark:bg-zinc-700 rounded-full mb-3">
 										<div
-											className="h-full bg-zinc-900 dark:bg-zinc-50 rounded-full transition-all"
+											className="h-full bg-zinc-700 dark:bg-zinc-400 rounded-full transition-all"
 											style={{ width: `${progressPercentage}%` }}
 										/>
 									</div>
 
 									{status === "active" && isTimed && (
 										<div
-											className={`text-center font-mono text-lg font-bold px-4 py-2 rounded-lg border transition-colors ${
+											className={`font-bold px-3 py-2 rounded-lg border border-zinc-300 shadow-sm dark:border-zinc-700 bg-white dark:bg-zinc-900 transition-colors ${
 												timeLeft <= 10
-													? "text-red-600 dark:text-red-400 border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-950/30"
-													: "text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-800"
+													? "text-red-600 dark:text-red-400"
+													: "text-zinc-500 dark:text-zinc-400"
 											}`}
 										>
-											{formatTime(timeLeft)}
+											<p className="text-xs uppercase tracking-wider font-mono text-slate-400">
+												Remaining Time:
+											</p>
+											<p className="text-lg lg:text-xl">
+												{formatTime(timeLeft)}
+											</p>
 										</div>
 									)}
+
 									{status === "active" && !isTimed && (
-										<div className="text-center font-mono text-sm font-bold text-zinc-400">
+										<div className="font-mono text-sm font-bold text-zinc-400">
 											Practice Mode — Unlimited Time
 										</div>
 									)}
@@ -196,17 +210,17 @@ export default function AssessmentPage() {
 							: 0;
 
 						return (
-							<div className="p-6 bg-white shadow-sm dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-700 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-2">
-								<div className="text-center sm:text-left">
-									<div className="text-xs font-semibold text-zinc-500 mb-1">
+							<div className="mb-4 px-3 md:px-4 py-3 bg-zinc-200 dark:bg-zinc-800 rounded-xl border-2 border-zinc-400 dark:border-zinc-600 flex items-center justify-between gap-4 sm:gap-2">
+								<div>
+									<div className="text-[10px] md:text-xs font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
 										Score
 									</div>
 									<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
-										{correctCount} / {total}
+										{correctCount}/{total}
 									</div>
 								</div>
-								<div className="text-center sm:text-right">
-									<div className="text-xs font-semibold text-zinc-500 mb-1">
+								<div className="text-right">
+									<div className="text-[10px] md:text-xs  font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
 										Percentage
 									</div>
 									<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
@@ -219,7 +233,7 @@ export default function AssessmentPage() {
 			</div>
 
 			{/* Question Card */}
-			<div className="mb-8">
+			<div>
 				<QuestionCarousel
 					questions={shuffledData}
 					currentIdx={currentIdx}
@@ -235,49 +249,60 @@ export default function AssessmentPage() {
 			</div>
 
 			{/* Navigation */}
-			<div className="flex justify-between items-center pt-6 border-t border-zinc-200 dark:border-zinc-800">
+			<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-2 dark:border-zinc-800 mt-4">
 				<div className="flex gap-2">
-					<button
-						disabled={currentIdx === 0}
+					{/* prev */}
+					<CustomButton
+						className="flex items-center justify-center gap-1 flex-1 sm:flex-none"
 						onClick={() => setCurrentIdx((prev) => prev - 1)}
-						className="flex items-center gap-1 px-3 py-2 bg-white dark:bg-zinc-800 sm:px-6 sm:py-3 text-sm sm:text-base border border-zinc-300 dark:border-zinc-700 rounded-xl font-bold disabled:opacity-40"
+						disabled={currentIdx === 0}
 					>
 						<span className="material-icons !text-base sm:!text-lg">
 							chevron_left
 						</span>
 						Prev
-					</button>
-					<button
-						disabled={currentIdx === shuffledData.length - 1}
+					</CustomButton>
+
+					{/* next */}
+					<CustomButton
+						className="flex items-center justify-center gap-1 flex-1 sm:flex-none"
 						onClick={() => {
-							if (!userAnswers[currentIdx] && status == "active") {
-								//
-								setModalType("noAnswer");
-							} else {
-								setCurrentIdx((prev) => prev + 1);
-							}
+							setCurrentIdx((prev) => prev + 1);
 						}}
-						className="flex items-center gap-1 px-3 py-2 bg-white dark:bg-zinc-800 sm:px-6 sm:py-3 text-sm sm:text-base border border-zinc-300 dark:border-zinc-700 rounded-xl font-bold disabled:opacity-40"
+						disabled={currentIdx === shuffledData.length - 1}
 					>
 						Next
 						<span className="material-icons !text-base sm:!text-lg">
 							chevron_right
 						</span>
-					</button>
+					</CustomButton>
+
+					<SelectDropdown
+						label="Jump To"
+						questionsLength={topic.questions.length || 0}
+						className="flex-1 sm:flex-none"
+						currentIndex={currentIdx}
+						onChange={(index: number) => {
+							//..
+							console.log(index);
+							setCurrentIdx(index);
+						}}
+					/>
 				</div>
+
 				{status === "active" && (
-					<button
+					<CustomButton
 						onClick={() =>
 							userAnswers.every((a) => a !== null)
 								? setStatus("result")
 								: setModalType("forceFinish")
 						}
-						className="px-4 py-2 sm:px-8 sm:py-3 text-sm sm:text-base bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-xl font-bold"
+						className="py-3 sm:py-3.5"
 					>
 						{userAnswers.every((a) => a !== null)
 							? "Check Results"
 							: "Submit"}
-					</button>
+					</CustomButton>
 				)}
 			</div>
 		</div>
