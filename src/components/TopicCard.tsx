@@ -1,11 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import type { Topic } from "../type";
 // import { formatTime } from "../lib/utils";
 
-export default function TopicCard({ topic }: { topic: any }) {
-	const navigate = useNavigate();
-
-	// Safety check for duration
-	// const durationInSeconds = (topic.timeLimit || 0) * 60;
+export default function TopicCard({ topic }: { topic: Topic }) {
+	const hasAttempted = typeof topic.highestScore === "number";
+	const scorePercentage = hasAttempted
+		? Math.round((topic.highestScore! / topic.questions.length) * 100)
+		: null;
 
 	return (
 		<div className="bg-white flex flex-col dark:bg-zinc-800 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 shadow-md transition-all hover:shadow-lg">
@@ -51,20 +52,20 @@ export default function TopicCard({ topic }: { topic: any }) {
 				<div className="flex justify-between text-sm">
 					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
 						<span className="material-icons !text-lg">emoji_events</span>{" "}
-						<span>Mastery</span>
+						<span>Best Score</span>
 					</span>
 					<span className="font-bold text-zinc-900 dark:text-zinc-200 text-sm">
-						0%
+						{hasAttempted ? `${scorePercentage}%` : "—"}
 					</span>
 				</div>
 			</div>
 
-			<button
-				onClick={() => navigate(`/assessment/${topic.id}`)}
-				className="w-full cursor-pointer py-2.5 bg-zinc-700 dark:bg-zinc-100 hover:bg-zinc-700 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-medium rounded-lg transition-colors"
+			<Link
+				to={`/assessment/${topic.id}`}
+				className="w-full cursor-pointer py-2.5 text-center bg-zinc-700 dark:bg-zinc-100 hover:bg-zinc-600 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-bold tracking-wider rounded-lg transition-colors text-sm uppercase"
 			>
 				View Assessment
-			</button>
+			</Link>
 		</div>
 	);
 }

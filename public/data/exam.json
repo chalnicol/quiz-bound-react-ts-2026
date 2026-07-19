@@ -2,7 +2,7 @@
 	{
 		"id": "t1",
 		"name": "Mathematics",
-		"brief": "",
+		"brief": "Quantitative problem solving",
 		"direction": "This is a test of your ability to think out solutions to quantitative problems in mathematics. Analyze and solve each problem carefully. Determine the four choices a, b, c, d.",
 		"timeLimit": "01:00:00",
 		"questions": [
@@ -511,12 +511,17 @@
 				"options": ["8", "9", "16", "25"],
 				"answer": "9"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "If 3x + 5 = 20, what is the value of x?",
+			"options": ["3", "4", "5", "6"],
+			"answer": "5"
+		}
 	},
 	{
 		"id": "t2",
 		"name": "Clerical Operations - Alphabetizing",
-		"brief": "",
+		"brief": "Sorting and filing",
 		"direction": "Arrange each group of items in alphabetical order.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -620,12 +625,17 @@
 				"options": ["ABCD", "ADCB", "ACBD", "ABDC"],
 				"answer": "ADCB"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "A. Department of Budget and Management <br/> B. Department of Agrarian Reform <br/> C. Department of Energy <br/> D. Department of Agriculture",
+			"options": ["BADC", "BDAC", "ABCD", "BCDA"],
+			"answer": "BDAC"
+		}
 	},
 	{
 		"id": "t3",
 		"name": "English - Synonyms",
-		"brief": "",
+		"brief": "Vocabulary similarity check",
 		"direction": "Choose the letter that corresponds to the word closest in meaning to the bold and italicized word in the sentence.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -869,12 +879,17 @@
 				],
 				"answer": "went beyond"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "The CEO's decision was <span class='custom-italic'>imperative</span> for the company's survival.",
+			"options": ["optional", "crucial", "trivial", "doubtful"],
+			"answer": "crucial"
+		}
 	},
 	{
 		"id": "t4",
 		"name": "English - Antonym",
-		"brief": "",
+		"brief": "Vocabulary contrast check",
 		"direction": "Choose the letter that corresponds to the word opposite in meaning to the italicized word or phrase in the sentence.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -1108,12 +1123,17 @@
 				"options": ["important", "trifling", "ordinary", "inconsequential"],
 				"answer": "important"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "The witness gave a <span class='custom-italic'>vague</span> description of the suspect.",
+			"options": ["precise", "ambiguous", "hazy", "obscure"],
+			"answer": "precise"
+		}
 	},
 	{
 		"id": "t5",
 		"name": "English - Double-Word Analogy",
-		"brief": "",
+		"brief": "Relationship mapping skills",
 		"direction": "Choose the letter that corresponds to the pair of words that is related in the same way as the given pair of words.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -1512,12 +1532,22 @@
 				],
 				"answer": "feeble : active"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "abundant : plentiful : :",
+			"options": [
+				"acute : blunt",
+				"meager : scarce",
+				"fragile : sturdy",
+				"vivid : dull"
+			],
+			"answer": "meager : scarce"
+		}
 	},
 	{
 		"id": "t6",
 		"name": "English - Correct Usage",
-		"brief": "",
+		"brief": "Grammar application test",
 		"direction": "Choose the letter that corresponds to the word or phrase that will correctly complete each sentence.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -1756,12 +1786,17 @@
 				"options": ["wrote in", "wrote off", "wrote over", "wrote up"],
 				"answer": "wrote up"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Neither the teacher nor the students ____ aware of the announcement.",
+			"options": ["was", "were", "is", "has been"],
+			"answer": "were"
+		}
 	},
 	{
 		"id": "t7",
 		"name": "English - Identifying Errors",
-		"brief": "",
+		"brief": "Structural mistake spotting",
 		"direction": "Choose the underlined word or phrases laveled <span class='font-bold'>a, b, c</span> or <strong>d</strong> which are NOT acceptable in format written English. Choose e if there is no error. Choose the letter that corresponds to your answer on the item number in your answer sheet.",
 		"timeLimit": "00:25:00",
 		"questions": [
@@ -2065,12 +2100,17 @@
 				"options": ["a", "b", "c", "d", "e"],
 				"answer": "b"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "<span class='division'><span>When the</span><span>a</span></span><span class='division'><span>bell rings</span><span>b</span></span><span class='division'><span>yesterday, the</span><span>c</span></span> students were already<span class='division'><span>in class.</span><span>d</span></span><span class='division'><span>No error</span><span>e</span></span>",
+			"options": ["a", "b", "c", "d", "e"],
+			"answer": "b"
+		}
 	},
 	{
 		"id": "t8",
 		"name": "Filipino - Kasing-Kahulugan",
-		"brief": "",
+		"brief": "Salitang magkatulad kahulugan",
 		"direction": "Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -2249,12 +2289,17 @@
 				],
 				"answer": "pagod na pagod"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Lubhang <span class='custom-italic'>mapagkumbaba</span> ang batang iyan kahit siya ay mayaman.",
+			"options": ["mayabang", "mapagbigay", "mababang-loob", "matapang"],
+			"answer": "mababang-loob"
+		}
 	},
 	{
 		"id": "t9",
 		"name": "Filipino - Kasalungat",
-		"brief": "",
+		"brief": "Salitang magkasalungat kahulugan",
 		"direction": "Piliin ang salitang kasalungat ng salitang nakapahilig.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -2393,12 +2438,22 @@
 				"options": ["maamo", "matapang", "masungit", "maliit"],
 				"answer": "maamo"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Ang desisyon ng hukom ay <span class='custom-italic'>paborable</span> sa nasasakdal.",
+			"options": [
+				"katanggap-tanggap",
+				"makatarungan",
+				"di-paborable",
+				"mabuti"
+			],
+			"answer": "di-paborable"
+		}
 	},
 	{
 		"id": "t10",
 		"name": "Filipino - Mga Kawikaan",
-		"brief": "",
+		"brief": "Karunungang bayan",
 		"direction": "Piliin ang salitang kasing-kahulugan ng salitang nakapahilig.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -2615,9 +2670,10 @@
 		]
 	},
 	{
-		"id": "t10",
+		"id": "t15",
 		"name": "Filipino - Wastong Gamit",
-		"brief": "Piliin ang titik ng salitang angkop sa patlang.",
+		"brief": "Tamang balarilang Filipino",
+		"direction": "Piliin ang titik ng salitang angkop sa patlang.",
 		"timeLimit": "15",
 		"questions": [
 			{
@@ -2780,7 +2836,8 @@
 	{
 		"id": "t11",
 		"name": "Filipino - Pagkilala sa Mali",
-		"brief": "Basahing mabuti ang bawat pangungusap. Hanapin ang salita o grupo ng mga salitang may salangguhit na di wasto ang gamit. Kung walang mali, piliin ang titik <strong>e</strong>.",
+		"brief": "Pagwawasto ng pangungusap",
+		"direction": "Basahing mabuti ang bawat pangungusap. Hanapin ang salita o grupo ng mga salitang may salangguhit na di wasto ang gamit. Kung walang mali, piliin ang titik <strong>e</strong>.",
 		"timeLimit": "00:15:00",
 		"questions": [
 			{
@@ -2913,7 +2970,7 @@
 	{
 		"id": "t12",
 		"name": "Constitution",
-		"brief": "",
+		"brief": "Fundamental legal principles",
 		"direction": "Choose letter that corresponds to the answer that will make each statement correct.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -3192,7 +3249,7 @@
 	{
 		"id": "t13",
 		"name": "Inductive Reasoning",
-		"brief": "",
+		"brief": "Logic pattern analysis",
 		"direction": "Discover the principle involved in each of the following series. Choose the letter that corresponds to the best answer.",
 		"timeLimit": "00:15:00",
 		"questions": [
@@ -3451,7 +3508,7 @@
 	{
 		"id": "t14",
 		"name": "Data Sufficiency",
-		"brief": "",
+		"brief": "Information adequacy check",
 		"direction": "Each of this data sufficiency problem consists of a question and two statements, labeled (1) and (2), in which certain data are given. You have to decide whether the data given in the statements are sufficient for the answering the questions. <div class='mt-1'>Choose the letter <br>a. if statement (1) ALONE is sufficient, but statement (2) alone is not sufficent. <br>b. if statement (2) ALONE is sufficient, but statement (1) alone is not sufficent. <br>c. if BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficent. <br>d. if each statement ALONE is sufficent. <br>e. if statements (1) and (2) TOGETHER are not sufficent.</div>",
 		"timeLimit": "00:10:00",
 		"questions": [

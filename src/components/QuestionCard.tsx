@@ -11,6 +11,22 @@ interface QuestionCardProps {
 	index: number;
 }
 
+const SANITIZE_CONFIG = {
+	ALLOWED_TAGS: [
+		"p",
+		"b",
+		"strong",
+		"i",
+		"em",
+		"br",
+		"img",
+		"span",
+		"sup",
+		"sub",
+	],
+	ALLOWED_ATTR: ["src", "alt", "class"],
+};
+
 export default function QuestionCard({
 	question,
 	selectedAnswer,
@@ -53,10 +69,10 @@ export default function QuestionCard({
 				<p className="px-1 font-bold min-w-7 rounded flex items-center justify-center bg-zinc-700 text-white dark:bg-zinc-400 dark:text-zinc-900">
 					{index + 1}.
 				</p>
-				{/* <p>{question.text}</p> */}
 				<p
+					className="[&_img]:max-w-full [&_img]:h-auto [&_img]:rounded-lg [&_img]:my-2 [&_img]:border [&_img]:border-zinc-200 [&_img]:dark:border-zinc-700"
 					dangerouslySetInnerHTML={{
-						__html: DOMPurify.sanitize(question.text),
+						__html: DOMPurify.sanitize(question.text, SANITIZE_CONFIG),
 					}}
 				/>
 			</div>
@@ -65,7 +81,6 @@ export default function QuestionCard({
 				{question.shuffledOptions.map((opt, idx) => (
 					<OptionBox
 						key={`${opt}_${idx}`}
-						// text={`${String.fromCharCode(65 + idx)}. ${opt}`}
 						text={opt}
 						isCorrect={opt === question.answer}
 						isSelected={selectedAnswer === opt}

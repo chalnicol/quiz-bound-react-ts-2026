@@ -1,20 +1,31 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import DOMPurify from "dompurify";
+import type { Topic } from "../type";
 
 interface PrepPhaseProps {
-	topicName: string;
-	topicBrief: string;
-	timeLimit: string;
+	topic: Topic;
 	onProceed: (isTimed: boolean) => void;
 }
 
-export default function PrepPhase({
-	topicName,
-	topicBrief,
-	timeLimit,
-	onProceed,
-}: PrepPhaseProps) {
+export default function PrepPhase({ topic, onProceed }: PrepPhaseProps) {
 	const [isTimed, setIsTimed] = useState(true);
+
+	const SANITIZE_CONFIG = {
+		ALLOWED_TAGS: [
+			"p",
+			"b",
+			"strong",
+			"i",
+			"em",
+			"br",
+			"img",
+			"span",
+			"sup",
+			"sub",
+		],
+		ALLOWED_ATTR: ["src", "alt", "class"],
+	};
 
 	return (
 		<div className="max-w-7xl mx-auto transition-colors px-4 py-8">
@@ -41,37 +52,31 @@ export default function PrepPhase({
 				</div>
 
 				{/* Right: Details */}
-				<div className="w-full md:w-2/3 lg:w-1/2 space-y-8">
+				<div className="w-full md:w-2/3 lg:w-1/2 space-y-4">
 					<div>
-						<h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 mb-2">
-							{topicName}
+						<h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 mb-0.5">
+							{topic.name}
 						</h1>
-						{topicBrief && (
+						{topic.brief && (
 							<p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-								{topicBrief}
+								{topic.brief}
 							</p>
 						)}
 					</div>
 
-					{/* Theme-Adaptive Directions with matching muted colors */}
-					<div className="bg-zinc-200 dark:bg-zinc-800 px-6 py-4 rounded-lg border border-zinc-300 dark:border-zinc-700  transition-colors">
-						<h3 className="font-bold text-zinc-900 dark:text-zinc-100 mb-3 text-lg">
-							Assessment Directions
-						</h3>
-						<ul className="text-sm text-zinc-700 dark:text-zinc-300 list-disc list-inside space-y-2">
-							<li>Navigate freely between questions.</li>
-							<li>Your responses are saved as you go.</li>
-							<li>
-								You have{" "}
-								<span className="font-mono font-bold text-zinc-900 dark:text-zinc-100">
-									{timeLimit}
-								</span>{" "}
-								<span className="text-[10px] tracking-widest font-semibold">
-									(HH:MM:SS)
-								</span>{" "}
-								if timer is enabled.
-							</li>
-						</ul>
+					<div className="bg-zinc-200 text-zinc-600 dark:text-zinc-400 text-sm dark:bg-zinc-800 px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700  transition-colors">
+						<span className="text-xs text-slate-400 uppercase tracking-wider font-bold">
+							Example:
+						</span>
+						<p
+							className="[&_img]:max-w-full [&_img]:h-auto [&_img]:rounded-lg [&_img]:my-2 [&_img]:border [&_img]:border-zinc-200 [&_img]:dark:border-zinc-700"
+							dangerouslySetInnerHTML={{
+								__html: DOMPurify.sanitize(
+									topic.direction ?? "",
+									SANITIZE_CONFIG,
+								),
+							}}
+						/>
 					</div>
 
 					{/* Pill Toggle */}

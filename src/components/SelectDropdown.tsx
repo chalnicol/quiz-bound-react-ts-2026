@@ -55,7 +55,7 @@ const SelectDropdown = ({
 			</CustomButton>
 
 			{isOpen && (
-				<div className="bg-white border border-zinc-400 p-2 end-0 gap-1 dark:bg-zinc-800 dark:border-zinc-700 absolute min-w-full overflow-x-hidden bottom-full h-44 mb-1 overflow-y-auto grid grid-cols-[repeat(3,_minmax(40px,_1fr))] shadow-lg dark:shadow-zinc-800 scrollbar-thin  dark:scrollbar-track-zinc-800 dark:scrollbar-thumb-zinc-500 scrollbar-track-zinc-100 scrollbar-thumb-zinc-400 ">
+				<div className="bg-white border border-zinc-400 p-2 start-0 gap-1 dark:bg-zinc-800 dark:border-zinc-700 absolute min-w-full overflow-x-hidden bottom-full h-44 mb-2 overflow-y-auto grid grid-cols-[repeat(3,_minmax(50px,_1fr))] shadow-lg dark:shadow-zinc-800 scrollbar-thin dark:scrollbar-track-zinc-700 dark:scrollbar-thumb-zinc-500 scrollbar-track-zinc-100 scrollbar-thumb-zinc-400">
 					{Array.from({ length: questionsLength }).map((_, i) => (
 						<button
 							key={i}

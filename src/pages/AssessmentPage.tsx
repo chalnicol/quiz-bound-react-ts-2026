@@ -1,6 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { topics } from "../data";
 import AssessmentModal from "../components/AssesmentModal";
 import PrepPhase from "../components/PrepPhase";
 import { formatTime, timeToSeconds } from "../lib/utils";
@@ -8,6 +7,7 @@ import QuestionCarousel from "../components/QuestionCarousel";
 import DOMPurify from "dompurify";
 import SelectDropdown from "../components/SelectDropdown";
 import CustomButton from "../components/CustomButton";
+import { useTopic } from "../context/TopicProvider";
 
 // const DEFAULT_TIME_LIMIT = 600; // 10:00, swap for topic?.timeLimit if you add that field
 
@@ -16,7 +16,9 @@ type ModalType = "none" | "exit" | "forceFinish" | "noAnswer" | "timeExpired";
 export default function AssessmentPage() {
 	const { topicId } = useParams();
 	const navigate = useNavigate();
-	const topic = topics.find((t) => t.id === topicId);
+	const { getTopic, updateTopicData } = useTopic();
+
+	const topic = getTopic(topicId || "");
 
 	const [status, setStatus] = useState<"prep" | "active" | "result">("prep");
 	const [currentIdx, setCurrentIdx] = useState(0);
@@ -25,21 +27,45 @@ export default function AssessmentPage() {
 	const [timeLeft, setTimeLeft] = useState<number>(0);
 	const [userAnswers, setUserAnswers] = useState<(string | null)[]>([]);
 
+	const prevTopicIdRef = useRef<string | null>(null);
+
 	const shuffledData = useMemo(() => {
 		if (!topic) return [];
 		return topic.questions.map((q: any) => ({
 			...q,
 			shuffledOptions: [...q.options].sort(() => Math.random() - 0.5),
 		}));
-	}, [topic]);
+	}, [topicId]);
+
+	const { score, percentage } = useMemo(() => {
+		const correctCount = userAnswers.filter(
+			(a, i) => shuffledData[i] && a === shuffledData[i].answer,
+		).length;
+		const totalCount = shuffledData.length;
+		const p = totalCount ? Math.round((correctCount / totalCount) * 100) : 0;
+
+		return { score: correctCount, percentage: p };
+	}, [userAnswers, shuffledData]);
+
+	const { answeredCount, total, progressPercentage } = useMemo(() => {
+		const answered = userAnswers.filter((a) => a !== null).length;
+		const t = shuffledData.length;
+		const p = t ? (answered / t) * 100 : 0;
+
+		return { answeredCount: answered, total: t, progressPercentage: p };
+	}, [userAnswers, shuffledData]);
 
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "instant" });
 	}, [status]);
 
 	useEffect(() => {
-		if (topic) setUserAnswers(Array(topic.questions.length).fill(null));
-	}, [topic]);
+		if (!topic || !topicId) return;
+		if (prevTopicIdRef.current === topicId) return;
+
+		prevTopicIdRef.current = topicId;
+		setUserAnswers(Array(topic.questions.length).fill(null));
+	}, [topic, topicId]);
 
 	// Countdown — only runs in timed mode, and stops cleanly at 0 instead of
 	// silently ticking past into negative numbers.
@@ -52,6 +78,17 @@ export default function AssessmentPage() {
 		const timer = setInterval(() => setTimeLeft((t) => t - 1), 1000);
 		return () => clearInterval(timer);
 	}, [status, isTimed, timeLeft]);
+
+	useEffect(() => {
+		if (status !== "result" || !topic) return;
+
+		const hasNoPreviousScore =
+			topic.highestScore === null || topic.highestScore === undefined;
+
+		if (hasNoPreviousScore || score > topic.highestScore!) {
+			updateTopicData(String(topic.id), score);
+		}
+	}, [status, topic, score, updateTopicData]);
 
 	const handleModalConfirm = () => {
 		if (modalType === "exit") navigate("/");
@@ -86,10 +123,7 @@ export default function AssessmentPage() {
 	if (status === "prep") {
 		return (
 			<PrepPhase
-				topicName={topic.name}
-				topicBrief={topic.brief ?? ""}
-				// timeLimit={formatTime(DEFAULT_TIME_LIMIT)}
-				timeLimit={topic.timeLimit}
+				topic={topic}
 				onProceed={(timed) => {
 					setIsTimed(timed);
 					setTimeLeft(timeToSeconds(topic.timeLimit));
@@ -144,92 +178,66 @@ export default function AssessmentPage() {
 			{/* Progress, Timer, and Score */}
 			<div>
 				{/* Calculate progress once to use everywhere */}
-				{(() => {
-					const answeredCount = userAnswers.filter(
-						(a) => a !== null,
-					).length;
-					const total = shuffledData.length;
-					const progressPercentage = total
-						? (answeredCount / total) * 100
-						: 0;
+				{status !== "result" && (
+					<div className="mb-6">
+						<div className="flex justify-between text-sm font-bold text-zinc-500 mb-2">
+							<span>Assessment Progress</span>
+							<span>
+								{answeredCount} / {total}
+							</span>
+						</div>
+						<div className="h-2 w-full bg-zinc-200 dark:bg-zinc-700 rounded-full mb-3">
+							<div
+								className="h-full bg-zinc-700 dark:bg-zinc-400 rounded-full transition-all"
+								style={{ width: `${progressPercentage}%` }}
+							/>
+						</div>
 
-					return (
-						<>
-							{status !== "result" && (
-								<div className="mb-6">
-									<div className="flex justify-between text-sm font-bold text-zinc-500 mb-2">
-										<span>Assessment Progress</span>
-										<span>
-											{answeredCount} / {total}
-										</span>
-									</div>
-									<div className="h-2 w-full bg-zinc-200 dark:bg-zinc-700 rounded-full mb-3">
-										<div
-											className="h-full bg-zinc-700 dark:bg-zinc-400 rounded-full transition-all"
-											style={{ width: `${progressPercentage}%` }}
-										/>
-									</div>
-
-									{status === "active" && isTimed && (
-										<div
-											className={`font-bold px-3 py-2 rounded-lg border border-zinc-300 shadow-sm dark:border-zinc-700 bg-white dark:bg-zinc-900 transition-colors ${
-												timeLeft <= 10
-													? "text-red-600 dark:text-red-400"
-													: "text-zinc-500 dark:text-zinc-400"
-											}`}
-										>
-											<p className="text-xs uppercase tracking-wider font-mono text-slate-400">
-												Remaining Time:
-											</p>
-											<p className="text-lg lg:text-xl">
-												{formatTime(timeLeft)}
-											</p>
-										</div>
-									)}
-
-									{status === "active" && !isTimed && (
-										<div className="font-mono text-sm font-bold text-zinc-400">
-											Practice Mode — Unlimited Time
-										</div>
-									)}
-								</div>
-							)}
-						</>
-					);
-				})()}
-
-				{status === "result" &&
-					// ... your existing result code remains the same
-					(() => {
-						const correctCount = userAnswers.filter(
-							(a, i) => a === shuffledData[i].answer,
-						).length;
-						const total = shuffledData.length;
-						const percentage = total
-							? Math.round((correctCount / total) * 100)
-							: 0;
-
-						return (
-							<div className="mb-4 px-3 md:px-4 py-3 bg-zinc-200 dark:bg-zinc-800 rounded-xl border-2 border-zinc-400 dark:border-zinc-600 flex items-center justify-between gap-4 sm:gap-2">
-								<div>
-									<div className="text-[10px] md:text-xs font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
-										Score
-									</div>
-									<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
-										{correctCount}/{total}
-									</div>
-								</div>
-								<div className="text-right">
-									<div className="text-[10px] md:text-xs  font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
-										Percentage
-									</div>
-									<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
-										{percentage}%
-									</div>
-								</div>
+						{status === "active" && isTimed && (
+							<div
+								className={`font-bold px-3 py-2 rounded-lg border border-zinc-300 shadow-sm dark:border-zinc-700 bg-white dark:bg-zinc-900 transition-colors ${
+									timeLeft <= 10
+										? "text-red-600 dark:text-red-400"
+										: "text-zinc-500 dark:text-zinc-400"
+								}`}
+							>
+								<p className="text-xs uppercase tracking-wider font-mono text-slate-400">
+									Remaining Time:
+								</p>
+								<p className="text-lg lg:text-xl">
+									{formatTime(timeLeft)}
+								</p>
 							</div>
-						);
-					})()}
+						)}
+
+						{status === "active" && !isTimed && (
+							<div className="font-mono text-sm font-bold text-zinc-400">
+								Practice Mode — Unlimited Time
+							</div>
+						)}
+					</div>
+				)}
+
+				{status === "result" && (
+					<div className="mb-4 px-3 md:px-4 py-3 bg-zinc-200 dark:bg-zinc-800 rounded-xl border-2 border-zinc-400 dark:border-zinc-600 flex items-center justify-between gap-4 sm:gap-2">
+						<div>
+							<div className="text-[10px] md:text-xs font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
+								Score
+							</div>
+							<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
+								{score}/{total}
+							</div>
+						</div>
+						<div className="text-right">
+							<div className="text-[10px] md:text-xs font-semibold text-zinc-500 mb-1 uppercase tracking-wider">
+								Percentage
+							</div>
+							<div className="text-2xl font-black text-zinc-900 dark:text-zinc-50">
+								{percentage}%
+							</div>
+						</div>
+					</div>
+				)}
 			</div>
 
 			{/* Question Card */}
@@ -251,6 +259,18 @@ export default function AssessmentPage() {
 			{/* Navigation */}
 			<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-2 dark:border-zinc-800 mt-4">
 				<div className="flex gap-2">
+					<SelectDropdown
+						label="Jump To"
+						questionsLength={topic.questions.length || 0}
+						className="flex-1 sm:flex-none"
+						currentIndex={currentIdx}
+						onChange={(index: number) => {
+							//..
+							console.log(index);
+							setCurrentIdx(index);
+						}}
+					/>
+
 					{/* prev */}
 					<CustomButton
 						className="flex items-center justify-center gap-1 flex-1 sm:flex-none"
@@ -276,18 +296,6 @@ export default function AssessmentPage() {
 							chevron_right
 						</span>
 					</CustomButton>
-
-					<SelectDropdown
-						label="Jump To"
-						questionsLength={topic.questions.length || 0}
-						className="flex-1 sm:flex-none"
-						currentIndex={currentIdx}
-						onChange={(index: number) => {
-							//..
-							console.log(index);
-							setCurrentIdx(index);
-						}}
-					/>
 				</div>
 
 				{status === "active" && (

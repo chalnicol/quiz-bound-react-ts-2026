@@ -12,6 +12,8 @@ export interface Topic {
 	name: string;
 	brief: string;
 	timeLimit: string; // in minutes
+	sampleQuestion: Question;
 	questions: Question[];
 	direction?: string;
+	highestScore?: number | null;
 }
