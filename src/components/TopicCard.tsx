@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Topic } from "../type";
+import { ClipboardList, Timer, Trophy } from "lucide-react";
 // import { formatTime } from "../lib/utils";
 
 export default function TopicCard({ topic }: { topic: Topic }) {
@@ -24,9 +25,8 @@ export default function TopicCard({ topic }: { topic: Topic }) {
 			<div className="space-y-2 mb-4 mt-auto border dark:border-zinc-600 border-zinc-300 rounded-lg px-3 py-2">
 				{/* Duration */}
 				<div className="flex justify-between text-sm">
-					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons !text-lg">timer</span>{" "}
-						Duration
+					<span className="flex text-zinc-600 dark:text-zinc-400 gap-1.5">
+						<Timer size={16} /> <span>Duration</span>
 					</span>
 					<span className="font-medium text-zinc-900 dark:text-zinc-200">
 						{/* {formatTime(timeLimit * 60)} */}
@@ -39,9 +39,8 @@ export default function TopicCard({ topic }: { topic: Topic }) {
 
 				{/* Questions */}
 				<div className="flex justify-between text-sm">
-					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons !text-lg">list_alt</span>{" "}
-						Questions
+					<span className="flex text-zinc-600 dark:text-zinc-400 gap-1.5">
+						<ClipboardList size={16} /> <span>Question </span>
 					</span>
 					<span className="font-medium text-zinc-900 dark:text-zinc-200">
 						{topic.questions?.length || 0}
@@ -50,9 +49,8 @@ export default function TopicCard({ topic }: { topic: Topic }) {
 
 				{/* Mastery */}
 				<div className="flex justify-between text-sm">
-					<span className="text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-						<span className="material-icons !text-lg">emoji_events</span>{" "}
-						<span>Best Score</span>
+					<span className="flex text-zinc-600 dark:text-zinc-400 gap-1.5">
+						<Trophy size={16} /> <span>Best Score </span>
 					</span>
 					<span className="font-bold text-zinc-900 dark:text-zinc-200 text-sm">
 						{hasAttempted ? `${scorePercentage}%` : "—"}
@@ -62,7 +60,7 @@ export default function TopicCard({ topic }: { topic: Topic }) {
 
 			<Link
 				to={`/assessment/${topic.id}`}
-				className="w-full cursor-pointer py-2.5 text-center bg-zinc-700 dark:bg-zinc-100 hover:bg-zinc-600 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-bold tracking-wider rounded-lg transition-colors text-sm uppercase"
+				className="w-full cursor-pointer py-3 text-center bg-zinc-600 dark:bg-zinc-300 hover:bg-zinc-500 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 font-bold tracking-wider rounded-lg transition-colors text-xs uppercase"
 			>
 				View Assessment
 			</Link>

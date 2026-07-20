@@ -16,7 +16,7 @@ const CustomButton = ({
 			disabled={disabled}
 			onClick={onClick}
 			className={cn(
-				"px-3 py-2 bg-white dark:bg-zinc-800 sm:px-6 sm:py-3 text-sm sm:text-base border border-zinc-300 dark:border-zinc-700 rounded-xl font-bold disabled:opacity-40",
+				"bg-white dark:bg-zinc-800 px-3 sm:px-6 py-3  border border-zinc-300 dark:border-zinc-700 rounded-lg lg:rounded-xl font-bold disabled:pointer-events-none disabled:opacity-50 cursor-pointer dark:hover:border-zinc-600 hover:border-zinc-400  shadow dark:shadow-zinc-800 active:scale-95",
 				className,
 			)}
 		>

@@ -47,7 +47,7 @@ export default function Dashboard() {
 		}, [topics]);
 
 	return (
-		<div className="px-4 py-12 max-w-7xl mx-auto transition-colors">
+		<div className="px-4 py-8 max-w-7xl mx-auto transition-colors">
 			<div className="mb-10">
 				<h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
 					Assessment Dashboard
@@ -144,13 +144,13 @@ export default function Dashboard() {
 			)}
 
 			{/* ===== Section: All Topics ===== */}
-			<section>
+			<section className="mb-12">
 				<h2 className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
 					All Topics
 				</h2>
 
 				{topics.length > 0 ? (
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
 						{topics.map((topic) => (
 							<TopicCard key={topic.id} topic={topic} />
 						))}

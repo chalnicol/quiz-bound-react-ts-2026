@@ -1,31 +1,17 @@
+import { BadgeCheck, OctagonX, TriangleAlert } from "lucide-react";
 import { cn } from "../lib/utils";
 import type { Question } from "../type";
+import HtmlRenderer from "./HtmlRenderer";
 import OptionBox from "./OptionBox";
-import DOMPurify from "dompurify";
 
 interface QuestionCardProps {
-	question: Question & { shuffledOptions: string[] };
+	// question: Question & { shuffledOptions: string[] };
+	question: Question;
 	selectedAnswer: string | null;
 	status: "active" | "result";
 	onAnswer: (option: string) => void;
 	index: number;
 }
-
-const SANITIZE_CONFIG = {
-	ALLOWED_TAGS: [
-		"p",
-		"b",
-		"strong",
-		"i",
-		"em",
-		"br",
-		"img",
-		"span",
-		"sup",
-		"sub",
-	],
-	ALLOWED_ATTR: ["src", "alt", "class"],
-};
 
 export default function QuestionCard({
 	question,
@@ -38,11 +24,17 @@ export default function QuestionCard({
 	const isUnanswered = selectedAnswer === null;
 
 	return (
-		<div className="p-4">
+		<div className="p-4 space-y-4">
+			<p>
+				<span className="uppercase tracking-wide bg-zinc-200 dark:bg-zinc-700/50 dark:text-zinc-400 px-1.5 py-1 text-sm text-zinc-400 font-semibold dark:border-zinc-400 rounded">
+					#{index + 1}
+				</span>
+			</p>
+
 			{status === "result" && (
 				<div
 					className={cn(
-						"mb-6 p-3 rounded-lg font-bold flex items-center gap-2 border",
+						"p-3 rounded-lg font-bold flex items-center gap-2 border",
 						isUnanswered
 							? "bg-amber-100/50 text-amber-800 dark:bg-amber-900/20 dark:text-amber-400 border-amber-200 dark:border-amber-900"
 							: isCorrect
@@ -50,13 +42,13 @@ export default function QuestionCard({
 								: "bg-red-100/50 text-red-800 dark:bg-red-900/20 dark:text-red-400 border-red-200 dark:border-red-900",
 					)}
 				>
-					<span className="material-icons">
-						{isUnanswered
-							? "warning"
-							: isCorrect
-								? "check_circle"
-								: "cancel"}
-					</span>
+					{isUnanswered ? (
+						<TriangleAlert size={24} />
+					) : isCorrect ? (
+						<BadgeCheck size={24} />
+					) : (
+						<OctagonX size={24} />
+					)}
 					{isUnanswered
 						? "You have no answer"
 						: isCorrect
@@ -65,20 +57,12 @@ export default function QuestionCard({
 				</div>
 			)}
 
-			<div className="mb-6 text-zinc-900 dark:text-zinc-50 flex items-start gap-2">
-				<p className="px-1 font-bold min-w-7 rounded flex items-center justify-center bg-zinc-700 text-white dark:bg-zinc-400 dark:text-zinc-900">
-					{index + 1}.
-				</p>
-				<p
-					className="[&_img]:max-w-full [&_img]:h-auto [&_img]:rounded-lg [&_img]:my-2 [&_img]:border [&_img]:border-zinc-200 [&_img]:dark:border-zinc-700"
-					dangerouslySetInnerHTML={{
-						__html: DOMPurify.sanitize(question.text, SANITIZE_CONFIG),
-					}}
-				/>
+			<div className="text-zinc-900 dark:text-zinc-50 flex items-start gap-2">
+				<HtmlRenderer content={question.text} />
 			</div>
 
 			<div className="grid gap-3">
-				{question.shuffledOptions.map((opt, idx) => (
+				{question.options.map((opt, idx) => (
 					<OptionBox
 						key={`${opt}_${idx}`}
 						text={opt}

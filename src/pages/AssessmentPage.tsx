@@ -8,6 +8,8 @@ import DOMPurify from "dompurify";
 import SelectDropdown from "../components/SelectDropdown";
 import CustomButton from "../components/CustomButton";
 import { useTopic } from "../context/TopicProvider";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import type { Question } from "../type";
 
 // const DEFAULT_TIME_LIMIT = 600; // 10:00, swap for topic?.timeLimit if you add that field
 
@@ -20,6 +22,9 @@ export default function AssessmentPage() {
 
 	const topic = getTopic(topicId || "");
 
+	const [shuffleOrder, setShuffleOrder] = useState(true);
+	const [shuffleOptionsOrder, setShuffleOptionsOrder] = useState(false);
+
 	const [status, setStatus] = useState<"prep" | "active" | "result">("prep");
 	const [currentIdx, setCurrentIdx] = useState(0);
 	const [modalType, setModalType] = useState<ModalType>("none");
@@ -30,30 +35,68 @@ export default function AssessmentPage() {
 	const prevTopicIdRef = useRef<string | null>(null);
 
 	const shuffledData = useMemo(() => {
-		if (!topic) return [];
-		return topic.questions.map((q: any) => ({
+		if (!topic || !topic.questions) return [];
+
+		const fisherYatesShuffle = <T,>(array: T[]): T[] => {
+			const arr = [...array];
+			for (let i = arr.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[arr[i], arr[j]] = [arr[j], arr[i]];
+			}
+			return arr;
+		};
+
+		const questionsToProcess = shuffleOrder
+			? fisherYatesShuffle(topic.questions)
+			: [...topic.questions];
+
+		return questionsToProcess.map((q: Question) => ({
 			...q,
-			shuffledOptions: [...q.options].sort(() => Math.random() - 0.5),
+			options: shuffleOptionsOrder
+				? fisherYatesShuffle(q.options)
+				: [...q.options],
 		}));
-	}, [topicId]);
+	}, [topic, shuffleOrder, shuffleOptionsOrder]);
 
-	const { score, percentage } = useMemo(() => {
-		const correctCount = userAnswers.filter(
-			(a, i) => shuffledData[i] && a === shuffledData[i].answer,
-		).length;
-		const totalCount = shuffledData.length;
-		const p = totalCount ? Math.round((correctCount / totalCount) * 100) : 0;
+	// 1. Memoize just the heavy processing / statuses array
+	const questionStatuses = useMemo(() => {
+		return shuffledData.map((q, i) => {
+			const userAnswer = userAnswers[i];
+			const isAnswered = userAnswer !== null && userAnswer !== undefined;
 
-		return { score: correctCount, percentage: p };
-	}, [userAnswers, shuffledData]);
+			if (status === "result") {
+				if (!isAnswered) return "unanswered";
+				return userAnswer === q.answer ? "correct" : "incorrect";
+			}
 
-	const { answeredCount, total, progressPercentage } = useMemo(() => {
-		const answered = userAnswers.filter((a) => a !== null).length;
-		const t = shuffledData.length;
-		const p = t ? (answered / t) * 100 : 0;
+			return isAnswered ? "filled" : "empty";
+		});
+	}, [userAnswers, shuffledData, status]);
 
-		return { answeredCount: answered, total: t, progressPercentage: p };
-	}, [userAnswers, shuffledData]);
+	// 2. Memoize the lightweight metrics derived from user answers
+	const { score, percentage, answeredCount, total, progressPercentage } =
+		useMemo(() => {
+			const totalCount = shuffledData.length;
+			const answered = userAnswers.filter(
+				(a) => a !== null && a !== undefined,
+			).length;
+
+			const correctCount = userAnswers.filter(
+				(a, i) => shuffledData[i] && a === shuffledData[i].answer,
+			).length;
+
+			return {
+				score: correctCount,
+				percentage: totalCount
+					? Math.round((correctCount / totalCount) * 100)
+					: 0,
+				answeredCount: answered,
+				total: totalCount,
+				progressPercentage: totalCount ? (answered / totalCount) * 100 : 0,
+			};
+		}, [userAnswers, shuffledData]);
+
+	//.....................
 
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "instant" });
@@ -105,6 +148,19 @@ export default function AssessmentPage() {
 		}
 	};
 
+	const handleProceed = (
+		isTimed: boolean,
+		isOrderShuffled: boolean,
+		isOptionsOrderShuffled: boolean,
+	) => {
+		if (!topic) return;
+		setIsTimed(isTimed);
+		setShuffleOrder(isOrderShuffled);
+		setShuffleOptionsOrder(isOptionsOrderShuffled);
+		setTimeLeft(timeToSeconds(topic.timeLimit));
+		setStatus("active");
+	};
+
 	if (!topic) {
 		return (
 			<div className="max-w-xl mx-auto px-4 py-20 text-center">
@@ -121,16 +177,7 @@ export default function AssessmentPage() {
 
 	// --- PREP VIEW ---
 	if (status === "prep") {
-		return (
-			<PrepPhase
-				topic={topic}
-				onProceed={(timed) => {
-					setIsTimed(timed);
-					setTimeLeft(timeToSeconds(topic.timeLimit));
-					setStatus("active");
-				}}
-			/>
-		);
+		return <PrepPhase topic={topic} onProceed={handleProceed} />;
 	}
 
 	// --- ASSESSMENT VIEW (Persistent Layout) ---
@@ -149,10 +196,12 @@ export default function AssessmentPage() {
 			<div className="mb-8 space-y-4">
 				<button
 					onClick={handleBack}
-					className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full font-semibold hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all shadow-sm justify-self-start"
+					className="inline-flex items-center cursor-pointer gap-2 px-4 py-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full font-semibold hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-all shadow-sm justify-self-start"
 				>
-					<span className="material-icons !text-sm">arrow_back</span> Back
-					to Dashboard
+					<span className="flex gap-1 items-center">
+						<ArrowLeft size={18} />
+						<span>Back to Dashboard</span>
+					</span>
 				</button>
 
 				<div className="space-y-1">
@@ -257,12 +306,12 @@ export default function AssessmentPage() {
 			</div>
 
 			{/* Navigation */}
-			<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-2 dark:border-zinc-800 mt-4">
+			<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-3 dark:border-zinc-800 mt-4">
 				<div className="flex gap-2">
 					<SelectDropdown
 						label="Jump To"
-						questionsLength={topic.questions.length || 0}
-						className="flex-1 sm:flex-none"
+						questionStatuses={questionStatuses}
+						className="flex-1 min-w-30 sm:flex-none"
 						currentIndex={currentIdx}
 						onChange={(index: number) => {
 							//..
@@ -273,27 +322,27 @@ export default function AssessmentPage() {
 
 					{/* prev */}
 					<CustomButton
-						className="flex items-center justify-center gap-1 flex-1 sm:flex-none"
+						className="flex flex-1 items-center justify-center gap-1sm:flex-none"
 						onClick={() => setCurrentIdx((prev) => prev - 1)}
 						disabled={currentIdx === 0}
 					>
-						<span className="material-icons !text-base sm:!text-lg">
-							chevron_left
+						<span className="flex items-center gap-1">
+							<ChevronLeft size={18} />
+							<span>Previous</span>
 						</span>
-						Prev
 					</CustomButton>
 
 					{/* next */}
 					<CustomButton
-						className="flex items-center justify-center gap-1 flex-1 sm:flex-none"
+						className="flex flex-1 items-center justify-center gap-1 sm:flex-none"
 						onClick={() => {
 							setCurrentIdx((prev) => prev + 1);
 						}}
 						disabled={currentIdx === shuffledData.length - 1}
 					>
-						Next
-						<span className="material-icons !text-base sm:!text-lg">
-							chevron_right
+						<span className="flex items-center gap-1">
+							<span>Next</span>
+							<ChevronRight size={18} />
 						</span>
 					</CustomButton>
 				</div>

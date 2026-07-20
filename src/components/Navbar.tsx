@@ -1,3 +1,4 @@
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeProvider";
 
 export default function Navbar() {
@@ -13,11 +14,16 @@ export default function Navbar() {
 
 				<button
 					onClick={toggleTheme}
-					className="flex cursor-pointer items-center w-8 aspect-square justify-center rounded-lg border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-zinc-900 shadow-md text-zinc-800 dark:text-zinc-200 transition-colors"
+					className="flex cursor-pointer items-center w-8 aspect-square justify-center rounded-lg border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-zinc-900 shadow dark:shadow-zinc-600 text-zinc-800 dark:text-zinc-200 transition-colors"
 				>
-					<span className="material-icons !text-xl">
+					{/* <span className="material-icons !text-xl">
 						{theme === "light" ? "dark_mode" : "light_mode"}
-					</span>
+					</span> */}
+					{theme == "light" ? (
+						<Sun size={18} className="fill-current" />
+					) : (
+						<Moon size={18} className="fill-current" />
+					)}
 				</button>
 			</div>
 		</nav>

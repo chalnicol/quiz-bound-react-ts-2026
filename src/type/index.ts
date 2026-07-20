@@ -3,7 +3,6 @@ export interface Question {
 	text: string;
 	options: string[]; // This is
 	answer: string;
-	fixedOptions?: boolean;
 }
 
 // Define the structure for the topic
@@ -16,4 +15,5 @@ export interface Topic {
 	questions: Question[];
 	direction?: string;
 	highestScore?: number | null;
+	randomOptions: boolean;
 }

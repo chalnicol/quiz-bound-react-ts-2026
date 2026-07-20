@@ -40,6 +40,7 @@ export function TopicProvider({ children }: { children: React.ReactNode }) {
 				console.error("Error fetching the JSON:", error); // Handle any errors
 			} finally {
 				//setLoading(false); // Stop loading regardless of success or failure
+				console.log("topic loaded..");
 			}
 		};
 		fetchData();
@@ -47,6 +48,8 @@ export function TopicProvider({ children }: { children: React.ReactNode }) {
 
 	const getTopic = useCallback(
 		(id: string) => {
+			// if (topics.length > 0) return null;
+
 			return topics.find((t) => t.id === id) || null;
 		},
 		[topics],

@@ -4,7 +4,8 @@ import QuestionCard from "./QuestionCard";
 import type { Question } from "../type";
 
 interface QuestionCarouselProps {
-	questions: (Question & { shuffledOptions: string[] })[];
+	// questions: (Question & { shuffledOptions: string[] })[];
+	questions: Question[];
 	currentIdx: number;
 	userAnswers: (string | null)[];
 	status: "active" | "result";

@@ -1,5 +1,5 @@
 import { cn } from "../lib/utils";
-import DOMPurify from "dompurify";
+import HtmlRenderer from "./HtmlRenderer";
 
 interface OptionProps {
 	text: string;
@@ -8,22 +8,6 @@ interface OptionProps {
 	isResult: boolean;
 	onSelect: () => void;
 }
-
-const SANITIZE_CONFIG = {
-	ALLOWED_TAGS: [
-		"p",
-		"b",
-		"strong",
-		"i",
-		"em",
-		"br",
-		"img",
-		"span",
-		"sup",
-		"sub",
-	],
-	ALLOWED_ATTR: ["src", "alt", "class"],
-};
 
 export default function OptionBox({
 	text,
@@ -54,12 +38,7 @@ export default function OptionBox({
 					buttonStyles,
 				)}
 			>
-				<p
-					className="[&_img]:max-w-full [&_img]:h-auto [&_img]:rounded-lg [&_img]:my-1 [&_img]:inline-block"
-					dangerouslySetInnerHTML={{
-						__html: DOMPurify.sanitize(text, SANITIZE_CONFIG),
-					}}
-				/>
+				<HtmlRenderer content={text} />
 			</button>
 
 			{isResult && isCorrect && (

@@ -516,7 +516,8 @@
 			"text": "If 3x + 5 = 20, what is the value of x?",
 			"options": ["3", "4", "5", "6"],
 			"answer": "5"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t2",
@@ -630,7 +631,8 @@
 			"text": "A. Department of Budget and Management <br/> B. Department of Agrarian Reform <br/> C. Department of Energy <br/> D. Department of Agriculture",
 			"options": ["BADC", "BDAC", "ABCD", "BCDA"],
 			"answer": "BDAC"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t3",
@@ -884,7 +886,8 @@
 			"text": "The CEO's decision was <span class='custom-italic'>imperative</span> for the company's survival.",
 			"options": ["optional", "crucial", "trivial", "doubtful"],
 			"answer": "crucial"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t4",
@@ -1128,7 +1131,8 @@
 			"text": "The witness gave a <span class='custom-italic'>vague</span> description of the suspect.",
 			"options": ["precise", "ambiguous", "hazy", "obscure"],
 			"answer": "precise"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t5",
@@ -1542,7 +1546,8 @@
 				"vivid : dull"
 			],
 			"answer": "meager : scarce"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t6",
@@ -1791,7 +1796,8 @@
 			"text": "Neither the teacher nor the students ____ aware of the announcement.",
 			"options": ["was", "were", "is", "has been"],
 			"answer": "were"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t7",
@@ -2105,7 +2111,8 @@
 			"text": "<span class='division'><span>When the</span><span>a</span></span><span class='division'><span>bell rings</span><span>b</span></span><span class='division'><span>yesterday, the</span><span>c</span></span> students were already<span class='division'><span>in class.</span><span>d</span></span><span class='division'><span>No error</span><span>e</span></span>",
 			"options": ["a", "b", "c", "d", "e"],
 			"answer": "b"
-		}
+		},
+		"randomOptions": false
 	},
 	{
 		"id": "t8",
@@ -2294,7 +2301,8 @@
 			"text": "Lubhang <span class='custom-italic'>mapagkumbaba</span> ang batang iyan kahit siya ay mayaman.",
 			"options": ["mayabang", "mapagbigay", "mababang-loob", "matapang"],
 			"answer": "mababang-loob"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t9",
@@ -2448,7 +2456,8 @@
 				"mabuti"
 			],
 			"answer": "di-paborable"
-		}
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t10",
@@ -2667,14 +2676,25 @@
 				],
 				"answer": "nagbibingi-bingihan"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Ang hindi lumingon sa pinanggalingan, ______.",
+			"options": [
+				"ay mawawala",
+				"ay hindi makakarating sa paroroonan",
+				"ay magiging matagumpay",
+				"ay madaling malilimutan"
+			],
+			"answer": "ay hindi makakarating sa paroroonan"
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t15",
 		"name": "Filipino - Wastong Gamit",
 		"brief": "Tamang balarilang Filipino",
 		"direction": "Piliin ang titik ng salitang angkop sa patlang.",
-		"timeLimit": "15",
+		"timeLimit": "00:15:00",
 		"questions": [
 			{
 				"text": "Katungkulan _______ sinuman ang tumulong sa kanyang kapwA. ",
@@ -2831,7 +2851,18 @@
 				"options": ["Abutan", "Tanawin", "Kunin", "Kunan"],
 				"answer": "Kunin"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Mahigpit na ________ ng pamunuan ang pagsusuot ng ID sa loob ng paaralan simula bukas.",
+			"options": [
+				"ipinagbabawal",
+				"ipinagbawal",
+				"ipagbabawal",
+				"magbabawal"
+			],
+			"answer": "ipinagbabawal"
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t11",
@@ -2965,7 +2996,13 @@
 				"options": ["a", "b", "c", "d", "e"],
 				"answer": "d"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "<span class='division'><span>Ang mga</span><span>a</span></span><span class='division'><span>mag-aaral ay</span><span>b</span></span><span class='division'><span>masaya na</span><span>c</span></span> naglalaro sa<span class='division'><span>palaruan.</span><span>d</span></span><span class='division'><span>Walang mali</span><span>e</span></span>",
+			"options": ["a", "b", "c", "d", "e"],
+			"answer": "c"
+		},
+		"randomOptions": false
 	},
 	{
 		"id": "t12",
@@ -3244,7 +3281,13 @@
 				"options": ["barangay", "community", "family", "municipality"],
 				"answer": "family"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "Who is the Commander-in-Chief of the Armed Forces?",
+			"options": ["Senator", "President", "Chief Justice", "Mayor"],
+			"answer": "President"
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t13",
@@ -3254,262 +3297,268 @@
 		"timeLimit": "00:15:00",
 		"questions": [
 			{
-				"text": "<div class='space-x-3'><span>3</span><span>6</span><span>9</span><span>12</span><span>15</span></div>",
+				"text": "<span class='space-x-3'><span>3</span><span>6</span><span>9</span><span>12</span><span>15</span></div>",
 				"options": ["2", "18", "22", "20"],
 				"answer": "18"
 			},
 			{
-				"text": "<div class='space-x-3'><span>C</span><span>E</span><span>G</span><span>I</span><span>K</span></div>",
+				"text": "<span class='space-x-3'><span>C</span><span>E</span><span>G</span><span>I</span><span>K</span></div>",
 				"options": ["L", "M", "N", "O"],
 				"answer": "M"
 			},
 			{
-				"text": "<div class='space-x-3'><span>IK</span><span>M</span><span>O</span><span>Q</span></div>",
+				"text": "<span class='space-x-3'><span>IK</span><span>M</span><span>O</span><span>Q</span></div>",
 				"options": ["R", "T", "S", "P"],
 				"answer": "S"
 			},
 			{
-				"text": "<div class='space-x-3'><span>B</span><span>D</span><span>F</span><span>H</span><span>J</span></div>",
+				"text": "<span class='space-x-3'><span>B</span><span>D</span><span>F</span><span>H</span><span>J</span></div>",
 				"options": ["L", "M", "N", "P"],
 				"answer": "L"
 			},
 			{
-				"text": "<div class='space-x-3'><span>10</span><span>17</span><span>26</span><span>37</span></div>",
+				"text": "<span class='space-x-3'><span>10</span><span>17</span><span>26</span><span>37</span></div>",
 				"options": ["48", "49", "50", "51"],
 				"answer": "50"
 			},
 			{
-				"text": "<div class='space-x-3'><span>37</span><span>50</span><span>65</span><span>82</span></div>",
+				"text": "<span class='space-x-3'><span>37</span><span>50</span><span>65</span><span>82</span></div>",
 				"options": ["98", "99", "100", "101"],
 				"answer": "101"
 			},
 			{
-				"text": "<div class='space-x-3'><span>3</span><span>9</span><span>5</span><span>25</span><span>8</span><span>64</span><span>12</span><span>144</span></div>",
+				"text": "<span class='space-x-3'><span>3</span><span>9</span><span>5</span><span>25</span><span>8</span><span>64</span><span>12</span><span>144</span></div>",
 				"options": ["15", "17", "20", "16"],
 				"answer": "17"
 			},
 			{
-				"text": "<div class='space-x-3'><span>AB</span><span>EF</span><span>IJ</span><span>MN</span></div>",
+				"text": "<span class='space-x-3'><span>AB</span><span>EF</span><span>IJ</span><span>MN</span></div>",
 				"options": ["OP", "PQ", "QR", "RS"],
 				"answer": "QR"
 			},
 			{
-				"text": "<div class='space-x-3'><span>ZY</span><span>WV</span><span>TS</span><span>QP</span></div>",
+				"text": "<span class='space-x-3'><span>ZY</span><span>WV</span><span>TS</span><span>QP</span></div>",
 				"options": ["NM", "ML", "LK", "KJ"],
 				"answer": "NM"
 			},
 			{
-				"text": "<div class='space-x-3'><span>DC</span><span>HG</span><span>LK</span><span>PO</span></div>",
+				"text": "<span class='space-x-3'><span>DC</span><span>HG</span><span>LK</span><span>PO</span></div>",
 				"options": ["OP", "RQ", "SR", "TS"],
 				"answer": "TS"
 			},
 			{
-				"text": "<div class='space-x-3'><span>1</span><span>2</span><span>5</span><span>6</span><span>11</span><span>12</span><span>19</span><span>20</span></div>",
+				"text": "<span class='space-x-3'><span>1</span><span>2</span><span>5</span><span>6</span><span>11</span><span>12</span><span>19</span><span>20</span></div>",
 				"options": ["25", "27", "29", "31"],
 				"answer": "29"
 			},
 			{
-				"text": "<div class='space-x-3'><span>4</span><span>9</span><span>5</span><span>11</span><span>6</span><span>13</span><span>7</span><span>15</span></div>",
+				"text": "<span class='space-x-3'><span>4</span><span>9</span><span>5</span><span>11</span><span>6</span><span>13</span><span>7</span><span>15</span></div>",
 				"options": ["19", "9", "8", "17"],
 				"answer": "8"
 			},
 			{
-				"text": "<div class='space-x-3'><span>6</span><span>12</span><span>36</span><span>72</span><span>216</span></div>",
+				"text": "<span class='space-x-3'><span>6</span><span>12</span><span>36</span><span>72</span><span>216</span></div>",
 				"options": ["250", "300", "400", "432"],
 				"answer": "432"
 			},
 			{
-				"text": "<div class='space-x-3'><span>A</span><span>C</span><span>C</span><span>F</span><span>F</span><span>F</span></div>",
+				"text": "<span class='space-x-3'><span>A</span><span>C</span><span>C</span><span>F</span><span>F</span><span>F</span></div>",
 				"options": ["J", "G", "K", "V"],
 				"answer": "J"
 			},
 			{
-				"text": "<div class='space-x-3'><span>1</span><span>2</span><span>6</span><span>12</span><span>36</span></div>",
+				"text": "<span class='space-x-3'><span>1</span><span>2</span><span>6</span><span>12</span><span>36</span></div>",
 				"options": ["50", "52", "70", "72"],
 				"answer": "72"
 			},
 			{
-				"text": "<div class='space-x-3'><span>H</span><span>H</span><span>L</span><span>L</span><span>P</span><span>P</span><span>T</span><span>T</span></div>",
+				"text": "<span class='space-x-3'><span>H</span><span>H</span><span>L</span><span>L</span><span>P</span><span>P</span><span>T</span><span>T</span></div>",
 				"options": ["V", "X", "Y", "Z"],
 				"answer": "X"
 			},
 			{
-				"text": "<div class='space-x-3'><span>E</span><span>F</span><span>H</span><span>G</span><span>I</span><span>J</span></div>",
+				"text": "<span class='space-x-3'><span>E</span><span>F</span><span>H</span><span>G</span><span>I</span><span>J</span></div>",
 				"options": ["LK", "JL", "KM", "MN"],
 				"answer": "LK"
 			},
 			{
-				"text": "<div class='space-x-3'><span>6</span><span>12</span><span>7</span><span>11</span><span>8</span><span>10</span></div>",
+				"text": "<span class='space-x-3'><span>6</span><span>12</span><span>7</span><span>11</span><span>8</span><span>10</span></div>",
 				"options": ["13", "7", "10", "9"],
 				"answer": "9"
 			},
 			{
-				"text": "<div class='space-x-3'><span>A</span><span>C</span><span>F</span><span>J</span><span>O</span></div>",
+				"text": "<span class='space-x-3'><span>A</span><span>C</span><span>F</span><span>J</span><span>O</span></div>",
 				"options": ["T", "U", "S", "R"],
 				"answer": "U"
 			},
 			{
-				"text": "<div class='space-x-3'><span>B</span><span>DE</span><span>GHI</span></div>",
+				"text": "<span class='space-x-3'><span>B</span><span>DE</span><span>GHI</span></div>",
 				"options": ["MNDP", "LMNO", "JKLM", "KLMN"],
 				"answer": "KLMN"
 			},
 			{
-				"text": "<div class='space-x-3'><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>",
+				"text": "<span class='space-x-3'><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>",
 				"options": ["J", "I", "H", "G"],
 				"answer": "G"
 			},
 			{
-				"text": "<div class='space-x-3'><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span></div>",
+				"text": "<span class='space-x-3'><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span></div>",
 				"options": ["W", "V", "U", "T"],
 				"answer": "T"
 			},
 			{
-				"text": "<div class='space-x-3'><span>3</span><span>8</span><span>48</span><span>55</span><span>440</span></div>",
+				"text": "<span class='space-x-3'><span>3</span><span>8</span><span>48</span><span>55</span><span>440</span></div>",
 				"options": ["448", "449", "450", "451"],
 				"answer": "449"
 			},
 			{
-				"text": "<div class='space-x-3'><span>16</span><span>12</span><span>17</span><span>11</span><span>18</span></div>",
+				"text": "<span class='space-x-3'><span>16</span><span>12</span><span>17</span><span>11</span><span>18</span></div>",
 				"options": ["7", "9", "10", "12"],
 				"answer": "10"
 			},
 			{
-				"text": "<div class='space-x-3'><span>28</span><span>58</span><span>29</span><span>145</span><span>29</span></div>",
+				"text": "<span class='space-x-3'><span>28</span><span>58</span><span>29</span><span>145</span><span>29</span></div>",
 				"options": ["231", "232", "233", "234"],
 				"answer": "232"
 			},
 			{
-				"text": "<div class='space-x-3'><span>MZ</span><span>KX</span><span>IV</span><span>GT</span></div>",
+				"text": "<span class='space-x-3'><span>MZ</span><span>KX</span><span>IV</span><span>GT</span></div>",
 				"options": ["ER", "FS", "DQ", "CP"],
 				"answer": "ER"
 			},
 			{
-				"text": "<div class='space-x-3'><span>LO</span><span>KP</span><span>JQ</span><span>IR</span><span>HS</span></div>",
+				"text": "<span class='space-x-3'><span>LO</span><span>KP</span><span>JQ</span><span>IR</span><span>HS</span></div>",
 				"options": ["GT", "FU", "EV", "DW"],
 				"answer": "GT"
 			},
 			{
-				"text": "<div class='space-x-3'><span>G</span><span>F</span><span>I</span><span>H</span><span>K</span></div>",
+				"text": "<span class='space-x-3'><span>G</span><span>F</span><span>I</span><span>H</span><span>K</span></div>",
 				"options": ["J", "M", "L", "O"],
 				"answer": "J"
 			},
 			{
-				"text": "<div class='space-x-3'><span>AZ</span><span>BY</span><span>CX</span><span>DW</span><span>EV</span></div>",
+				"text": "<span class='space-x-3'><span>AZ</span><span>BY</span><span>CX</span><span>DW</span><span>EV</span></div>",
 				"options": ["GT", "FU", "HS", "JR"],
 				"answer": "FU"
 			},
 			{
-				"text": "<div class='space-x-3'><span>396</span><span>384</span><span>370</span><span>354</span><span>336</span></div>",
+				"text": "<span class='space-x-3'><span>396</span><span>384</span><span>370</span><span>354</span><span>336</span></div>",
 				"options": ["318", "314", "316", "314"],
 				"answer": "316"
 			},
 			{
-				"text": "<div class='space-x-3'><span>15</span><span>17</span><span>18</span><span>21</span><span>22</span></div>",
+				"text": "<span class='space-x-3'><span>15</span><span>17</span><span>18</span><span>21</span><span>22</span></div>",
 				"options": ["23", "25", "24", "26"],
 				"answer": "26"
 			},
 			{
-				"text": "<div class='space-x-3'><span>7</span><span>21</span><span>14</span><span>42</span><span>42</span></div>",
+				"text": "<span class='space-x-3'><span>7</span><span>21</span><span>14</span><span>42</span><span>42</span></div>",
 				"options": ["84", "96", "124", "126"],
 				"answer": "126"
 			},
 			{
-				"text": "<div class='space-x-3'><span>314</span><span>321</span><span>322</span><span>330</span><span>332</span></div>",
+				"text": "<span class='space-x-3'><span>314</span><span>321</span><span>322</span><span>330</span><span>332</span></div>",
 				"options": ["340", "341", "342", "343"],
 				"answer": "341"
 			},
 			{
-				"text": "<div class='space-x-3'><span>F21</span><span>H19</span><span>K16</span><span>012</span></div>",
+				"text": "<span class='space-x-3'><span>F21</span><span>H19</span><span>K16</span><span>012</span></div>",
 				"options": ["A26", "Z1", "X3", "B25"],
 				"answer": "Z1"
 			},
 			{
-				"text": "<div class='space-x-3'><span>I18</span><span>K16</span><span>M14</span><span>012</span></div>",
+				"text": "<span class='space-x-3'><span>I18</span><span>K16</span><span>M14</span><span>012</span></div>",
 				"options": ["P10", "Q11", "Q10", "P11"],
 				"answer": "Q10"
 			},
 			{
-				"text": "<div class='space-x-3'><span>BO</span><span>DQ</span><span>FS</span><span>HU</span><span>JW</span></div>",
+				"text": "<span class='space-x-3'><span>BO</span><span>DQ</span><span>FS</span><span>HU</span><span>JW</span></div>",
 				"options": ["KX", "IV", "LY", "MZ"],
 				"answer": "LY"
 			},
 			{
-				"text": "<div class='space-x-3'><span>BC</span><span>PQ</span><span>EF</span><span>ST</span></div>",
+				"text": "<span class='space-x-3'><span>BC</span><span>PQ</span><span>EF</span><span>ST</span></div>",
 				"options": ["UJ", "KL", "VW", "HI"],
 				"answer": "HI"
 			},
 			{
-				"text": "<div class='space-x-3'><span>E4</span><span>G6</span><span>18</span><span>K10</span><span>M12</span></div>",
+				"text": "<span class='space-x-3'><span>E4</span><span>G6</span><span>18</span><span>K10</span><span>M12</span></div>",
 				"options": ["O14", "Q16", "N14", "L16"],
 				"answer": "O14"
 			},
 			{
-				"text": "<div class='space-x-3'><span>DQ4</span><span>GT7</span><span>CP3</span><span>HU8</span><span>BO2</span></div>",
+				"text": "<span class='space-x-3'><span>DQ4</span><span>GT7</span><span>CP3</span><span>HU8</span><span>BO2</span></div>",
 				"options": ["IV9", "KX11", "JW10", "MZ13"],
 				"answer": "IV9"
 			},
 			{
-				"text": "<div class='space-x-3'><span>AN1</span><span>CP3</span><span>ER5</span><span>GT7</span><span>IV9</span><span>KX11</span></div>",
+				"text": "<span class='space-x-3'><span>AN1</span><span>CP3</span><span>ER5</span><span>GT7</span><span>IV9</span><span>KX11</span></div>",
 				"options": ["LY12", "MZ13", "JW10", "HU8"],
 				"answer": "MZ13"
 			},
 			{
-				"text": "<div class='space-x-3'><span>A1</span><span>C3</span><span>E5</span></div>",
+				"text": "<span class='space-x-3'><span>A1</span><span>C3</span><span>E5</span></div>",
 				"options": ["F6", "G7", "J11", "K19"],
 				"answer": "G7"
 			},
 			{
-				"text": "<div class='space-x-3'><span>A26</span><span>C24</span><span>EF21</span></div>",
+				"text": "<span class='space-x-3'><span>A26</span><span>C24</span><span>EF21</span></div>",
 				"options": ["P12", "H14", "J17", "L19"],
 				"answer": "J17"
 			},
 			{
-				"text": "<div class='space-x-3'><span>J10</span><span>L12</span><span>N14</span></div>",
+				"text": "<span class='space-x-3'><span>J10</span><span>L12</span><span>N14</span></div>",
 				"options": ["O15", "P16", "G14", "U34"],
 				"answer": "P16"
 			},
 			{
-				"text": "<div class='space-x-3'><span>8R</span><span>6T</span><span>4V</span></div>",
+				"text": "<span class='space-x-3'><span>8R</span><span>6T</span><span>4V</span></div>",
 				"options": ["17j", "15e", "24w", "2x"],
 				"answer": "2x"
 			},
 			{
-				"text": "<div class='space-x-3'><span>J1017</span><span>L1215</span><span>N1413</span></div>",
+				"text": "<span class='space-x-3'><span>J1017</span><span>L1215</span><span>N1413</span></div>",
 				"options": ["R125", "P1611", "T416", "Q678"],
 				"answer": "P1611"
 			},
 			{
-				"text": "<div class='space-x-3'><span>AC</span><span>FH</span><span>KM</span></div>",
+				"text": "<span class='space-x-3'><span>AC</span><span>FH</span><span>KM</span></div>",
 				"options": ["AB", "EF", "PR", "VW"],
 				"answer": "PR"
 			},
 			{
-				"text": "<div class='space-x-3'><span>1516</span><span>1819</span><span>2122</span></div>",
+				"text": "<span class='space-x-3'><span>1516</span><span>1819</span><span>2122</span></div>",
 				"options": ["1716", "1115", "2324", "2425"],
 				"answer": "2425"
 			},
 			{
-				"text": "<div class='space-x-3'><span>1121</span><span>2242</span><span>3483</span></div>",
+				"text": "<span class='space-x-3'><span>1121</span><span>2242</span><span>3483</span></div>",
 				"options": ["4964", "6766", "4844", "4994"],
 				"answer": "4964"
 			},
 			{
-				"text": "<div class='space-x-3'><span>aa33bb</span><span>cc77dd</span><span>ee1111ff</span></div>",
+				"text": "<span class='space-x-3'><span>aa33bb</span><span>cc77dd</span><span>ee1111ff</span></div>",
 				"options": ["gg1516hh", "gg1515hh", "gg1717hh", "gg1816hh"],
 				"answer": "gg1515hh"
 			},
 			{
-				"text": "<div class='space-x-3'><span>b9b9</span><span>c7c7</span><span>d5d5</span></div>",
+				"text": "<span class='space-x-3'><span>b9b9</span><span>c7c7</span><span>d5d5</span></div>",
 				"options": ["e3e2", "e4e4", "e2e2", "e3e3"],
 				"answer": "e3e3"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "<span class='space-x-3'><span>3</span><span>8</span><span>15</span><span>24</span></div>",
+			"options": ["33", "35", "37", "39"],
+			"answer": "35"
+		},
+		"randomOptions": true
 	},
 	{
 		"id": "t14",
 		"name": "Data Sufficiency",
 		"brief": "Information adequacy check",
-		"direction": "Each of this data sufficiency problem consists of a question and two statements, labeled (1) and (2), in which certain data are given. You have to decide whether the data given in the statements are sufficient for the answering the questions. <div class='mt-1'>Choose the letter <br>a. if statement (1) ALONE is sufficient, but statement (2) alone is not sufficent. <br>b. if statement (2) ALONE is sufficient, but statement (1) alone is not sufficent. <br>c. if BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficent. <br>d. if each statement ALONE is sufficent. <br>e. if statements (1) and (2) TOGETHER are not sufficent.</div>",
+		"direction": "Each of this data sufficiency problem consists of a question and two statements, labeled (1) and (2), in which certain data are given. You have to decide whether the data given in the statements are sufficient for the answering the questions. <span class='mt-1'>Choose the letter <br>a. if statement (1) ALONE is sufficient, but statement (2) alone is not sufficent. <br>b. if statement (2) ALONE is sufficient, but statement (1) alone is not sufficent. <br>c. if BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficent. <br>d. if each statement ALONE is sufficent. <br>e. if statements (1) and (2) TOGETHER are not sufficent.</div>",
 		"timeLimit": "00:10:00",
 		"questions": [
 			{
@@ -3612,6 +3661,12 @@
 				"options": ["a", "b", "c", "d", "e"],
 				"answer": "d"
 			}
-		]
+		],
+		"sampleQuestion": {
+			"text": "What is the area of the rectangular garden? <br>(1) The perimeter of the garden is 40 meters.<br>(2) The length of the garden is twice its width.<br>",
+			"options": ["a", "b", "c", "d", "e"],
+			"answer": "c"
+		},
+		"randomOptions": false
 	}
 ]
